@@ -1,11 +1,19 @@
 import React from 'react';
+import {
+  BrowserView,
+  MobileView,
+} from "react-device-detect";
 
-import NavBar from './_components/_modules/navBar';
+
 import Loading from './_components/Loading';
 
 function App() {
   return (
-    <Loading></Loading>
+    <>
+    <MobileView>
+    <Loading/>
+    </MobileView>
+    </>
   );
 }
 
