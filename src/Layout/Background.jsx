@@ -16,14 +16,13 @@ const defaultOptions = {
 
 
 const DefaultBackground = Styled.div`
-    background:red;
     height: 100vh;
     z-index:0;
 `;
 
 function Background({children}){
     return(
-        <DefaultBackground><Lottie options={defaultOptions} />{children}</DefaultBackground>
+        <DefaultBackground><Lottie options={defaultOptions} height={300} width={"100%"} />{children}</DefaultBackground>
     )
 }
 
