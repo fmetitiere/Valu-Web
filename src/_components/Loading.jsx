@@ -1,13 +1,9 @@
 import React from 'react';
-import FadeIn from 'react-fade-in';
 import Lottie from 'react-lottie';
 
-import { BrowserView, MobileView } from 'react-device-detect';
-
+import * as animationData from '../Animations/anim1.json';
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './Home';
-
-import * as animationData from '../Animations/anim1.json';
 
 const defaultOptions = {
 	loop: true,
@@ -35,6 +31,6 @@ export default class Loading extends React.Component {
 	}
 
 	render() {
-		return <div>{!this.state.done ? <Lottie options={defaultOptions} height={420} width={420} /> : <Home />}</div>;
+		return <div>{!this.state.done ? <Lottie options={defaultOptions} height={"100%"} width={"100%"} /> : <Home />}</div>;
 	}
 }

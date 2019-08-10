@@ -1,6 +1,11 @@
 import React from 'react';
 import { MDBNavbar, MDBNavbarBrand, MDBNavbarNav, MDBNavbarToggler, MDBCollapse, MDBNavItem, MDBNavLink, MDBIcon } from 'mdbreact';
 import { BrowserRouter as Router } from 'react-router-dom';
+import Styled from 'styled-components';
+
+const NavbarStyled = Styled.header`
+    z-index:1999;
+`;
 
 class FixedNavbarExample extends React.Component {
   constructor(props) {
@@ -22,7 +27,7 @@ class FixedNavbarExample extends React.Component {
     return(
       <div>
         <Router>
-          <header>
+          <NavbarStyled>
             <MDBNavbar style={bgPink} dark expand="md" scrolling fixed="top">
               <MDBNavbarBrand href="/">
                   <strong>Navbar</strong>
@@ -56,7 +61,7 @@ class FixedNavbarExample extends React.Component {
                 </MDBNavbarNav>
               </MDBCollapse>
             </MDBNavbar>
-          </header>
+          </NavbarStyled>
         </Router>
       </div>
     );
