@@ -1,7 +1,7 @@
 import React from 'react';
 import Lottie from 'react-lottie';
 
-import * as animationData from '../Animations/anim1.json';
+import * as animationData from '../Animations/loading.json';
 import 'bootstrap/dist/css/bootstrap.css';
 import Home from './Home';
 

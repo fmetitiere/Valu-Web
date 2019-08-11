@@ -1,5 +1,6 @@
 import React from 'react';
 import NavBar from './_modules/navBar';
+import Test from './Test';
 
 import Background from '../Layout/Background'
 

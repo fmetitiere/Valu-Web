@@ -26,11 +26,26 @@ function DefaultBackground({children}){
     )
 }
 
-function AnimBackground({children}){
+class AnimBackground extends React.Component{
 	
-    return(
-        <BaseBackground><Lottie options={defaultOptions} height={300} width={"100%"} />{children}</BaseBackground>
-    )
+	componentWillMount(){
+		this.setState({},_=>this.setSpeed())
+		this.setState({},_=>this.setSegments())
+	  }
+	  setSpeed(){
+		this.setState({speed: 0})
+	  }
+	  setSegments(){
+		this.setState({segments: 0})
+	  }
+
+	  
+
+	render(){
+		return(
+			<BaseBackground><Lottie  speed={0.2} options={defaultOptions} height={300} width={"100%"} />{this.props.children}</BaseBackground>
+		)
+	}
 }
 
 function Background({anim, children}){
