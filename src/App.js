@@ -1,4 +1,7 @@
 import React from 'react';
+import {ThemeProvider} from 'styled-components';
+import theme from './Layout/DefaultTheme';
+
 import {
   BrowserView,
   MobileView,
@@ -10,9 +13,11 @@ import Loading from './_components/Loading';
 function App() {
   return (
     <>
-    <MobileView>
-    <Loading/>
-    </MobileView>
+    <ThemeProvider theme={theme}>
+      <MobileView>
+          <Loading/>
+      </MobileView>
+    </ThemeProvider>
     </>
   );
 }
