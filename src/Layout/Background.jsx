@@ -16,7 +16,10 @@ const defaultOptions = {
 
 
 const BaseBackground = Styled.div`
-    height: 100vh;
+    z-index:0;
+`;
+
+const ImageBackground = Styled.div`
     z-index:0;
 `;
 

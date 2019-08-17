@@ -1,15 +1,23 @@
 import React from 'react';
-import NavBar from './_modules/navBar';
-import Test from './Test';
 
-import Background from '../Layout/Background'
+import {Layout, Header, Main, Footer, Left, Center, Right, Background} from '../Layout/';
 
 export default function Home(){
     return(
         <>
-            <Background anim>
-                <NavBar transparent/>
-            </Background>  
+        <Layout>
+            <Header>
+                <Left>Back</Left>
+                <Center>Name</Center>
+                <Right>Menu</Right>
+            </Header>
+            <Main>
+                <Background anim></Background>
+            </Main>
+            <Footer>
+                
+            </Footer>
+        </Layout>
         </>
     )
 }
