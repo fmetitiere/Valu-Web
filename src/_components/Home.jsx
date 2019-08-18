@@ -13,8 +13,11 @@ export default function Home(){
             </Header>
             <Main>
                 <Background anim></Background>
+                <Background anim></Background>
+                <Background anim></Background>
+
             </Main>
-            <Footer>
+            <Footer Icon1="Icono1" Icon2="Icono1">
                 
             </Footer>
         </Layout>

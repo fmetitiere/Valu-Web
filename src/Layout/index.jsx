@@ -1,3 +1,4 @@
+import React from "react";
 import Background from '../Layout/Background';
 import Styled from 'styled-components';
 
@@ -16,12 +17,14 @@ export const Header = Styled.header`
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "left center right";
-    background-color: black;
+    background: ${props => props.theme.PrimaryColor};
+    box-shadow: box-shadow: 0 4px 5px #bdbdbd;
     backgriund-size: cover;
     position: fixed;
     width: 100%;
     height:4rem;
     padding: 1rem;
+    z-index: 199;
 `;
 
 export const Left = Styled.div`
@@ -44,9 +47,37 @@ export const Main = Styled.div`
     grid-area: content;
 `;
 
-export const Footer = Styled.footer`
-    grid-area: footer;
+const BaseFooter = Styled.footer`
+    grid-area: header;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    background: ${props => props.theme.PrimaryColor};
+    backgriund-size: cover;
+    position: fixed;
+    width: 100%;
+    height:4rem;
+    padding: 1rem;
+    bottom:0;
 `;
+
+export function Footer({Icon1, Icon2, Icon3, Icon4}){
+    return (
+        <BaseFooter>
+            <div>
+                {Icon1}
+            </div>
+            <div>
+                {Icon2}
+            </div>
+            <div>
+                {Icon3}
+            </div>
+            <div>
+                {Icon4}
+            </div>
+        </BaseFooter>
+    )
+}
 
 export{
     Background,
