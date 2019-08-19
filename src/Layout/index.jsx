@@ -3,8 +3,12 @@ import { Link } from "react-router-dom";
 import Banner from './Banner';
 import Styled from 'styled-components';
 
+function changePadding({noPadding}){
+    return noPadding ? "0" : "1rem";
+}
+
 export const MainContainer = Styled.div`
-    padding: 1rem;
+    padding: ${changePadding};
     width:100%;
 `;
 

@@ -8,14 +8,15 @@ import CardActionArea from '@material-ui/core/CardActionArea';
 import CardActions from '@material-ui/core/CardActions';
 import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
-import BackgroundImage from '../_components/images/banner.png';
+
 
 const CarouselStyled = Styled(Carousel)`
     .MuiPaper-elevation1-5 {
         box-shadow: none !important;
     }
     .carousel .slide {
-        background: transparent ;
+        background: transparent;
+        padding: .5rem;
     }
 `;
 
@@ -42,7 +43,8 @@ export default function Slider({ image1, title1, image2, title2 }) {
 			showArrows={false}
 			showThumbs={false}
 			infiniteLoop
-			emulateTouch
+            emulateTouch
+            centerMode 
 		>
 			<div>
 				<CardStyled>

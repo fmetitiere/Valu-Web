@@ -17,7 +17,7 @@ export default function Home(){
                 </Header>
                 <Banner anim></Banner>
                 <Main>
-                    <MainContainer>
+                    <MainContainer noPadding>
                         <Slider 
                             image1={BackgroundImage}
                             title1="Imagen 1"
