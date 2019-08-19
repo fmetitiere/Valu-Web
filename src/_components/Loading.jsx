@@ -1,9 +1,15 @@
 import React from 'react';
+import Routes from "./Routes"
+import { Router } from "react-router-dom"
 import Lottie from 'react-lottie';
+import createHistory from 'history/createBrowserHistory'
 
 import * as animationData from '../Animations/loading.json';
 import 'bootstrap/dist/css/bootstrap.css';
-import Home from './Home';
+
+
+
+const history = createHistory()
 
 const defaultOptions = {
 	loop: true,
@@ -31,6 +37,11 @@ export default class Loading extends React.Component {
 	}
 
 	render() {
-		return <div>{!this.state.done ? <Lottie options={defaultOptions} height={"100%"} width={"100%"} /> : <Home />}</div>;
+		return <div>{!this.state.done ? 
+		<Lottie options={defaultOptions} height={"100%"} width={"100%"} /> :
+		<Router history={history}>
+			<Routes />
+	  	</Router>}
+		</div>;
 	}
 }
