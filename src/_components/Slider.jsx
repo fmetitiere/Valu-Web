@@ -6,7 +6,7 @@ import Cards from '../_components/Cards';
 
 export default function Slider(){
     return(
-        <Carousel showArrows={false} showThumbs={false} infiniteLoop emulateTouch>
+        <Carousel showStatus={false} showIndicators={false} showArrows={false} showThumbs={false} infiniteLoop emulateTouch>
             <div>
                 <Cards></Cards>
             </div>

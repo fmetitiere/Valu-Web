@@ -9,9 +9,16 @@ import Typography from '@material-ui/core/Typography';
 
 import Styled from 'styled-components';
 
+import BackgroundImage from '../_components/images/banner.png'
+
 const CardStyled = Styled(Card)`
     width: 100vw;
     padding: 1rem;
+    background: white;
+    border-radius: 0;
+    &.MuiPaper-rounded-3 {
+        border-radius: 0px !important;
+    }
 `;
 
 export default function MediaCard() {
@@ -21,7 +28,7 @@ export default function MediaCard() {
     <CardStyled >
       <CardActionArea>
         <CardMedia
-          image="/static/images/cards/contemplative-reptile.jpg"
+          image={BackgroundImage}
           title="Contemplative Reptile"
         />
         <CardContent>

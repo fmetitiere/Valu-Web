@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 import Lottie from 'react-lottie';
 
 import * as animationData from '../Animations/backgroundAnim.json';
-import BackgroundImage from '../images/banner.png'
+import BackgroundImage from '../_components/images/banner.png';
 
 const defaultOptions = {
 	loop: true,
