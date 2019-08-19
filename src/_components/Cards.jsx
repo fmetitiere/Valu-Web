@@ -11,6 +11,7 @@ import Styled from 'styled-components';
 
 const CardStyled = Styled(Card)`
     width: 100vw;
+    padding: 1rem;
 `;
 
 export default function MediaCard() {

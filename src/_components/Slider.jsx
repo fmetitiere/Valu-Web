@@ -11,11 +11,10 @@ export default function Slider(){
                 <Cards></Cards>
             </div>
             <div>
-            <Cards></Cards>
+                <Cards></Cards>
             </div>
             <div>
-                <img src="assets/3.jpeg" />
-                <p className="legend">Legend 3</p>
+                <Cards></Cards>
             </div>
         </Carousel>
     )
