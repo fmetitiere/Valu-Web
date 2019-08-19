@@ -2,6 +2,10 @@ import React from "react";
 import Banner from './Banner';
 import Styled from 'styled-components';
 
+export const MainContainer = Styled.div`
+    padding: 1rem;
+`;
+
 export const Layout = Styled.div`
     height: 100vh;
     width: 100%;
@@ -47,6 +51,7 @@ export const Right = Styled.div`
 export const Main = Styled.div`
     grid-area: content;
     width: 100vw;
+    background-color: rgba(38, 59, 164, 0.1);
 `;
 
 const BaseFooter = Styled.footer`
