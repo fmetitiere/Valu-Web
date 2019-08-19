@@ -1,5 +1,6 @@
 import React from 'react';
 
+import Slider from '../_components/Slider';
 import {Layout, Header, Main, Footer, Left, Center, Right, Banner} from '../Layout/';
 
 export default function Home(){
@@ -13,7 +14,7 @@ export default function Home(){
             </Header>
             <Main>
                 <Banner anim></Banner>
-
+                <Slider></Slider>
             </Main>
             <Footer Icon1="Icono1" Icon2="Icono1">
                  

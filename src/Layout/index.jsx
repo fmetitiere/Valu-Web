@@ -10,6 +10,7 @@ export const Layout = Styled.div`
     display: grid;
     grid-template-rows: 4rem auto 4rem;
     grid-template-areas: "header" "content" "footer";
+    width: 100vw;
 `;
 
 export const Header = Styled.header`
@@ -18,13 +19,13 @@ export const Header = Styled.header`
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "left center right";
     background: ${props => props.theme.PrimaryColor};
-    box-shadow: box-shadow: 0 4px 5px #bdbdbd;
-    backgriund-size: cover;
     position: fixed;
     width: 100%;
     height:4rem;
     padding: 1rem;
     z-index: 199;
+    box-shadow: ${props => props.theme.Shadows};
+    width: 100vw;
 `;
 
 export const Left = Styled.div`
@@ -45,6 +46,7 @@ export const Right = Styled.div`
 
 export const Main = Styled.div`
     grid-area: content;
+    width: 100vw;
 `;
 
 const BaseFooter = Styled.footer`
@@ -58,6 +60,7 @@ const BaseFooter = Styled.footer`
     height:4rem;
     padding: 1rem;
     bottom:0;
+    width: 100vw;
 `;
 
 export function Footer({Icon1, Icon2, Icon3, Icon4}){

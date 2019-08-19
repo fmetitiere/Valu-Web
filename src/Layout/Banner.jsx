@@ -24,7 +24,7 @@ const ImageBackground = Styled.div`
 		z-index:0;
 		background-image: url(${BackgroundImage});
     background-position: 0 -5rem;
-    background-repeat: no-repeat;
+		background-repeat: no-repeat;
 `;
 
 function DefaultBackground({children}){
