@@ -9,7 +9,7 @@ export default function Home(){
             <Header>
                 <Center><Avatar></Avatar></Center>
             </Header>
-            <Banner anim></Banner>
+            <Banner></Banner>
             <Main>
                
             </Main>

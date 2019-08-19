@@ -1,7 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 import { TransitionGroup, CSSTransition } from "react-transition-group";
-import styled, { keyframes } from "styled-components";
+import styled from "styled-components";
 import Home from './Home';
 import About from './About';
 
