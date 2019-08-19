@@ -5,9 +5,14 @@ import {MainContainer, Layout, Header, Main, Footer, Left, Center, Right, Banner
 import BackgroundImage from '../_components/images/banner.png';
 import Avatar from '../_components/Avatar'
 
+import {HomePageElm} from '../_components/PageTransition';
+
+
+
 export default function Home(){
     return(
         <>
+        <HomePageElm>
         <Layout>
             <Header>
                 <Center><Avatar></Avatar></Center>
@@ -27,6 +32,7 @@ export default function Home(){
                  
             </Footer>
         </Layout>
+        </HomePageElm>
         </>
     )
 }

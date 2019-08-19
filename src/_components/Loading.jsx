@@ -5,8 +5,6 @@ import Lottie from 'react-lottie';
 import createHistory from 'history/createBrowserHistory'
 
 import * as animationData from '../Animations/loading.json';
-import 'bootstrap/dist/css/bootstrap.css';
-
 
 
 const history = createHistory()
@@ -40,7 +38,7 @@ export default class Loading extends React.Component {
 		return <div>{!this.state.done ? 
 		<Lottie options={defaultOptions} height={"100%"} width={"100%"} /> :
 		<Router history={history}>
-			<Routes />
+		<Routes />
 	  	</Router>}
 		</div>;
 	}

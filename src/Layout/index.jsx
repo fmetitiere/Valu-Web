@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Banner from './Banner';
 import Styled from 'styled-components';
 
@@ -76,7 +77,8 @@ export function Footer({Icon1, Icon2, Icon3, Icon4}){
     return (
         <BaseFooter>
             <div>
-                {Icon1}
+               
+            <Link to="/about">Go  →</Link>
             </div>
             <div>
                 {Icon2}
