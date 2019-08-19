@@ -48,7 +48,7 @@ export const Main = Styled.div`
 `;
 
 const BaseFooter = Styled.footer`
-    grid-area: header;
+    grid-area: header; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     background: ${props => props.theme.PrimaryColor};

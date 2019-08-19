@@ -18,7 +18,7 @@ export default function Home(){
 
             </Main>
             <Footer Icon1="Icono1" Icon2="Icono1">
-                
+                 
             </Footer>
         </Layout>
         </>
