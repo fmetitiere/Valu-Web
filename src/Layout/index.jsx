@@ -26,7 +26,6 @@ export const Header = Styled.header`
     position: fixed;
     width: 100%;
     height:4rem;
-    padding: 1rem;
     z-index: 199;
     box-shadow: ${props => props.theme.Shadows};
     width: 100vw;

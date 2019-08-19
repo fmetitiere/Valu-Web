@@ -2,18 +2,15 @@ import React from 'react';
 
 import Slider from '../_components/Slider';
 import {MainContainer, Layout, Header, Main, Footer, Left, Center, Right, Banner} from '../Layout/';
-
 import BackgroundImage from '../_components/images/banner.png';
-
+import Avatar from '../_components/Avatar'
 
 export default function Home(){
     return(
         <>
         <Layout>
             <Header>
-                <Left>Back</Left>
-                <Center>Name</Center>
-                <Right>Menu</Right>
+                <Center><Avatar></Avatar></Center>
             </Header>
             <Main>
                 <Banner anim></Banner>

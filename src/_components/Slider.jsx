@@ -29,8 +29,8 @@ const CardStyled = Styled(Card)`
     .MuiCard-root-1 {
         width: 100% !important;
     }
-    .MuiCardMedia-root-35 {
-        height: 10rem;
+    button div{
+        height: 10rem !important;
     }
 `;
 

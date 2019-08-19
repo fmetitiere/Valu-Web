@@ -23,7 +23,7 @@ const BaseBackground = Styled.div`
 const ImageBackground = Styled.div`
 		z-index:0;
 		background-image: url(${BackgroundImage});
-    background-position: 0 -5rem;
+    background-position: 0 -7rem;
 		background-repeat: no-repeat;
 `;
 
@@ -50,7 +50,7 @@ class AnimBackground extends React.Component{
 
 	render(){
 		return(
-			<ImageBackground><Lottie  speed={0.2} options={defaultOptions} height={250} width={"100%"} />{this.props.children}</ImageBackground>
+			<ImageBackground><Lottie  speed={0.2} options={defaultOptions} height={200} width={"100%"} />{this.props.children}</ImageBackground>
 		)
 	}
 }
