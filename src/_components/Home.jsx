@@ -1,6 +1,6 @@
 import React from 'react';
 
-import {Layout, Header, Main, Footer, Left, Center, Right, Background} from '../Layout/';
+import {Layout, Header, Main, Footer, Left, Center, Right, Banner} from '../Layout/';
 
 export default function Home(){
     return(
@@ -12,9 +12,7 @@ export default function Home(){
                 <Right>Menu</Right>
             </Header>
             <Main>
-                <Background anim></Background>
-                <Background anim></Background>
-                <Background anim></Background>
+                <Banner anim></Banner>
 
             </Main>
             <Footer Icon1="Icono1" Icon2="Icono1">

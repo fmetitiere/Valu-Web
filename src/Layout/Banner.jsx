@@ -1,8 +1,9 @@
 import React from 'react';
 import Styled from 'styled-components';
-
 import Lottie from 'react-lottie';
+
 import * as animationData from '../Animations/backgroundAnim.json';
+import BackgroundImage from '../images/banner.png'
 
 const defaultOptions = {
 	loop: true,
@@ -16,11 +17,14 @@ const defaultOptions = {
 
 
 const BaseBackground = Styled.div`
-    z-index:0;
+		z-index:0;
 `;
 
 const ImageBackground = Styled.div`
-    z-index:0;
+		z-index:0;
+		background-image: url(${BackgroundImage});
+    background-position: 0 -5rem;
+    background-repeat: no-repeat;
 `;
 
 function DefaultBackground({children}){
@@ -46,12 +50,12 @@ class AnimBackground extends React.Component{
 
 	render(){
 		return(
-			<BaseBackground><Lottie  speed={0.2} options={defaultOptions} height={300} width={"100%"} />{this.props.children}</BaseBackground>
+			<ImageBackground><Lottie  speed={0.2} options={defaultOptions} height={250} width={"100%"} />{this.props.children}</ImageBackground>
 		)
 	}
 }
 
-function Background({anim, children}){
+function Banner({anim, children}){
 
 	const BackgroundComponent = anim ? AnimBackground : DefaultBackground;
 
@@ -60,5 +64,5 @@ function Background({anim, children}){
 	)
 }
 
-export default Background;
+export default Banner;
 

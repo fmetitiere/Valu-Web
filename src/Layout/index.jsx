@@ -1,5 +1,5 @@
 import React from "react";
-import Background from '../Layout/Background';
+import Banner from './Banner';
 import Styled from 'styled-components';
 
 export const Layout = Styled.div`
@@ -80,5 +80,5 @@ export function Footer({Icon1, Icon2, Icon3, Icon4}){
 }
 
 export{
-    Background,
+    Banner,
 }
