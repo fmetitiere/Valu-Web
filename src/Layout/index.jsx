@@ -9,13 +9,13 @@ export const MainContainer = Styled.div`
 
 export const Layout = Styled.div`
     height: 100vh;
-    width: 100%;
     padding: 0;
     margin: 0;
     display: grid;
     grid-template-rows: 4rem auto 4rem;
     grid-template-areas: "header" "content" "footer";
     width: 100vw;
+    background-color: rgba(38, 59, 164, 0.1);
 `;
 
 export const Header = Styled.header`
@@ -50,7 +50,6 @@ export const Right = Styled.div`
 export const Main = Styled.div`
     grid-area: content;
     width: 100vw;
-    background-color: rgba(38, 59, 164, 0.1);
     display:flex;
     align-items:center;
 `;
@@ -59,14 +58,18 @@ const BaseFooter = Styled.footer`
     grid-area: header; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    background: ${props => props.theme.PrimaryColor};
+    background: white;
+    box-shadow: ${props => props.theme.Shadows};
     backgriund-size: cover;
     position: fixed;
-    width: 100%;
-    height:4rem;
+    left:0;
+    right:0;
+    margin: 0 auto;
+    height:3.5rem;
     padding: 1rem;
     bottom:0;
-    width: 100vw;
+    width: 95%;
+    border-radius: 1rem 1rem 0 0;
 `;
 
 export function Footer({Icon1, Icon2, Icon3, Icon4}){
