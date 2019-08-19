@@ -12,8 +12,8 @@ export default function Home(){
             <Header>
                 <Center><Avatar></Avatar></Center>
             </Header>
+            <Banner anim></Banner>
             <Main>
-                <Banner anim></Banner>
                 <MainContainer>
                     <Slider 
                         image1={BackgroundImage}

@@ -4,6 +4,7 @@ import Styled from 'styled-components';
 
 export const MainContainer = Styled.div`
     padding: 1rem;
+    width:100%;
 `;
 
 export const Layout = Styled.div`
@@ -22,13 +23,12 @@ export const Header = Styled.header`
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "left center right";
-    background: ${props => props.theme.PrimaryColor};
+    background: transparent;
     position: fixed;
     width: 100%;
     height:4rem;
-    z-index: 199;
-    box-shadow: ${props => props.theme.Shadows};
     width: 100vw;
+    z-index: 1999;
 `;
 
 export const Left = Styled.div`
@@ -51,6 +51,8 @@ export const Main = Styled.div`
     grid-area: content;
     width: 100vw;
     background-color: rgba(38, 59, 164, 0.1);
+    display:flex;
+    align-items:center;
 `;
 
 const BaseFooter = Styled.footer`
