@@ -11,12 +11,12 @@ export default function Home(){
     return(
         <>
         <HomePageElm>
-            <Layout>
+            <Layout overflowHide>
                 <Header transparent>
                     <Center><Avatar/></Center>
                 </Header>
                 <Banner anim></Banner>
-                <Main overflowHide>
+                <Main>
                     <MainContainer noPadding>
                         <Slider 
                             image1={BackgroundImage}

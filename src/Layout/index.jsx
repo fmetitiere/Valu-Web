@@ -13,7 +13,12 @@ export const MainContainer = Styled.div`
     width:100%;
 `;
 
+function OverflowHide({ overflowHide }) {
+	return overflowHide ? 'hidden' : 'unset';
+}
+
 export const Layout = Styled.div`
+    overflow: ${OverflowHide};
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -57,16 +62,11 @@ export const Right = Styled.div`
     align-self: center;
 `;
 
-function OverflowHide({ overflowHide }) {
-	return overflowHide ? 'hidden' : 'unset';
-}
-
 export const Main = Styled.div`
     grid-area: content;
     width: 100vw;
     display:flex;
     align-items:center;
-    overflow: ${OverflowHide};
 `;
 
 export { Banner, BottomMenu };
