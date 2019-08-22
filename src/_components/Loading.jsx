@@ -9,9 +9,6 @@ import createHistory from 'history/createBrowserHistory';
 import * as animationData from '../Animations/loading.json';
 
 const LottieWrapper = styled.div`
-	position:absolute;
-	top:0;
-	bottom:0;
 	background: ${props => props.theme.PrimaryColor};
 `;
 
