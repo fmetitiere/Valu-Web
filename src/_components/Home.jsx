@@ -13,7 +13,7 @@ export default function Home(){
         <HomePageElm>
             <Layout>
                 <Header>
-                    <Center><Avatar></Avatar></Center>
+                    <Center><Avatar/></Center>
                 </Header>
                 <Banner anim></Banner>
                 <Main>
