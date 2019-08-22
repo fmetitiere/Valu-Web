@@ -10,6 +10,8 @@ import * as animationData from '../Animations/loading.json';
 
 const LottieWrapper = styled.div`
 	background: ${props => props.theme.PrimaryColor};
+	width:100vw;
+	height:100vh;
 `;
 
 const history = createHistory();

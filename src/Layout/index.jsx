@@ -8,17 +8,17 @@ function changePadding({ noPadding }) {
 	return noPadding ? '0' : '1rem';
 }
 
+function OverflowHide({ overflowHide }) {
+	return overflowHide ? 'hidden' : 'unset';
+}
+
 export const MainContainer = Styled.div`
     padding: ${changePadding};
     width:100%;
 `;
 
-function OverflowHide({ overflowHide }) {
-	return overflowHide ? 'hidden' : 'unset';
-}
-
 export const Layout = Styled.div`
-    overflow: ${OverflowHide};
+    
     height: 100vh;
     padding: 0;
     margin: 0;
@@ -67,6 +67,7 @@ export const Main = Styled.div`
     width: 100vw;
     display:flex;
     align-items:center;
+    overflow: ${OverflowHide};
 `;
 
 export { Banner, BottomMenu };
