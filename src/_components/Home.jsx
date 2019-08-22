@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Slider from '../_components/Slider';
-import {MainContainer, Layout, Header, Main, Footer, Left, Center, Right, Banner} from '../Layout/';
+import {MainContainer, Layout, Header, Main, Center, Banner, BottomMenu} from '../Layout/';
 import BackgroundImage from '../_components/images/banner.png';
 import Avatar from '../_components/Avatar'
 
@@ -12,11 +12,11 @@ export default function Home(){
         <>
         <HomePageElm>
             <Layout>
-                <Header>
+                <Header transparent>
                     <Center><Avatar/></Center>
                 </Header>
                 <Banner anim></Banner>
-                <Main>
+                <Main overflowHide>
                     <MainContainer noPadding>
                         <Slider 
                             image1={BackgroundImage}
@@ -26,9 +26,9 @@ export default function Home(){
                             title2="Imagen 2"/>
                     </MainContainer>    
                 </Main>
-                <Footer Icon1="Icono1" Icon2="Icono1">
+                <BottomMenu Icon1="Icono1" Icon2="Icono1">
                     
-                </Footer>
+                </BottomMenu>
             </Layout>
         </HomePageElm>
         </>

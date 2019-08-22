@@ -1,5 +1,5 @@
 import React from 'react';
-import {MainContainer, Layout, Header, Main, Footer, Left, Center, Right, Banner} from '../Layout';
+import {Layout, Header, Main, Left, Center, Right, Banner, BottomMenu} from '../Layout';
 import Avatar from './Avatar'
 
 export default function Home(){
@@ -13,9 +13,9 @@ export default function Home(){
             <Main>
                
             </Main>
-            <Footer Icon1="Icono1" Icon2="Icono1">
+            <BottomMenu Icon1="Icono1" Icon2="Icono1">
                  
-            </Footer>
+            </BottomMenu>
         </Layout>
         </>
     )

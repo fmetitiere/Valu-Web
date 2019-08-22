@@ -1,13 +1,21 @@
 import React from 'react';
-import Routes from "./Routes"
-import { Router } from "react-router-dom"
+import Routes from './Routes';
+import { Router } from 'react-router-dom';
 import Lottie from 'react-lottie';
-import createHistory from 'history/createBrowserHistory'
+import styled from 'styled-components';
+
+import createHistory from 'history/createBrowserHistory';
 
 import * as animationData from '../Animations/loading.json';
 
+const LottieWrapper = styled.div`
+	position:absolute;
+	top:0;
+	bottom:0;
+	background: ${props => props.theme.PrimaryColor};
+`;
 
-const history = createHistory()
+const history = createHistory();
 
 const defaultOptions = {
 	loop: true,
@@ -35,11 +43,18 @@ export default class Loading extends React.Component {
 	}
 
 	render() {
-		return <div>{!this.state.done ? 
-		<Lottie options={defaultOptions} height={"100%"} width={"100%"} /> :
-		<Router history={history}>
-		<Routes />
-	  	</Router>}
-		</div>;
+		return (
+			<div>
+				{!this.state.done ? (
+					<LottieWrapper>
+						<Lottie options={defaultOptions} height={'100%'} width={'100%'} />
+					</LottieWrapper>
+				) : (
+					<Router history={history}>
+						<Routes />
+					</Router>
+				)}
+			</div>
+		);
 	}
 }

@@ -23,7 +23,7 @@ const BaseBackground = Styled.div`
 const ImageBackground = Styled.div`
 		z-index:0;
 		background-image: url(${BackgroundImage});
-    background-position: 0 -8rem;
+    	background-position: 0 -8rem;
 		background-repeat: no-repeat;
 		position: absolute;
 		top:0;

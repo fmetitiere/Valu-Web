@@ -1,10 +1,11 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Banner from './Banner';
 import Styled from 'styled-components';
 
-function changePadding({noPadding}){
-    return noPadding ? "0" : "1rem";
+import Banner from './Banner';
+import BottomMenu from '../_components/BottomMenu';
+
+
+function changePadding({ noPadding }) {
+	return noPadding ? '0' : '1rem';
 }
 
 export const MainContainer = Styled.div`
@@ -23,12 +24,16 @@ export const Layout = Styled.div`
     background-color: rgba(38, 59, 164, 0.1);
 `;
 
+function changeBackgroundHeader({ transparent, ...props }) {
+	return transparent ? 'transparent' : props.theme.NavBarMenuColor;
+}
+
 export const Header = Styled.header`
     grid-area: header;
     display: grid;
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-areas: "left center right";
-    background: transparent;
+    background: ${changeBackgroundHeader};
     position: fixed;
     width: 100%;
     height:4rem;
@@ -52,51 +57,16 @@ export const Right = Styled.div`
     align-self: center;
 `;
 
+function OverflowHide({ overflowHide }) {
+	return overflowHide ? 'hidden' : 'unset';
+}
+
 export const Main = Styled.div`
     grid-area: content;
     width: 100vw;
     display:flex;
     align-items:center;
+    overflow: ${OverflowHide};
 `;
 
-const BaseFooter = Styled.footer`
-    grid-area: header; 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    background: white;
-    box-shadow: ${props => props.theme.Shadows};
-    backgriund-size: cover;
-    position: fixed;
-    left:0;
-    right:0;
-    margin: 0 auto;
-    height:3.5rem;
-    padding: 1rem;
-    bottom:0;
-    width: 95%;
-    border-radius: 1rem 1rem 0 0;
-`;
-
-export function Footer({Icon1, Icon2, Icon3, Icon4}){
-    return (
-        <BaseFooter>
-            <div>
-               
-            <Link to="/about">Go  →</Link>
-            </div>
-            <div>
-                {Icon2}
-            </div>
-            <div>
-                {Icon3}
-            </div>
-            <div>
-                {Icon4}
-            </div>
-        </BaseFooter>
-    )
-}
-
-export{
-    Banner,
-}
+export { Banner, BottomMenu };
