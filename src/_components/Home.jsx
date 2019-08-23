@@ -5,17 +5,16 @@ import { MainContainer, Layout, Header, Main, Center, Banner, BottomMenu } from 
 import BackgroundImage from '../_components/images/banner.png';
 import Avatar from '../_components/Avatar';
 
-
 export default function Home() {
 	return (
-		<Layout overflowHide>
+		<Layout>
 			<Header transparent>
 				<Center>
 					<Avatar />
 				</Center>
-			</Header>
-			<Main>
 				<Banner anim />
+			</Header>
+			<Main overflowHide>
 				<MainContainer noPadding>
 					<Slider image1={BackgroundImage} title1="Imagen 1" image2={BackgroundImage} title2="Imagen 2" />
 				</MainContainer>

@@ -38,7 +38,7 @@ export default class Loading extends React.Component {
 			fetch('https://jsonplaceholder.typicode.com/posts')
 				.then((response) => response.json())
 				.then((json) => this.setState({ done: true }));
-		}, 1500);
+		}, 0);
 	}
 
 	render() {
