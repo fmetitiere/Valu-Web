@@ -53,7 +53,7 @@ class AnimBackground extends React.Component{
 
 	render(){
 		return(
-			<ImageBackground><Lottie  speed={0.2} options={defaultOptions} height={180} width={"100%"} />{this.props.children}</ImageBackground>
+			<ImageBackground><Lottie isClickToPauseDisabled={true} speed={0.2} options={defaultOptions} height={180} width={"100%"} />{this.props.children}</ImageBackground>
 		)
 	}
 }

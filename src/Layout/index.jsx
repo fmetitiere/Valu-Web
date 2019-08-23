@@ -18,7 +18,7 @@ export const MainContainer = Styled.div`
 `;
 
 export const Layout = Styled.div`
-    
+    overflow: ${OverflowHide};
     height: 100vh;
     padding: 0;
     margin: 0;

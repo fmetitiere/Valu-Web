@@ -38,7 +38,7 @@ export default class Loading extends React.Component {
 			fetch('https://jsonplaceholder.typicode.com/posts')
 				.then((response) => response.json())
 				.then((json) => this.setState({ done: true }));
-		}, 0);
+		}, 1500);
 	}
 
 	render() {
@@ -46,7 +46,7 @@ export default class Loading extends React.Component {
 			<div>
 				{!this.state.done ? (
 					<LottieWrapper>
-						<Lottie options={defaultOptions} height={'100%'} width={'100%'} />
+						<Lottie isClickToPauseDisabled={true} options={defaultOptions} />
 					</LottieWrapper>
 				) : (
 					<Router history={history}>

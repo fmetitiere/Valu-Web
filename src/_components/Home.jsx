@@ -7,7 +7,7 @@ import Avatar from '../_components/Avatar';
 
 export default function Home() {
 	return (
-		<Layout>
+		<Layout overflowHide>
 			<Header transparent>
 				<Center>
 					<Avatar />

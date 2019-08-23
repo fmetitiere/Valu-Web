@@ -1,33 +1,58 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { Switch, Route, withRouter } from "react-router-dom";
+import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Home from './Home';
 import About from './About';
 
-const PageContainer = styled.div`
-	position: relative;
-	width: 100vw;
-	height: 100vh;
-	background-color: transparent;
+const Wrapper = styled.div`
+    .fade-enter {
+        opacity: 0.01;
+    }
+    .fade-enter.fade-enter-active {
+        opacity: 1;
+        transition: opacity 300ms ease-in;
+    }
+    .fade-exit {
+        opacity: 1;
+    }
+      
+    .fade-exit.fade-exit-active {
+        opacity: 0.01;
+        transition: opacity 300ms ease-in;
+	}
+	div.transition-group {
+		position: relative;
+   }
+   section.route-section {
+	 position: absolute;
+	 width: 100%;
+	 top: 0;
+	 left: 0;
+   }
 `;
 
-const Routes = () => {
+function Container({ location }) {
 	return (
-		<div>
-			<Router>
-				<Route
-					render={({ location }) => {
-						return (
-							<Switch location={location}>
-								<Route exact path="/about" component={About} />
-								<Route exact path="/" component={Home} />
-							</Switch>
-						);
-					}}
-				/>
-			</Router>
-		</div>
-	);
-};
+	  <Wrapper>
+		<TransitionGroup className="transition-group">
+		  <CSSTransition
+			key={location.key}
+			timeout={{ enter: 300, exit: 300 }}
+			classNames="fade"
+		  >
+			<section className="route-section">
+			  <Switch location={location}>
+				<Route exact path="/" component={Home} />
+				<Route path="/about" component={About} />
 
-export default Routes;
+			  </Switch>
+			</section>
+		  </CSSTransition>
+		</TransitionGroup>
+	  </Wrapper>
+	);
+  }
+  
+
+  export default withRouter(Container);
