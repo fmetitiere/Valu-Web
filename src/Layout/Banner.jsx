@@ -18,7 +18,7 @@ const defaultOptions = {
 
 const AvatarWrapper = Styled.div`
 	position: absolute;
-	left:1rem;
+	left:10px;
 	top: -2.5rem;
 	background:white;
 	border-radius: .5rem;
