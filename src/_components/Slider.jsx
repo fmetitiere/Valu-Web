@@ -10,6 +10,7 @@ import CardMedia from '@material-ui/core/CardMedia';
 import Button from '@material-ui/core/Button';
 
 
+
 const CarouselStyled = Styled(Carousel)`
     .MuiPaper-elevation1-5 {
         box-shadow: none !important;

@@ -7,16 +7,13 @@ import Avatar from '../_components/Avatar';
 
 export default function Home() {
 	return (
-		<Layout overflowHide>
+		<Layout>
 			<Header transparent>
-				<Center>
-					<Avatar />
-				</Center>
-				<Banner anim />
+				<Banner social/>
 			</Header>
-			<Main overflowHide>
-				<MainContainer noPadding>
-					<Slider image1={BackgroundImage} title1="Imagen 1" image2={BackgroundImage} title2="Imagen 2" />
+			<Main >
+				<MainContainer >
+					
 				</MainContainer>
 			</Main>
 			<BottomMenu Icon1="Icono1" Icon2="Icono1" />

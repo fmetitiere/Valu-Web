@@ -30,7 +30,7 @@ export const Layout = Styled.div`
 `;
 
 function changeBackgroundHeader({ transparent, ...props }) {
-	return transparent ? 'transparent' : props.theme.NavBarMenuColor;
+	return transparent ? 'transparent' : props.theme.PrimaryColor;
 }
 
 export const Header = Styled.header`
