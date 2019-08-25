@@ -23,11 +23,13 @@ const AvatarWrapper = Styled.div`
 	background:white;
 	border-radius: .5rem;
 	padding: .2rem;
-	.MuiAvatar-root-98 {
-		width: 70px !important;
-		height: 70px !important;
-		border-radius: .5rem !important;
-	}
+	div{
+		div {
+			width: 70px !important;
+			height: 70px !important;
+			border-radius: .5rem !important;
+		}
+	} 
 `;
 
 const SocialBackgroundWrapper = Styled.div`
