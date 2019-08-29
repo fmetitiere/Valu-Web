@@ -79,9 +79,40 @@ const ImageBackground = Styled.div`
 		width: 100%;
 `;
 
+
+class SocialAnimBackground extends React.Component {
+	componentWillMount() {
+		this.setState({}, (_) => this.setSpeed());
+		this.setState({}, (_) => this.setSegments());
+	}
+	setSpeed() {
+		this.setState({ speed: 0 });
+	}
+	setSegments() {
+		this.setState({ segments: 0 });
+	}
+
+	render() {
+		return (
+			<>
+				<Lottie
+					isClickToPauseDisabled={true}
+					speed={0.2}
+					options={defaultOptions}
+					height={180}
+					width={'100%'}
+				/>
+				{this.props.children}
+			</>
+		);
+	}
+}
+
+
 function SocialBackground({ children }) {
 	return (
 		<SocialBackgroundWrapper>
+			<SocialAnimBackground>
 			<SocialContent>
 			<AvatarWrapper>
 				<Avatar />
@@ -99,6 +130,7 @@ function SocialBackground({ children }) {
 					<p>About</p>
 				</div>
 			</SocialContent>
+			</SocialAnimBackground>
 		</SocialBackgroundWrapper>
 	);
 }
