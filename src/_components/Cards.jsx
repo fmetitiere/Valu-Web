@@ -8,7 +8,7 @@ import Button from '@material-ui/core/Button';
 
 import Styled from 'styled-components';
 
-import BackgroundImage from '../_components/images/banner.png'
+import BackgroundImage from '../_components/images/banner.jpg'
 
 const CardStyled = Styled(Card)`
     width: 100%;

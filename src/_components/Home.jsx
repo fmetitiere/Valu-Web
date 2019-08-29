@@ -1,9 +1,8 @@
 import React from 'react';
 
-import Slider from '../_components/Slider';
+
 import { MainContainer, Layout, Header, Main, Center, Banner, BottomMenu } from '../Layout/';
-import BackgroundImage from '../_components/images/banner.png';
-import Avatar from '../_components/Avatar';
+
 
 export default function Home() {
 	return (

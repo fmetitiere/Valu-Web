@@ -3,7 +3,7 @@ import Styled from 'styled-components';
 import Lottie from 'react-lottie';
 
 import * as animationData from '../Animations/backgroundAnim.json';
-import BackgroundImage from '../_components/images/banner.png';
+import BackgroundImage from '../_components/images/banner.jpg';
 import Avatar from '../_components/Avatar';
 
 const defaultOptions = {

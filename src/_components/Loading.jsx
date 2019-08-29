@@ -5,14 +5,15 @@ import Lottie from 'react-lottie';
 import styled from 'styled-components';
 
 import createHistory from 'history/createBrowserHistory';
-
-import * as animationData from '../Animations/loading.json';
+import * as animationData from '../Animations/backgroundAnim.json';
+import backgroundImage from '../_components/images/backgroundLoading.jpg'
 
 const LottieWrapper = styled.div`
-	background: ${props => props.theme.PrimaryColor};
+	background: url(${backgroundImage});
 	width:100vw;
 	height:100vh;
 `;
+
 
 const history = createHistory();
 
