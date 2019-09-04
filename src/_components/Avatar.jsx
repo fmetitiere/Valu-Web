@@ -10,10 +10,21 @@ const AvatarStyled = styled(Avatar)`
     z-index:1;
 `;
 
+const AvatarWrapper = styled(Grid)`
+background:white;
+border-radius: .5rem;
+padding: .2rem;
+  div {
+    width: 70px !important;
+    height: 70px !important;
+    border-radius: .5rem !important;
+  }
+`;
+
 export default function ImageAvatars() {
   return (
-    <Grid container justify="center" alignItems="center">
+    <AvatarWrapper container justify="center" alignItems="center">
       <AvatarStyled alt="Remy Sharp" src={AvatarImage}  />
-    </Grid>
+    </AvatarWrapper>
   );
 }

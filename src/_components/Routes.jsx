@@ -4,6 +4,8 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Home from './Home';
 import About from './About';
+import { BottomMenu } from '../Layout/';
+
 
 const Wrapper = styled.div`
     .fade-enter {
@@ -47,6 +49,7 @@ function Container({ location }) {
 				<Route path="/about" component={About} />
 
 			  </Switch>
+			  <BottomMenu Icon1="Icono1" Icon2="Icono1" />
 			</section>
 		  </CSSTransition>
 		</TransitionGroup>

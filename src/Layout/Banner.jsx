@@ -20,23 +20,14 @@ const AvatarWrapper = Styled.div`
 	position: absolute;
 	left:10px;
 	top: -2.5rem;
-	background:white;
-	border-radius: .5rem;
-	padding: .2rem;
-	div{
-		div {
-			width: 70px !important;
-			height: 70px !important;
-			border-radius: .5rem !important;
-		}
-	} 
 `;
 
 const SocialBackgroundWrapper = Styled.div`
 		z-index:0;
 		background-image: url(${BackgroundImage});
-		background-position: 0 0rem;
+		background-position: center;
 		background-repeat: no-repeat;
+		background-size: cover;
 		position: absolute;
 		top:0;
 		width: 100%;
@@ -56,6 +47,7 @@ const SocialContent = Styled.div`
 			align-self: end;
 			justify-self: center;
 		}
+		
 	`;
 
 const BaseBackground = Styled.div`
@@ -114,10 +106,11 @@ function SocialBackground({ children }) {
 		<SocialBackgroundWrapper>
 			<SocialAnimBackground>
 			<SocialContent>
-			<AvatarWrapper>
-				<Avatar />
-			</AvatarWrapper>
+			
 				<div>
+				<AvatarWrapper>
+					<Avatar />
+				</AvatarWrapper>
 					<p>About</p>
 				</div>
 				<div>

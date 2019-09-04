@@ -15,7 +15,7 @@ export default function Home() {
 					
 				</MainContainer>
 			</Main>
-			<BottomMenu Icon1="Icono1" Icon2="Icono1" />
+			
 		</Layout>
 	);
 }
