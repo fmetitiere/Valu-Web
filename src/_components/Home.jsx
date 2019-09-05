@@ -1,14 +1,14 @@
 import React from 'react';
 
-import { MainContainer, Layout, Header, Main, Center, Banner, BottomMenu } from '../Layout/';
+import { MainContainer, Layout, Main, Banner } from '../Layout/';
 
 export default function Home() {
 	return (
 		<Layout>
-			<Banner />
-
+			<Banner name="lalala"/>
+			
 			<Main>
-				<MainContainer />
+				<MainContainer noPadding></MainContainer>
 			</Main>
 		</Layout>
 	);

@@ -3,7 +3,6 @@ import Styled from 'styled-components';
 import Banner from './Banner';
 import BottomMenu from '../_components/BottomMenu';
 
-
 function changePadding({ noPadding }) {
 	return noPadding ? '0' : '1rem';
 }
@@ -16,8 +15,6 @@ export const MainContainer = Styled.div`
     padding: ${changePadding};
     width:100%;
 `;
-
-
 
 export const Layout = Styled.div`
     overflow: ${OverflowHide};
@@ -70,6 +67,11 @@ export const Main = Styled.div`
     display:flex;
     align-items:center;
     overflow: ${OverflowHide};
+`;
+
+export const H3 = Styled.h3`
+    font-size: 1.75rem;
+    text-align: center;
 `;
 
 export { Banner, BottomMenu };

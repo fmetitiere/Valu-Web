@@ -5,6 +5,7 @@ import Lottie from 'react-lottie';
 import * as animationData from '../Animations/backgroundAnim.json';
 import BackgroundImage from '../_components/images/banner.jpg';
 import Avatar from '../_components/Avatar';
+import { H3 } from '../Layout/';
 
 const defaultOptions = {
 	loop: true,
@@ -20,7 +21,7 @@ const AvatarWrapper = Styled.div`
 	position: absolute;
 	left:0;
 	right:0;
-	top: 3rem;
+	top: 3.5rem;
 `;
 
 const BackgroundWrapper = Styled.div`
@@ -31,6 +32,7 @@ const BackgroundWrapper = Styled.div`
 		background-size: cover;
 		width: 100%;
 		height:7.5rem;
+		border-radius: .5rem .5rem 0 0;
 		`;
 
 class SocialAnimBackground extends React.Component {
@@ -61,20 +63,17 @@ class SocialAnimBackground extends React.Component {
 	}
 }
 
-function BannerBackground() {
+function Banner() {
 	return (
 		<BackgroundWrapper>
 			<SocialAnimBackground>
 				<AvatarWrapper>
 					<Avatar />
+					<H3><b>Nano Metitiere</b></H3>
 				</AvatarWrapper>
 			</SocialAnimBackground>
 		</BackgroundWrapper>
 	);
-}
-
-function Banner({ children }) {
-	return <BannerBackground>{children}</BannerBackground>;
 }
 
 export default Banner;
