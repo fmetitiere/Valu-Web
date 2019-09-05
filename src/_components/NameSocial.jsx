@@ -7,6 +7,7 @@ import { H3 } from '../Layout/';
 const Wrapper = Styled.div`
     width:100%;
     margin-top: 4rem;
+    border-bottom: 1px solid #ddd;
 `;
 
 const InfoSocial = Styled.div`

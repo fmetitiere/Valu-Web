@@ -5,6 +5,7 @@ import {
   } from "react-device-detect";
   
 import NameSocial from '../_components/NameSocial';
+import LastJobs from '../_components/LastJobs';
 import {Layout, Main, Banner, BottomMenu } from '../Layout/';
 
 export default function Home() {
@@ -15,7 +16,7 @@ export default function Home() {
 				<Main>
 					<Banner/>
 					<NameSocial/>
-						Lalal
+					<LastJobs/>	
 				</Main>
 			</Layout>
 			<BottomMenu Icon1="Icono1" Icon2="Icono1" />
