@@ -17,15 +17,17 @@ export const MainContainer = Styled.div`
     width:100%;
 `;
 
+
+
 export const Layout = Styled.div`
     overflow: ${OverflowHide};
     height: 100vh;
-    padding: 0;
+    padding: ${changePadding};
     margin: 0;
     display: grid;
     grid-template-rows: 4rem auto 4rem;
     grid-template-areas: "header" "content" "footer";
-    width: 100vw;
+    width: 100%;
     background-color: rgba(38, 59, 164, 0.1);
 `;
 
@@ -64,7 +66,7 @@ export const Right = Styled.div`
 
 export const Main = Styled.div`
     grid-area: content;
-    width: 100vw;
+    width: 100%;
     display:flex;
     align-items:center;
     overflow: ${OverflowHide};

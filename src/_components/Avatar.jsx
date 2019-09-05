@@ -11,13 +11,13 @@ const AvatarStyled = styled(Avatar)`
 `;
 
 const AvatarWrapper = styled(Grid)`
-background:white;
 border-radius: .5rem;
 padding: .2rem;
   div {
-    width: 70px !important;
-    height: 70px !important;
-    border-radius: .5rem !important;
+    width: 9rem !important;
+    height: 9rem !important;
+    border-radius: 5rem !important;
+    border: .2rem solid white;
   }
 `;
 

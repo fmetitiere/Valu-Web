@@ -18,59 +18,20 @@ const defaultOptions = {
 
 const AvatarWrapper = Styled.div`
 	position: absolute;
-	left:10px;
-	top: -2.5rem;
+	left:0;
+	right:0;
+	top: 3rem;
 `;
 
-const SocialBackgroundWrapper = Styled.div`
+const BackgroundWrapper = Styled.div`
 		z-index:0;
 		background-image: url(${BackgroundImage});
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
-		position: absolute;
-		top:0;
 		width: 100%;
-		height:12rem;
+		height:7.5rem;
 		`;
-
-const SocialContent = Styled.div`
-		background: white;
-		height:6rem;
-		position: absolute;
-		bottom: -2.5rem;
-		width: 100%;
-		display:grid;
-		grid-template-columns: 1fr 1fr 1fr 1fr;
-		
-		div{
-			align-self: end;
-			justify-self: center;
-		}
-		
-	`;
-
-const BaseBackground = Styled.div`
-		z-index:0;
-		background-image: url(${BackgroundImage});
-    	background-position: 0 0rem;
-		background-repeat: no-repeat;
-		position: absolute;
-		top:0;
-		width: 100%;
-		height:12rem;
-`;
-
-const ImageBackground = Styled.div`
-		z-index:0;
-		background-image: url(${BackgroundImage});
-    	background-position: 0 0rem;
-		background-repeat: no-repeat;
-		position: absolute;
-		top:0;
-		width: 100%;
-`;
-
 
 class SocialAnimBackground extends React.Component {
 	componentWillMount() {
@@ -86,7 +47,7 @@ class SocialAnimBackground extends React.Component {
 
 	render() {
 		return (
-			<>
+			<div>
 				<Lottie
 					isClickToPauseDisabled={true}
 					speed={0.2}
@@ -95,79 +56,25 @@ class SocialAnimBackground extends React.Component {
 					width={'100%'}
 				/>
 				{this.props.children}
-			</>
+			</div>
 		);
 	}
 }
 
-
-function SocialBackground({ children }) {
+function BannerBackground() {
 	return (
-		<SocialBackgroundWrapper>
+		<BackgroundWrapper>
 			<SocialAnimBackground>
-			<SocialContent>
-			
-				<div>
 				<AvatarWrapper>
 					<Avatar />
 				</AvatarWrapper>
-					<p>About</p>
-				</div>
-				<div>
-					<p>About</p>
-				</div>
-				<div>
-					<p>About</p>
-				</div>
-				<div>
-					<p>About</p>
-				</div>
-			</SocialContent>
 			</SocialAnimBackground>
-		</SocialBackgroundWrapper>
+		</BackgroundWrapper>
 	);
 }
 
-function DefaultBackground({ children }) {
-	return <BaseBackground>{children}</BaseBackground>;
-}
-
-class AnimBackground extends React.Component {
-	componentWillMount() {
-		this.setState({}, (_) => this.setSpeed());
-		this.setState({}, (_) => this.setSegments());
-	}
-	setSpeed() {
-		this.setState({ speed: 0 });
-	}
-	setSegments() {
-		this.setState({ segments: 0 });
-	}
-
-	render() {
-		return (
-			<ImageBackground>
-				<Lottie
-					isClickToPauseDisabled={true}
-					speed={0.2}
-					options={defaultOptions}
-					height={180}
-					width={'100%'}
-				/>
-				{this.props.children}
-			</ImageBackground>
-		);
-	}
-}
-
-function Banner({ social, anim, children }) {
-	if (anim) {
-		return <AnimBackground>{children}</AnimBackground>;
-	} else if (social) {
-		return <SocialBackground>{children}</SocialBackground>;
-	} else {
-		return <DefaultBackground>{children}</DefaultBackground>;
-	}
+function Banner({ children }) {
+	return <BannerBackground>{children}</BannerBackground>;
 }
 
 export default Banner;
