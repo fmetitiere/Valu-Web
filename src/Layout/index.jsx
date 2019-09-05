@@ -1,3 +1,4 @@
+import React from 'react';
 import Styled from 'styled-components';
 
 import Banner from './Banner';
@@ -23,7 +24,7 @@ export const FlexContainer = Styled.div`
     justify-content: space-around;
 `;
 
-export const Layout = Styled.div`
+const DefaultLayout = Styled.div`
     overflow: ${OverflowHide};
     height: 100vh;
     padding: ${changePadding};
@@ -33,6 +34,27 @@ export const Layout = Styled.div`
     grid-template-areas: "header" "content" "footer";
     width: 100%;
 `;
+
+const NoHeaderLayout = Styled.div`
+    overflow: ${OverflowHide};
+    height: 100vh;
+    padding: ${changePadding};
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 4rem;
+    grid-template-areas: "content" "footer";
+    width: 100%;
+`;
+
+export function Layout({noHeader, children, ...props}){
+    const LayoutComponent = noHeader ? NoHeaderLayout : DefaultLayout;
+
+    return(
+        <LayoutComponent {...props}>
+            {children}
+        </LayoutComponent>
+    )
+}
 
 function changeBackgroundHeader({ transparent, ...props }) {
 	return transparent ? 'transparent' : props.theme.PrimaryColor;
@@ -67,11 +89,16 @@ export const Right = Styled.div`
     align-self: center;
 `;
 
+function changeAlingItems({center}){
+    return center ? "center" : "flex-start";
+}
+
 export const Main = Styled.div`
     grid-area: content;
     width: 100%;
     display:flex;
-    align-items:center;
+    flex-direction: column;
+    align-items:${changeAlingItems};
     overflow: ${OverflowHide};
 `;
 

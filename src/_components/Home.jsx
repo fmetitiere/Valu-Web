@@ -4,18 +4,18 @@ import {
 	MobileView,
   } from "react-device-detect";
   
-
-import { MainContainer, Layout, Main, Banner, BottomMenu } from '../Layout/';
+import NameSocial from '../_components/NameSocial';
+import {Layout, Main, Banner, BottomMenu } from '../Layout/';
 
 export default function Home() {
 	return (
 		<>
 		<MobileView>
-			<Layout>
-				<Banner/>
+			<Layout noHeader>
 				<Main>
-					<MainContainer noPadding>
-					</MainContainer>
+					<Banner/>
+					<NameSocial/>
+						Lalal
 				</Main>
 			</Layout>
 			<BottomMenu Icon1="Icono1" Icon2="Icono1" />
@@ -23,13 +23,8 @@ export default function Home() {
 
 		<BrowserView>
 			<Layout>
-				<Banner/>
-				<Main>
-					<MainContainer noPadding>
-					</MainContainer>
-				</Main>
+				
 			</Layout>
-			
 		</BrowserView>
 		</>
 	);
