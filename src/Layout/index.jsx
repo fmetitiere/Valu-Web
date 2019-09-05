@@ -16,6 +16,13 @@ export const MainContainer = Styled.div`
     width:100%;
 `;
 
+export const FlexContainer = Styled.div`
+    padding: ${changePadding};
+    width:100%;
+    display: flex;
+    justify-content: space-around;
+`;
+
 export const Layout = Styled.div`
     overflow: ${OverflowHide};
     height: 100vh;

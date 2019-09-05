@@ -5,13 +5,15 @@ import Lottie from 'react-lottie';
 import styled from 'styled-components';
 
 import createHistory from 'history/createBrowserHistory';
-import * as animationData from '../Animations/backgroundAnim.json';
+import * as animationData from '../Animations/loading.json';
 import backgroundImage from '../_components/images/backgroundLoading.jpg'
 
 const LottieWrapper = styled.div`
 	background: url(${backgroundImage});
 	width:100vw;
 	height:100vh;
+	display:flex;
+	align-items: center;
 `;
 
 
@@ -47,7 +49,7 @@ export default class Loading extends React.Component {
 			<div>
 				{!this.state.done ? (
 					<LottieWrapper>
-						<Lottie isClickToPauseDisabled={true} options={defaultOptions} />
+						<Lottie width={500} height={500} isClickToPauseDisabled={true} options={defaultOptions} />
 					</LottieWrapper>
 				) : (
 					<Router history={history}>

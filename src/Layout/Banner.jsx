@@ -1,6 +1,7 @@
 import React from 'react';
 import Styled from 'styled-components';
 import Lottie from 'react-lottie';
+import { MDBIcon} from "mdbreact";
 
 import * as animationData from '../Animations/backgroundAnim.json';
 import BackgroundImage from '../_components/images/banner.jpg';
@@ -69,7 +70,10 @@ function Banner() {
 			<SocialAnimBackground>
 				<AvatarWrapper>
 					<Avatar />
-					<H3><b>Nano Metitiere</b></H3>
+					<H3>
+						<b>Nano Metitiere</b>
+					</H3>
+
 				</AvatarWrapper>
 			</SocialAnimBackground>
 		</BackgroundWrapper>

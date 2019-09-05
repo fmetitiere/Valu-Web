@@ -6,10 +6,12 @@ export default function Home() {
 	return (
 		<>
 		<Layout>
-			<Banner name="lalala"/>
+			<Banner/>
 			
 			<Main>
-				<MainContainer noPadding></MainContainer>
+				<MainContainer noPadding>
+				
+				</MainContainer>
 			</Main>
 			
 		</Layout>
