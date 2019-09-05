@@ -78,7 +78,8 @@ export const Main = Styled.div`
 export const H3 = Styled.h3`
     font-size: 1.75rem;
     text-align: center;
-    margin: .5rem;
+    margin: 1rem 0;
+    font-weight:bold;
 `;
 
 export { Banner, BottomMenu };
