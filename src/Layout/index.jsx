@@ -25,7 +25,6 @@ export const Layout = Styled.div`
     grid-template-rows: 4rem auto 4rem;
     grid-template-areas: "header" "content" "footer";
     width: 100%;
-    background-color: rgba(38, 59, 164, 0.1);
 `;
 
 function changeBackgroundHeader({ transparent, ...props }) {

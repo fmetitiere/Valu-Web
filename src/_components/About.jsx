@@ -4,10 +4,13 @@ import Avatar from './Avatar';
 
 export default function Home() {
 	return (
+        <>
 		<Layout noPadding>
 			<Header />
 
 			<Main />
 		</Layout>
+        <BottomMenu Icon1="Icono1" Icon2="Icono1" />
+        </>
 	);
 }
