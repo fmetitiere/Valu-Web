@@ -17,6 +17,7 @@ const Section = styled.a`
   color: unset;
   flex-direction: column;
   overflow: hidden;
+  margin: 1rem 0;
 `;
 
 const Image = styled.div`
@@ -52,6 +53,21 @@ export default function Posts() {
           <H5>Portfolio</H5>
         </ProyectDesc>
       </Section>
+      <Section href="/about">
+        <ProyectName>
+          <H5>Test 1</H5>
+          <div>
+            <span>1 h - </span>
+            <MDBIcon icon="globe-americas" />
+          </div>
+        </ProyectName>
+        <Image />
+        <ProyectDesc>
+          <span>www.nanometitiere.com</span>
+          <H5>Portfolio</H5>
+        </ProyectDesc>
+      </Section>
+      
     </Wrapper>
   );
 }

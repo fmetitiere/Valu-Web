@@ -26,7 +26,7 @@ export const FlexContainer = Styled.div`
 
 const DefaultLayout = Styled.div`
     overflow: ${OverflowHide};
-    height: 100vh;
+    height: 100%;
     padding: ${changePadding};
     margin: 0;
     display: grid;
@@ -37,7 +37,7 @@ const DefaultLayout = Styled.div`
 
 const NoHeaderLayout = Styled.div`
     overflow: ${OverflowHide};
-    height: 100vh;
+    height: 100%;
     padding: ${changePadding};
     margin: 0;
     display: grid;

@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import { Link } from "react-router-dom";
+
 
 const Wrapper = styled.div`
   display: grid;
@@ -10,7 +12,7 @@ const Wrapper = styled.div`
   margin-top: 1rem;
 `;
 
-const Section = styled.a`
+const Section = styled(Link)`
   height: 5rem;
   border: 1px solid;
   border-radius: .5rem;
@@ -23,7 +25,7 @@ const Section = styled.a`
 export default function Sections() {
   return (
     <Wrapper>
-      <Section href="/about">
+      <Section to="/about">
         <p>Portfolio</p>
       </Section>
       <Section>
