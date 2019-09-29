@@ -108,5 +108,10 @@ export const H3 = Styled.h3`
     margin: 1rem 0;
     font-weight:bold;
 `;
+export const H5 = Styled.h5`
+    font-size: 1.25rem;
+    padding:0;
+    margin:0;
+`;
 
 export { Banner, BottomMenu };
