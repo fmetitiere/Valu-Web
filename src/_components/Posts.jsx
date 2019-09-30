@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import styled from "styled-components";
-import { H5 } from "../Layout/";
+import { H5, SMALL } from "../Layout/";
 
 import { MDBIcon } from "mdbreact";
 import Modal from "react-responsive-modal";
@@ -12,13 +12,12 @@ const Wrapper = styled.div`
 
 const Section = styled.div`
   height: 20rem;
-  border: 1px solid;
   border-radius: 0.5rem;
   display: flex;
   color: unset;
   flex-direction: column;
   overflow: hidden;
-  margin: 1rem 0;
+  box-shadow: ${props => props.theme.Shadows};
 `;
 
 const Image = styled.div`
@@ -32,9 +31,17 @@ const ProyectName = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  span,
+  i {
+    color: ${props => props.theme.NavBarMenuColor};
+  }
 `;
 const ProyectDesc = styled.div`
-  padding: 1rem;
+  padding: .5rem 0 0 1rem;
+  span{
+    text-transform: uppercase
+    color: ${props => props.theme.NavBarMenuColor}; 
+  }
 `;
 
 export default class Posts extends React.Component {
@@ -71,7 +78,6 @@ export default class Posts extends React.Component {
     const { open2 } = this.state;
     const { open3 } = this.state;
 
-
     return (
       <>
         <Wrapper onClick={this.onOpenModal}>
@@ -85,7 +91,7 @@ export default class Posts extends React.Component {
             </ProyectName>
             <Image />
             <ProyectDesc>
-              <span>www.nanometitiere.com</span>
+              <SMALL>www.nanometitiere.com</SMALL>
               <H5>Portfolio</H5>
             </ProyectDesc>
           </Section>
@@ -105,7 +111,7 @@ export default class Posts extends React.Component {
             </ProyectName>
             <Image />
             <ProyectDesc>
-              <span>www.nanometitiere.com</span>
+              <SMALL>www.nanometitiere.com</SMALL>
               <H5>Portfolio</H5>
             </ProyectDesc>
           </Section>
@@ -125,7 +131,7 @@ export default class Posts extends React.Component {
             </ProyectName>
             <Image />
             <ProyectDesc>
-              <span>www.nanometitiere.com</span>
+              <SMALL>www.nanometitiere.com</SMALL>
               <H5>Portfolio</H5>
             </ProyectDesc>
           </Section>

@@ -22,7 +22,7 @@ export default function Home() {
 					<Posts/>
 				</Main>
 			</Layout>
-			<BottomMenu Icon1="Icono1" Icon2="Icono1" />
+			<BottomMenu current />
 		</MobileView>
 
 		<BrowserView>

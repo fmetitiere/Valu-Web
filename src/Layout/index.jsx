@@ -114,4 +114,9 @@ export const H5 = Styled.h5`
     margin:0;
 `;
 
+export const SMALL = Styled.small`
+    font-size: .875rem;
+    color: ${props => props.theme.NavBarMenuColor};
+`;
+
 export { Banner, BottomMenu };

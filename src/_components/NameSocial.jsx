@@ -33,7 +33,7 @@ const Profession = Styled.div`
 const Social = Styled.div`
 	align-self: center;
 	justify-self: center;
-	background: rgba(128, 128, 128, 0.3);
+	background: rgba(128, 128, 128, 0.1);
 	width: 80%;
 	text-align: center;
 	padding: .2rem .3rem;

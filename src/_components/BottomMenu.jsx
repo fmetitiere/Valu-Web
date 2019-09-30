@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import Styled from 'styled-components';
+import Styled from "styled-components";
+import classnames from "classnames";
+import { MDBIcon } from "mdbreact";
 
 const MenuWrapper = Styled.div`
     grid-area: header; 
@@ -14,24 +16,52 @@ const MenuWrapper = Styled.div`
     padding: 1rem;
     bottom:0;
     width:100%;
+    div{
+        justify-self: center;
+        align-self: center;
+    }
+    i{
+        color:#ccc;
+        font-size:1.3rem;
+
+    }
+    div:nth-child(2){
+        i{
+            font-size:1.5rem !important;
+        }
+    }
+    .current{
+        i{
+            color: ${props => props.theme.NavBarMenuColor};
+        }
+        
+    }
+   
 `;
 
-export default function BottomMenu({Icon1, Icon2, Icon3, Icon4}){
-    return (
-        <MenuWrapper>
-            <div>
-               
-            <Link to="/about">Go  →</Link>
-            </div>
-            <div>
-                {Icon2}
-            </div>
-            <div>
-                {Icon3}
-            </div>
-            <div>
-                {Icon4}
-            </div>
-        </MenuWrapper>
-    )
+export default function BottomMenu({ current, current2, current3, current4 }) {
+  return (
+    <MenuWrapper>
+      <div>
+        <Link className={classnames({ current })} to="/about">
+          <MDBIcon icon="home" />
+        </Link>
+      </div>
+      <div>
+        <Link className={classnames({ current2 })} to="/about">
+          <MDBIcon far icon="image" />
+        </Link>
+      </div>
+      <div>
+        <Link className={classnames({ current3 })} to="/about">
+          <MDBIcon icon="user-alt" />
+        </Link>
+      </div>
+      <div>
+        <Link className={classnames({ current4 })} to="/about">
+          <MDBIcon icon="cogs" />
+        </Link>
+      </div>
+    </MenuWrapper>
+  );
 }

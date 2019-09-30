@@ -14,12 +14,17 @@ const Wrapper = styled.div`
 
 const Section = styled(Link)`
   height: 5rem;
-  border: 1px solid;
   border-radius: .5rem;
   display:flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   color:unset;
+  background: ${(props) => props.theme.PrimaryColor};
+  p{
+      color: white;
+      font-weight: bold;
+      margin:0;
+  }
 `;
 
 export default function Sections() {
