@@ -36,6 +36,12 @@ const MenuWrapper = Styled.div`
         }
         
     }
+    .current2{
+      i{
+          color: ${props => props.theme.NavBarMenuColor};
+      }
+      
+  }
    
 `;
 
@@ -43,12 +49,12 @@ export default function BottomMenu({ current, current2, current3, current4 }) {
   return (
     <MenuWrapper>
       <div>
-        <Link className={classnames({ current })} to="/about">
+        <Link className={classnames({ current })} to="/">
           <MDBIcon icon="home" />
         </Link>
       </div>
       <div>
-        <Link className={classnames({ current2 })} to="/about">
+        <Link className={classnames({ current2 })} to="/portfolio">
           <MDBIcon far icon="image" />
         </Link>
       </div>

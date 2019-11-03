@@ -6,7 +6,7 @@ import styled from 'styled-components';
 
 import createHistory from 'history/createBrowserHistory';
 import * as animationData from '../Animations/loading.json';
-import backgroundImage from '../_components/images/backgroundLoading.jpg'
+import backgroundImage from '../_components/images/backgroundLoading.jpg';
 
 const LottieWrapper = styled.div`
 	background: url(${backgroundImage});

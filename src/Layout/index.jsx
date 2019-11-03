@@ -26,7 +26,7 @@ export const FlexContainer = Styled.div`
 
 const DefaultLayout = Styled.div`
     overflow: ${OverflowHide};
-    height: 100%;
+    height: 100vh;
     padding: ${changePadding};
     margin: 0;
     display: grid;
@@ -37,7 +37,7 @@ const DefaultLayout = Styled.div`
 
 const NoHeaderLayout = Styled.div`
     overflow: ${OverflowHide};
-    height: 100%;
+    height: 100vh;
     padding: ${changePadding};
     margin: 0;
     display: grid;
@@ -82,6 +82,9 @@ export const Center = Styled.div`
     grid-area: center;
     margin: auto;
     align-self: center;
+    font-weight: bold;
+    font-size: 1.3rem;
+    color: #fff;
 `;
 export const Right = Styled.div`
     grid-area: right;
@@ -100,6 +103,7 @@ export const Main = Styled.div`
     flex-direction: column;
     align-items:${changeAlingItems};
     overflow: ${OverflowHide};
+    padding: ${changePadding};
 `;
 
 export const H3 = Styled.h3`
@@ -112,6 +116,13 @@ export const H5 = Styled.h5`
     font-size: 1.25rem;
     padding:0;
     margin:0;
+`;
+
+export const P = Styled.p`
+    font-size: 1rem;
+    padding:0;
+    margin:0;
+    text-align: justify;
 `;
 
 export const SMALL = Styled.small`

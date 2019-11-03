@@ -4,6 +4,7 @@ import { TransitionGroup, CSSTransition } from 'react-transition-group';
 import styled from 'styled-components';
 import Home from './Home';
 import About from './About';
+import Portfolio from './Portfolio';
 
 const Wrapper = styled.div`
 	.fade-enter {
@@ -41,6 +42,7 @@ function Container({ location }) {
 						<Switch location={location}>
 							<Route exact path="/" component={Home} />
 							<Route path="/about" component={About} />
+							<Route path="/portfolio" component={Portfolio} />
 						</Switch>
 					</section>
 				</CSSTransition>

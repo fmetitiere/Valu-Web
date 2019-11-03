@@ -30,13 +30,13 @@ const Section = styled(Link)`
 export default function Sections() {
   return (
     <Wrapper>
-      <Section to="/about">
+      <Section to="/portfolio">
         <p>Portfolio</p>
       </Section>
       <Section>
         <p>Skills</p>
       </Section>
-      <Section>
+      <Section to="/about">
         <p>Bio</p>
       </Section>
     </Wrapper>
