@@ -25,7 +25,8 @@ const AvatarWrapper = Styled.div`
 
 const BackgroundWrapper = Styled.div`
 		z-index:0;
-		background-image: url(${BackgroundImage});
+		// background-image: url(${BackgroundImage});
+		background: ${props => props.theme.PrimaryColor};
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;

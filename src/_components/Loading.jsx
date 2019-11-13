@@ -9,7 +9,8 @@ import * as animationData from '../Animations/loading.json';
 import backgroundImage from '../_components/images/backgroundLoading.jpg';
 
 const LottieWrapper = styled.div`
-	background: url(${backgroundImage});
+	// background: url(${backgroundImage});
+	background: ${props => props.theme.PrimaryColor};
 	width:100vw;
 	height:100vh;
 	display:flex;
@@ -32,16 +33,16 @@ export default class Loading extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			done: undefined
+			done: true
 		};
 	}
 
 	componentDidMount() {
 		setTimeout(() => {
-			fetch('https://jsonplaceholder.typicode.com/posts')
+			fetch('http://localhost:3001/')
 				.then((response) => response.json())
 				.then((json) => this.setState({ done: true }));
-		}, 1500);
+		}, 0);
 	}
 
 	render() {

@@ -8,7 +8,7 @@ const MenuWrapper = Styled.div`
     grid-area: header; 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    background: white;
+		background: ${props => props.theme.PrimaryColor};
     box-shadow: ${props => props.theme.Shadows};
     backgriund-size: cover;
     position: fixed;

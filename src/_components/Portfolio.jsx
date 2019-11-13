@@ -1,74 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Modal from "react-responsive-modal";
 
 import { Layout, Header, Main, BottomMenu, Left, Center } from "../Layout";
 import PathfindersBack from "../_components/images/path.jpg";
 import ManuBack from "../_components/images/manu.jpg";
+import Proyecto2000 from "../_components/images/proyecto2000.jpg";
 
 const PortContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "1 2";
-  height: 15rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas: "1 2 3";
+  height: 8rem;
   width: 100%;
 `;
+
+function changeBackground({ imgPath }) {
+  return imgPath ? imgPath : "";
+}
 
 const BackgroundSmall = styled.div`
   width: 100%;
   height: 100%;
-`;
-
-const PathfindersSmall = styled(BackgroundSmall)`
-  background: url(${PathfindersBack});
+  background: url(${changeBackground});
   background-position: center top;
 `;
 
-const Pathfinders = styled.div`
+function PortElement({ title, imgPath, modal = true }) {
+  const [showModal, setShowModal] = useState(false);
+
+  return (
+    <>
+      <BackgroundSmall
+        onClick={() => setShowModal(true)}
+        imgPath={imgPath}
+      ></BackgroundSmall>
+      {modal && (
+        <Modal open={showModal} onClose={() => setShowModal(false)} center>
+          <h3>{title}</h3>
+          <BackgroundLarge imgPath={imgPath} />
+        </Modal>
+      )}
+    </>
+  );
+}
+
+const BackgroundLarge = styled.div`
   width: 18rem;
   height: 60vh;
-  background: url(${PathfindersBack});
+
+  background: url(${changeBackground});
   background-position: center top;
 `;
-
-const ManuSmall = styled(BackgroundSmall)`
-  background: url(${ManuBack});
-  background-position: right top;
-`;
-
-const Manu = styled.div`
-  width: 18rem;
-  height: 60vh;
-  background: url(${ManuBack});
-  background-position: center top;
-`;
-
 export default class Portfolio extends React.Component {
-  state = {
-    open: false
-  };
-
-  onOpenModal = () => {
-    this.setState({ open: true });
-  };
-
-  onCloseModal = () => {
-    this.setState({ open: false });
-  };
-
-  onOpenModalManu = () => {
-    this.setState({ openManu: true });
-  };
-
-  onCloseModalManu = () => {
-    this.setState({ openManu: false });
-  };
-
   render() {
-    const { open } = this.state;
-    const { openManu } = this.state;
-    const { open3 } = this.state;
-
     return (
       <>
         <Layout noPadding>
@@ -81,22 +66,15 @@ export default class Portfolio extends React.Component {
 
           <Main noPadding>
             <PortContainer>
-              <>
-                <PathfindersSmall onClick={this.onOpenModal}></PathfindersSmall>
-                <Modal open={open} onClose={this.onCloseModal} center>
-                  <h3>Pathfinders</h3>
-                  <Pathfinders />
-                </Modal>
-              </>
-              <>
-                <ManuSmall onClick={this.onOpenModalManu}></ManuSmall>
-                <Modal open={openManu} onClose={this.onCloseModalManu} center>
-                  <h3>Manu</h3>
-                  <Manu />
-                </Modal>
-              </>
+              <PortElement imgPath={PathfindersBack} title="Pathfinders"></PortElement>
+              <PortElement imgPath={ManuBack} title="Manuel DiCiervo"></PortElement>
+              <PortElement imgPath={Proyecto2000} title="Proyecto 2000"></PortElement>
             </PortContainer>
-            <PortContainer></PortContainer>
+            <PortContainer>
+              <PortElement imgPath={PathfindersBack} title="Pathfinders"></PortElement>
+              <PortElement imgPath={ManuBack} title="Manuel DiCiervo"></PortElement>
+              <PortElement imgPath={Proyecto2000} title="Proyecto 2000"></PortElement>
+            </PortContainer>
           </Main>
         </Layout>
         <BottomMenu current2 />
