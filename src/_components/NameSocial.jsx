@@ -66,7 +66,7 @@ export default function NameSocial() {
 				<b>Nano Metitiere</b>
 			</H3>
 			<InfoSocial>
-				<Profession>Frontend Developer</Profession>
+				<Profession>UX UI Developer</Profession>
 				<Social1>
 					<a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/nano.metitiere">
 						<MDBIcon fab icon="facebook-square" />

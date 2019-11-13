@@ -11,7 +11,8 @@ import {
   MainContainer
 } from "../Layout";
 
-import backgroundImage from "../_components/images/backgroundLoading.jpg";
+import backgroundImage from "../images/backgroundLoading.jpg";
+import { MDBIcon } from "mdbreact";
 
 const Banner = styled.div`
   width: 100%;
@@ -24,9 +25,9 @@ export default function About({ ...props }) {
     <>
       <Layout noPadding>
         <Header>
-          <Left>
-            <button onClick={() => props.history.goBack()}>Back</button>
-          </Left>
+        <Left>
+                <MDBIcon onClick={() => props.history.goBack()} icon="arrow-left" />
+            </Left>
           <Center>Biography</Center>
         </Header>
 

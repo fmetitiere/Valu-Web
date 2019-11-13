@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import Avatar from '@material-ui/core/Avatar';
 import Grid from '@material-ui/core/Grid';
 
-import AvatarImage from '../_components/images/avatar.jpg';
+import AvatarImage from '../images/avatar.jpg';
 
 const AvatarStyled = styled(Avatar)`
     z-index:1;
@@ -17,7 +17,6 @@ padding: .2rem;
     width: 9rem !important;
     height: 9rem !important;
     border-radius: 5rem !important;
-    border: .2rem solid white;
   }
 `;
 
