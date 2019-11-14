@@ -1,13 +1,13 @@
 import React from 'react';
 import {ThemeProvider} from 'styled-components';
-import theme from './Layout/DefaultTheme';
+import Routes from '../src/_components/Routes';
 
-import Loading from './_components/Loading';
+import theme from './Layout/DefaultTheme';
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-          <Loading/>
+          <Routes/>
     </ThemeProvider>
   );
 }

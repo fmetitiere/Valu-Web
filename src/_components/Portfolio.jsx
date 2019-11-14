@@ -19,7 +19,7 @@ import {
   KLD,
   Gire
 } from "../_components/Backgrounds";
-import { Layout, Header, Main, BottomMenu, Left, Center } from "../Layout";
+import { Layout, Header, Main, Left, Center } from "../Layout";
 
 const PortContainer = styled.div`
   display: grid;
@@ -173,7 +173,6 @@ export default class Portfolio extends React.Component {
             </PortContainer>
           </Main>
         </Layout>
-        <BottomMenu current2 />
       </>
     );
   }

@@ -4,7 +4,6 @@ import {
   Layout,
   Header,
   Main,
-  BottomMenu,
   Left,
   Center,
   P,
@@ -47,7 +46,6 @@ export default function About({ ...props }) {
           </MainContainer>
         </Main>
       </Layout>
-      <BottomMenu Icon1="Icono1" Icon2="Icono1" />
     </>
   );
 }

@@ -30,19 +30,6 @@ const MenuWrapper = Styled.div`
             font-size:1.5rem !important;
         }
     }
-    .current{
-        i{
-            color: ${props => props.theme.NavBarMenuColor};
-        }
-        
-    }
-    .current2{
-      i{
-          color: ${props => props.theme.NavBarMenuColor};
-      }
-      
-  }
-   
 `;
 
 export default function BottomMenu({ current, current2, current3, current4 }) {

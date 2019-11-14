@@ -7,7 +7,7 @@ import {
 import NameSocial from '../_components/NameSocial';
 import Sections from '../_components/Sections';
 import Posts from '../_components/Posts';
-import {Layout, Main, Banner, BottomMenu } from '../Layout/';
+import {Layout, Main, Banner } from '../Layout/';
 
 
 export default function Home() {
@@ -22,7 +22,6 @@ export default function Home() {
 					<Posts/>
 				</Main>
 			</Layout>
-			<BottomMenu current />
 		</MobileView>
 
 		<BrowserView>
