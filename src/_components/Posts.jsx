@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { H5, SMALL } from "../Layout/";
-import {PathfindersBack, ManuBack, Proyecto2000} from "../_components/Backgrounds";
+import {PathfindersBack, Gire, Proyecto2000} from "../_components/Backgrounds";
 
 import { MDBIcon } from "mdbreact";
 import Modal from "react-responsive-modal";
@@ -36,6 +36,7 @@ const Image = styled.div`
   width: 100%;
   background: url(${changeBackground});
   background-position: ${changeBackPosition} top;
+  background-size: cover;
 `;
 
 const ProyectName = styled.div`
@@ -60,6 +61,7 @@ const ImageModal = styled.div`
   height: 60vh;
   background: url(${changeBackground});
   background-position: center top;
+  background-size: cover;
 `;
 
 function PostElement({title, desc, page, time, imgPath}){
@@ -98,8 +100,8 @@ export default class Posts extends React.Component {
 
     return (
       <>
-        <PostElement imgPath={PathfindersBack} title="Test 1" desc="Name" page="www.nanometitiere.com" time="1"/>
-        <PostElement imgPath={ManuBack} title="Test 1" desc="Name" page="www.nanometitiere.com" time="1"/>
+        <PostElement imgPath={Gire} title="Rapipago" desc="Digital Wallet" page="UX UI Develop" time="1"/>
+        <PostElement imgPath={PathfindersBack} title="Pathfinders" desc="Video Game Studio" page="Web Design" time="4"/>
       </>
     );
   }
