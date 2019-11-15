@@ -23,7 +23,7 @@ padding: .2rem;
 export default function ImageAvatars() {
   return (
     <AvatarWrapper container justify="center" alignItems="center">
-      <AvatarStyled alt="Remy Sharp" src={AvatarImage}  />
+      <AvatarStyled alt="Nano Metitiere" src={AvatarImage}  />
     </AvatarWrapper>
   );
 }

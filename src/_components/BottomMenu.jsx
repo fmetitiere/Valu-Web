@@ -21,7 +21,7 @@ const MenuWrapper = Styled.div`
         align-self: center;
     }
     i{
-        color:#ccc;
+        color:#fff;
         font-size:1.3rem;
 
     }
