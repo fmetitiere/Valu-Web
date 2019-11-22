@@ -30,7 +30,7 @@ const PortContainer = styled.div`
 `;
 
 function changeBackground({ imgPath }) {
-  return imgPath ? imgPath : "";
+  return imgPath?`background:url(${imgPath});` : '';
 }
 
 function changeBackPosition({ right, left }) {
@@ -42,7 +42,7 @@ const BackgroundSmall = styled.div`
   height: 92%;
   align-self: center;
   justify-self: center;
-  background: url(${changeBackground});
+  ${changeBackground}
   background-position: ${changeBackPosition} top;
   border-radius: 0.5rem;
   overflow: hidden;

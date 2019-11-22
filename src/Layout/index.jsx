@@ -1,15 +1,18 @@
-import React from 'react';
-import Styled from 'styled-components';
+import React from "react";
+import Styled from "styled-components";
 
-import Banner from './Banner';
-import BottomMenu from '../_components/BottomMenu';
+import Banner from "./Banner";
+import Menu from "../_components/Menu";
+import MenuDesktop from "../_components/MenuDesktop";
+
+export { Banner, Menu, MenuDesktop };
 
 function changePadding({ noPadding }) {
-	return noPadding ? '0' : '1rem';
+  return noPadding ? "0" : "1rem";
 }
 
 function OverflowHide({ overflowHide }) {
-	return overflowHide ? 'hidden' : 'unset';
+  return overflowHide ? "hidden" : "unset";
 }
 
 export const MainContainer = Styled.div`
@@ -26,13 +29,13 @@ export const FlexContainer = Styled.div`
 
 const DefaultLayout = Styled.div`
     overflow: ${OverflowHide};
-    height: 100%;
     padding: ${changePadding};
     margin: 0;
     display: grid;
     grid-template-rows: 4rem auto 4rem;
     grid-template-areas: "header" "content" "footer";
     width: 100%;
+    height: 100%;
 `;
 
 const NoHeaderLayout = Styled.div`
@@ -46,18 +49,14 @@ const NoHeaderLayout = Styled.div`
     width: 100%;
 `;
 
-export function Layout({noHeader, children, ...props}){
-    const LayoutComponent = noHeader ? NoHeaderLayout : DefaultLayout;
+export function Layout({ noHeader, children, ...props }) {
+  const LayoutComponent = noHeader ? NoHeaderLayout : DefaultLayout;
 
-    return(
-        <LayoutComponent {...props}>
-            {children}
-        </LayoutComponent>
-    )
+  return <LayoutComponent {...props}>{children}</LayoutComponent>;
 }
 
 function changeBackgroundHeader({ transparent, ...props }) {
-	return transparent ? 'transparent' : props.theme.PrimaryColor;
+  return transparent ? "transparent" : props.theme.PrimaryColor;
 }
 
 export const Header = Styled.header`
@@ -71,6 +70,9 @@ export const Header = Styled.header`
     height:4rem;
     width: 100vw;
     z-index: 1999;
+    .fa-arrow-left:before {
+        color: white;
+    }
 `;
 
 export const Left = Styled.div`
@@ -92,8 +94,8 @@ export const Right = Styled.div`
     align-self: center;
 `;
 
-function changeAlingItems({center}){
-    return center ? "center" : "flex-start";
+function changeAlingItems({ center }) {
+  return center ? "center" : "flex-start";
 }
 
 export const Main = Styled.div`
@@ -106,9 +108,16 @@ export const Main = Styled.div`
     padding: ${changePadding};
 `;
 
+function changeTextAlign({left}){
+    return(
+        (left && "left") ||
+        "center"
+    )
+}
+
 export const H3 = Styled.h3`
     font-size: 1.75rem;
-    text-align: center;
+    text-align: ${changeTextAlign};
     margin: 1rem 0;
     font-weight:bold;
 `;
@@ -130,4 +139,35 @@ export const SMALL = Styled.small`
     color: ${props => props.theme.NavBarMenuColor};
 `;
 
-export { Banner, BottomMenu };
+export const LayoutDesktop = Styled.div`
+    display:grid;
+    grid-template-rows: 3.5rem auto;
+    grid-template-areas: "header" "content";
+    width: 100%;
+    height: 100%;
+    background: rgba(224, 224, 224, 0.2);
+`;
+
+export const MainDesktop = Styled.div`
+    grid-area: content;
+    display: grid;
+    grid-template-columns: 2fr 5fr 3fr;
+    grid-template-areas: "profile posts bio";
+    width: 1170px;
+    margin: 0 auto;
+    background: white;
+`;
+
+export const ProfileArea = Styled.div`
+    grid-area: profile;
+    position: relative;
+    padding: 1rem;
+`;
+export const PostsArea = Styled.div`
+    grid-area: posts;
+    padding: 0 1rem;
+`;
+export const BioArea = Styled.div`
+    grid-area: bio;
+    padding: 1rem;
+`;

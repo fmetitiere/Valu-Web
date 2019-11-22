@@ -1,8 +1,8 @@
-import React from 'react';
-import Styled from 'styled-components';
-import { MDBIcon } from 'mdbreact';
+import React from "react";
+import Styled from "styled-components";
+import { MDBIcon } from "mdbreact";
 
-import { H3 } from '../Layout/';
+import { H3 } from "../Layout/";
 
 const Wrapper = Styled.div`
     width:100%;
@@ -16,13 +16,25 @@ const InfoSocial = Styled.div`
     grid-template-areas: "profession social1 social2 social3";
 	height:3rem;
 `;
+const InfoSocialDesktop = Styled.div`
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-areas: "social1 social2 social3";
+	height:3rem;
+`;
+
+function changeWidth({lessFive, lessTwenty}){
+	return(
+		(lessFive && "95%") || "100%"
+	)
+}
 
 const Profession = Styled.div`
 	grid-area: profession;
 	align-self: center;
 	justify-self: center;
-	background: ${(props) => props.theme.PrimaryColor};
-	width:95%;
+	background: ${props => props.theme.PrimaryColor};
+	width:${changeWidth};
 	text-align: center;
 	font-weight: bold;
 	color: white;
@@ -59,30 +71,77 @@ const Social3 = Styled(Social)`
 	grid-area: social3;
 `;
 
-export default function NameSocial() {
-	return (
-		<Wrapper>
-			<H3>
-				<b>Nano Metitiere</b>
-			</H3>
-			<InfoSocial>
-				<Profession>UX UI Developer</Profession>
-				<Social1>
-					<a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/nano.metitiere">
-						<MDBIcon fab icon="facebook-square" />
-					</a>
-				</Social1>
-				<Social2>
-					<a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/nano.digitalartist/">
-						<MDBIcon fab icon="instagram" />
-					</a>
-				</Social2>
-				<Social3>
-					<a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/nano-metitiere-ba687756/">
-						<MDBIcon fab icon="linkedin" />
-					</a>
-				</Social3>
-			</InfoSocial>
-		</Wrapper>
-	);
+export default function NameSocial({ desktop }) {
+  return (
+    <Wrapper>
+      <H3>
+        <b>Nano Metitiere</b>
+      </H3>
+      {desktop ? (
+        <>
+          <Profession>UX UI Developer</Profession>
+          <InfoSocialDesktop>
+            <Social1>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.facebook.com/nano.metitiere"
+              >
+                <MDBIcon fab icon="facebook-square" />
+              </a>
+            </Social1>
+            <Social2>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.instagram.com/nano.digitalartist/"
+              >
+                <MDBIcon fab icon="instagram" />
+              </a>
+            </Social2>
+            <Social3>
+              <a
+                rel="noopener noreferrer"
+                target="_blank"
+                href="https://www.linkedin.com/in/nano-metitiere-ba687756/"
+              >
+                <MDBIcon fab icon="linkedin" />
+              </a>
+            </Social3>
+          </InfoSocialDesktop>
+        </>
+      ) : (
+        <InfoSocial>
+          <Profession lessFive>UX UI Developer</Profession>
+          <Social1>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.facebook.com/nano.metitiere"
+            >
+              <MDBIcon fab icon="facebook-square" />
+            </a>
+          </Social1>
+          <Social2>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.instagram.com/nano.digitalartist/"
+            >
+              <MDBIcon fab icon="instagram" />
+            </a>
+          </Social2>
+          <Social3>
+            <a
+              rel="noopener noreferrer"
+              target="_blank"
+              href="https://www.linkedin.com/in/nano-metitiere-ba687756/"
+            >
+              <MDBIcon fab icon="linkedin" />
+            </a>
+          </Social3>
+        </InfoSocial>
+      )}
+    </Wrapper>
+  );
 }

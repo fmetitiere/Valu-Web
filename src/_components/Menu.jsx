@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Styled from "styled-components";
-import classnames from "classnames";
 import { MDBIcon } from "mdbreact";
 
 const MenuWrapper = Styled.div`
@@ -23,7 +22,6 @@ const MenuWrapper = Styled.div`
     i{
         color:#fff;
         font-size:1.3rem;
-
     }
     div:nth-child(2){
         i{
@@ -32,27 +30,27 @@ const MenuWrapper = Styled.div`
     }
 `;
 
-export default function BottomMenu({ current, current2, current3, current4 }) {
+export default function Menu() {
   return (
     <MenuWrapper>
       <div>
-        <Link className={classnames({ current })} to="/">
+        <Link to="/">
           <MDBIcon icon="home" />
         </Link>
       </div>
       <div>
-        <Link className={classnames({ current2 })} to="/portfolio">
-          <MDBIcon far icon="image" />
+        <Link to="/portfolio">
+          <MDBIcon icon="images" />
         </Link>
       </div>
       <div>
-        <Link className={classnames({ current3 })} to="/about">
-          <MDBIcon icon="user-alt" />
-        </Link>
-      </div>
-      <div>
-        <Link className={classnames({ current4 })} to="/about">
+        <Link to="/about">
           <MDBIcon icon="cogs" />
+        </Link>
+      </div>
+      <div>
+        <Link to="/about">
+          <MDBIcon icon="user-alt" />
         </Link>
       </div>
     </MenuWrapper>

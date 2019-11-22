@@ -1,18 +1,17 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { H5, SMALL } from "../Layout/";
-import {PathfindersBack, Gire, Proyecto2000} from "../_components/Backgrounds";
+import { PathfindersBack, Gire } from "../_components/Backgrounds";
 
 import { MDBIcon } from "mdbreact";
 import Modal from "react-responsive-modal";
-
 
 function changeBackground({ imgPath }) {
   return imgPath ? imgPath : "";
 }
 
-function changeBackPosition({right, left}){
-  return (right && "right") || (left && "left"); 
+function changeBackPosition({ right, left }) {
+  return (right && "right") || (left && "left");
 }
 
 const Wrapper = styled.div`
@@ -20,9 +19,15 @@ const Wrapper = styled.div`
   margin-top: 1rem;
 `;
 
+function changeSectionSize({ desktop }) {
+  return desktop ? "28rem" : "20rem";
+}
+function changeImageSize({ desktop }) {
+  return desktop ? "20rem" : "12rem";
+}
 
 const Section = styled.div`
-  height: 20rem;
+  height: ${changeSectionSize};
   border-radius: 0.5rem;
   display: flex;
   color: unset;
@@ -32,7 +37,7 @@ const Section = styled.div`
 `;
 
 const Image = styled.div`
-  height: 12rem;
+  height: ${changeImageSize};
   width: 100%;
   background: url(${changeBackground});
   background-position: ${changeBackPosition} top;
@@ -64,45 +69,54 @@ const ImageModal = styled.div`
   background-size: cover;
 `;
 
-function PostElement({title, desc, page, time, imgPath}){
-
+function PostElement({ title, desc, page, time, imgPath, desktop }) {
   const [showModal, setShowModal] = useState(false);
 
-  return(
+  return (
     <>
-    <Wrapper onClick={()=> setShowModal(true)}>
-          <Section href="/about">
-            <ProyectName>
-              <H5>{title}</H5>
-              <div>
-                <span>{time} h - </span>
-                <MDBIcon icon="globe-americas" />
-              </div>
-            </ProyectName>
-            <Image imgPath={imgPath}/>
-            <ProyectDesc>
-              <SMALL>{page}</SMALL>
-              <H5>{desc}</H5>
-            </ProyectDesc>
-          </Section>
-        </Wrapper>
-        <Modal open={showModal} onClose={()=>setShowModal(false)} center>
-          <h2>{title}</h2>
-          <ImageModal imgPath={imgPath}/>
-        </Modal>
-      </>
-  )
+      <Wrapper onClick={() => setShowModal(true)}>
+        <Section desktop={desktop} href="/about">
+          <ProyectName>
+            <H5>{title}</H5>
+            <div>
+              <span>{time} h - </span>
+              <MDBIcon icon="globe-americas" />
+            </div>
+          </ProyectName>
+          <Image desktop={desktop} imgPath={imgPath} />
+          <ProyectDesc>
+            <SMALL>{page}</SMALL>
+            <H5>{desc}</H5>
+          </ProyectDesc>
+        </Section>
+      </Wrapper>
+      <Modal open={showModal} onClose={() => setShowModal(false)} center>
+        <h2>{title}</h2>
+        <ImageModal imgPath={imgPath} />
+      </Modal>
+    </>
+  );
 }
 
-export default class Posts extends React.Component {
-
-  render() {
-
-    return (
-      <>
-        <PostElement imgPath={Gire} title="Rapipago" desc="Digital Wallet" page="UX UI Develop" time="1"/>
-        <PostElement imgPath={PathfindersBack} title="Pathfinders" desc="Video Game Studio" page="Web Design" time="4"/>
-      </>
-    );
-  }
+export default function Posts({desktop}) {
+  return (
+    <>
+      <PostElement
+        imgPath={Gire}
+        title="Rapipago"
+        desc="Digital Wallet"
+        page="UX UI Develop"
+        time="1"
+        desktop={desktop}
+      />
+      <PostElement
+        imgPath={PathfindersBack}
+        title="Pathfinders"
+        desc="Video Game Studio"
+        page="Web Design"
+        time="4"
+        desktop={desktop}
+      />
+    </>
+  );
 }
