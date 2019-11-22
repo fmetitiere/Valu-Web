@@ -98,7 +98,7 @@ function PortElement({ title, imgPath, modal = true, ...props }) {
 const BackgroundLarge = styled.div`
   width: 18rem;
   height: 60vh;
-  background: url(${changeBackground});
+  ${changeBackground}
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
