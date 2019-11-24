@@ -1,24 +1,8 @@
 import React, { useState } from 'react';
-import { H3, P, Button } from '../Layout/';
+import { H3, P, Button, Card } from '../Layout/';
 
 import classnames from 'classnames';
 import styled from 'styled-components';
-
-const Wrapper = styled.div`
-	.show {
-      animation-duration: 1s;
-      animation-name: slidein;
-    @keyframes slidein {
-      from {
-        opacity:0
-      }
-      to {
-        opacity: 1;
-      }
-    }
-
-	}
-`;
 
 export default function BiographyText({show=false}) {
 	const [ open, setOpen ] = useState(false);
@@ -27,8 +11,8 @@ export default function BiographyText({show=false}) {
   show = isOpen;
 
 	return (
-		<Wrapper>
-			<H3 left>Biography</H3>
+		<Card>
+			<H3 noMarginTop left>Biography</H3>
 			<P>
 				Born in Buenos Aires (Argentina), Nano began his studies in 2012 at the "First Da Vinci Multimedia
 				School" in <strong>"Multimedia Design"</strong>. After two years of studies, he travels to Ecuador to
@@ -48,9 +32,9 @@ export default function BiographyText({show=false}) {
 				</P>
 			)}
 
-			{(open && <Button className={classnames({show})} onClick={() => setOpen(!isOpen)}>Show -</Button>) || (
+			{(open && <Button blue whiteFont className={classnames({show})} onClick={() => setOpen(!isOpen)}>Show -</Button>) || (
 				<Button className={classnames({show})} onClick={() => setOpen(!isOpen)}>Show +</Button>
 			)}
-		</Wrapper>
+		</Card>
 	);
 }

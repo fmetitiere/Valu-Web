@@ -16,6 +16,7 @@
     "react-responsive-carousel": "^3.1.50",
     "react-responsive-modal": "^4.0.1",
     "react-scripts": "3.1.0",
+    "react-skillbars": "^1.5.1",
     "react-svg": "^10.0.17",
     "react-toggle-display": "^2.2.0",
     "react-transition-group": "^4.2.2",

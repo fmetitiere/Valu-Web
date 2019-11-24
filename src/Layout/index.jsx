@@ -112,10 +112,14 @@ function changeTextAlign({ left }) {
 	return (left && 'left') || 'center';
 }
 
+function changeMargin({ noMarginTop }) {
+	return (noMarginTop && '0 0 1rem') || '1rem 0';
+}
+
 export const H3 = Styled.h3`
     font-size: 1.75rem;
     text-align: ${changeTextAlign};
-    margin: 1rem 0;
+    margin: ${changeMargin};
     font-weight:bold;
 `;
 export const H5 = Styled.h5`
@@ -169,14 +173,21 @@ export const BioArea = Styled.div`
     padding: 1rem 1rem 0 0;
 `;
 
+function BackgroundColor({ blue, ...props }) {
+	return blue ? props.theme.PrimaryColor : 'white';
+}
+function changeFontColor({ whiteFont }) {
+	return whiteFont ? 'white' : '#68b7f0';
+}
+
 export const Button = Styled.button`
-    background: white;
+    background: ${BackgroundColor};
     border: 0;
     width: 100%;
     margin: .5rem 0;
     border: .1rem solid #68b7f0;
     padding: .3rem;
-    color: #68b7f0;
+    color: ${changeFontColor};
     font-weight: bold;
     border-radius: .5rem;
     outline:0;
@@ -191,4 +202,24 @@ export const Button = Styled.button`
     &:active, &:focus{
         outline:0;
     }
+`;
+
+export const Card = Styled.div`
+box-shadow: 0 0 10px rgba(0,0,0,0.2);
+padding: 1rem;
+border-radius: .5rem;
+margin-bottom: 1rem;
+  .show {
+    animation-duration: 1s;
+    animation-name: slidein;
+  @keyframes slidein {
+    from {
+      opacity:0
+    }
+    to {
+      opacity: 1;
+    }
+  }
+
+  }
 `;
