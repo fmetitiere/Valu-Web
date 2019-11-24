@@ -19,14 +19,26 @@ import {
   KLD,
   Gire
 } from "../_components/Backgrounds";
-import { Layout, Header, Main, Left, Center } from "../Layout";
+import { Layout, LayoutDesktop, Header, Main, MainDesktop, Left, Center } from "../Layout";
+
+function changeGrid({threeCol}){
+    return(
+      threeCol && `
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "1 2 3";
+      ` || `
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "1 2";
+      `
+    )
+}
 
 const PortContainer = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-areas: "1 2";
+  ${changeGrid}
   height: 15rem;
   width: 100%;
+  grid-gap: 1rem;
 `;
 
 function changeBackground({ imgPath }) {
@@ -37,8 +49,10 @@ function changeBackPosition({ right, left }) {
   return (right && "right") || (left && "20%");
 }
 
+
+
 const BackgroundSmall = styled.div`
-  width: 90%;
+  width: 100%;
   height: 92%;
   align-self: center;
   justify-self: center;
@@ -103,77 +117,134 @@ const BackgroundLarge = styled.div`
   background-size: cover;
   background-repeat: no-repeat;
 `;
-export default class Portfolio extends React.Component {
-  render() {
+export default function Portfolio({desktop}, ...props) {
     return (
-      <>
-        <Layout noPadding>
-          <Header>
-            <Left>
-              <MDBIcon
-                onClick={() => this.props.history.goBack()}
-                icon="arrow-left"
-              />
-            </Left>
-            <Center>Portfolio</Center>
-          </Header>
+      <div>
+      {desktop && 
+        <LayoutDesktop>
+        <MainDesktop noPadding>
+          <PortContainer threeCol>
+            <PortElement imgPath={Gire} title="Rapipago"></PortElement>
 
-          <Main noPadding>
-            <PortContainer>
-              <PortElement imgPath={Gire} title="Rapipago"></PortElement>
+            <PortElement
+              imgPath={PathfindersBack}
+              title="Pathfinders"
+            ></PortElement>
+            <PortElement
+              right
+              imgPath={ManuBack}
+              title="Manuel DiCiervo"
+            ></PortElement>
+          </PortContainer>
+          <PortContainer threeCol>
+            
+            <PortElement
+              imgPath={Proyecto2000}
+              title="Proyecto 2000"
+            ></PortElement>
+            <PortElement left imgPath={Benfica} title="Benfica"></PortElement>
+            <PortElement right imgPath={Piccot} title="Piccot"></PortElement>
+          </PortContainer>
+          <PortContainer threeCol>
+            <PortElement left imgPath={IdWeb} title="ID"></PortElement>
+            <PortElement imgPath={Xolos} title="Xolos"></PortElement>
+            <PortElement imgPath={Airwheel} title="Airwheel"></PortElement>
+          </PortContainer>
+          <PortContainer threeCol>
+            
+            <PortElement left imgPath={NorAuto} title="NorAuto"></PortElement>
+            <PortElement
+              left
+              imgPath={Criterium}
+              title="Criterium"
+            ></PortElement>
+            <PortElement imgPath={Danzar} title="Danzar"></PortElement>
+          </PortContainer>
+          <PortContainer threeCol>
+            <PortElement
+              left
+              imgPath={SinLimite}
+              title="Sin Limite"
+            ></PortElement>
 
-              <PortElement
-                imgPath={PathfindersBack}
-                title="Pathfinders"
-              ></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                right
-                imgPath={ManuBack}
-                title="Manuel DiCiervo"
-              ></PortElement>
-              <PortElement
-                imgPath={Proyecto2000}
-                title="Proyecto 2000"
-              ></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement left imgPath={Benfica} title="Benfica"></PortElement>
-              <PortElement right imgPath={Piccot} title="Piccot"></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement left imgPath={IdWeb} title="ID"></PortElement>
-              <PortElement imgPath={Xolos} title="Xolos"></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement imgPath={Airwheel} title="Airwheel"></PortElement>
-              <PortElement left imgPath={NorAuto} title="NorAuto"></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                left
-                imgPath={Criterium}
-                title="Criterium"
-              ></PortElement>
-              <PortElement imgPath={Danzar} title="Danzar"></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                left
-                imgPath={SinLimite}
-                title="Sin Limite"
-              ></PortElement>
+            <PortElement
+              left
+              imgPath={KLD}
+              title="KLD Argentina"
+            ></PortElement>
+          </PortContainer>
+        </MainDesktop>
+      </LayoutDesktop>
+      || 
 
-              <PortElement
-                left
-                imgPath={KLD}
-                title="KLD Argentina"
-              ></PortElement>
-            </PortContainer>
-          </Main>
-        </Layout>
-      </>
+      <Layout noPadding>
+              <Header>
+                <Left>
+                  <MDBIcon
+                    onClick={() => props.history.goBack()}
+                    icon="arrow-left"
+                  />
+                </Left>
+                <Center>Portfolio2</Center>
+              </Header>
+      
+              <Main>
+                <PortContainer>
+                  <PortElement imgPath={Gire} title="Rapipago"></PortElement>
+      
+                  <PortElement
+                    imgPath={PathfindersBack}
+                    title="Pathfinders"
+                  ></PortElement>
+                </PortContainer>
+                <PortContainer>
+                  <PortElement
+                    right
+                    imgPath={ManuBack}
+                    title="Manuel DiCiervo"
+                  ></PortElement>
+                  <PortElement
+                    imgPath={Proyecto2000}
+                    title="Proyecto 2000"
+                  ></PortElement>
+                </PortContainer>
+                <PortContainer>
+                  <PortElement left imgPath={Benfica} title="Benfica"></PortElement>
+                  <PortElement right imgPath={Piccot} title="Piccot"></PortElement>
+                </PortContainer>
+                <PortContainer>
+                  <PortElement left imgPath={IdWeb} title="ID"></PortElement>
+                  <PortElement imgPath={Xolos} title="Xolos"></PortElement>
+                </PortContainer>
+                <PortContainer>
+                  <PortElement imgPath={Airwheel} title="Airwheel"></PortElement>
+                  <PortElement left imgPath={NorAuto} title="NorAuto"></PortElement>
+                </PortContainer>
+                <PortContainer>
+                  <PortElement
+                    left
+                    imgPath={Criterium}
+                    title="Criterium"
+                  ></PortElement>
+                  <PortElement imgPath={Danzar} title="Danzar"></PortElement>
+                </PortContainer>
+                <PortContainer>
+                  <PortElement
+                    left
+                    imgPath={SinLimite}
+                    title="Sin Limite"
+                  ></PortElement>
+      
+                  <PortElement
+                    left
+                    imgPath={KLD}
+                    title="KLD Argentina"
+                  ></PortElement>
+                </PortContainer>
+              </Main>
+            </Layout>
+      } 
+        
+      </div>
     );
-  }
 }

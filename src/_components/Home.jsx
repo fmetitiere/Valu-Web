@@ -7,7 +7,7 @@ import { Layout, Main, Banner } from "../Layout/";
 
 export default function Home() {
   return (
-    <Layout noHeader>
+    <Layout noHeader noPadding>
       <Main>
         <Banner />
         <NameSocial />

@@ -113,7 +113,7 @@ function changeTextAlign({ left }) {
 }
 
 function changeMargin({ noMarginTop }) {
-	return (noMarginTop && '0 0 1rem') || '1rem 0';
+	return (noMarginTop && '0 0 .5rem') || '.5rem 0';
 }
 
 export const H3 = Styled.h3`
@@ -146,14 +146,19 @@ export const LayoutDesktop = Styled.div`
     grid-template-areas: "header" "content";
     width: 100%;
     height: 100%;
-    background: rgba(224, 224, 224, 0.2);
 `;
+
+function addGrid({grid}){
+    return(grid && `
+    display: grid;
+    grid-template-columns: 2.5fr 5fr 3fr;
+    grid-template-areas: "profile posts bio";
+    `) || "";
+}
 
 export const MainDesktop = Styled.div`
     grid-area: content;
-    display: grid;
-    grid-template-columns: 2fr 5fr 3fr;
-    grid-template-areas: "profile posts bio";
+    ${addGrid};
     width: 1170px;
     margin: 0 auto;
     background: white;

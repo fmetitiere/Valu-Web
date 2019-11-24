@@ -27,6 +27,9 @@ function Routes() {
         <BrowserRouter>
           <Switch>
             <Route exact path="/" component={HomeDesktop} />
+            <Route exact path="/portfolio">
+              <Portfolio desktop></Portfolio>
+            </Route>
           </Switch>
           <MenuDesktop />
         </BrowserRouter>

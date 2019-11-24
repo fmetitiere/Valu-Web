@@ -16,7 +16,7 @@ import Experience from "../_components/Experience";
 export default function HomeDesktop() {
   return (
     <LayoutDesktop>
-      <MainDesktop>
+      <MainDesktop grid>
         <ProfileArea>
           <Banner desktop />
           <NameSocial desktop />
