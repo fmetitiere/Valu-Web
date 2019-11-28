@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Layout, Header, Main, Left, Center, P, MainContainer } from '../Layout';
+import { Layout, Header, Main, Left, Center, MainContainer } from '../Layout';
 
 import backgroundImage from '../images/backgroundLoading.jpg';
 import BiographyText from '../_components/BiographyText';

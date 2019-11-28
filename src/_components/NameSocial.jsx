@@ -80,7 +80,7 @@ export default function NameSocial({ desktop }) {
 				</>
 			) : (
 				<InfoSocial>
-					<Profession lessFive>UX UI Developer</Profession>
+					<Profession>UX UI Developer</Profession>
 					<NameSocialText/>
 				</InfoSocial>
 			)}

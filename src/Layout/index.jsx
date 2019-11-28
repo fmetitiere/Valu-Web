@@ -168,7 +168,7 @@ export const MainDesktop = Styled.div`
 
 export const ProfileArea = Styled.div`
     grid-area: profile;
-    position: relative;
+    position: fixed;
 `;
 export const PostsArea = Styled.div`
     grid-area: posts;
@@ -177,21 +177,25 @@ export const BioArea = Styled.div`
     grid-area: bio;
 `;
 
-function BackgroundColor({ blue, ...props }) {
-	return blue ? props.theme.PrimaryColor : 'white';
-}
-function changeFontColor({ whiteFont }) {
-	return whiteFont ? 'white' : '#68b7f0';
+function SecondaryButton({ secondary, ...props }) {
+	return (
+        secondary ? `
+        background: ${props.theme.PrimaryColor};
+        color: white;
+        ` : `
+        background: white;
+        color: #68b7f0;
+        `
+    )
 }
 
 export const Button = Styled.button`
-    background: ${BackgroundColor};
+    ${SecondaryButton}
     border: 0;
     width: 100%;
     margin: .5rem 0;
     border: .1rem solid #68b7f0;
     padding: .3rem;
-    color: ${changeFontColor};
     font-weight: bold;
     border-radius: .5rem;
     outline:0;

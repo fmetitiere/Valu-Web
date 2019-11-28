@@ -2,7 +2,7 @@ import React from "react";
 import Styled from "styled-components";
 import Lottie from "react-lottie";
 
-import * as animationData from "../Animations/backgroundAnim.json";
+import * as animationData from "../Animations/BackgroundAnimDesktop.json";
 import BackgroundImage from "../images/banner.jpg";
 import Avatar from "../_components/Avatar";
 
@@ -66,9 +66,9 @@ class SocialAnimBackground extends React.Component {
       <>
         <Lottie
           isClickToPauseDisabled={true}
-          speed={0.2}
+          speed={0.4}
           options={defaultOptions}
-          height={180}
+          height={210}
           width={"100%"}
         />
         {this.props.children}

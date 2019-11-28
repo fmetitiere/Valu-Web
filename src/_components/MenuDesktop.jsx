@@ -4,8 +4,6 @@ import Styled from "styled-components";
 
 const MenuWrapper = Styled.div`
     grid-area: header; 
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
 		background: ${props => props.theme.PrimaryColor};
     box-shadow: ${props => props.theme.Shadows};
     backgriund-size: cover;
@@ -15,25 +13,45 @@ const MenuWrapper = Styled.div`
     top:0;
     width:100%;
     z-index:199;
-    div{
-        justify-self: center;
-        align-self: center;
-    }
-    i{
-        color:#fff;
-        font-size:1.3rem;
-    }
-    div:nth-child(2){
-        i{
-            font-size:1.5rem !important;
-        }
-    }
+`;
+const Menu = Styled.div`
+  width: 1170px;
+  display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+`;
+
+const Flex = Styled.div`
+  display: flex;
+`;
+
+const Logo = Styled.div`
+  color: white;
+  font-weight: normal;
+  font-size: 1.2rem;
+`;
+
+const MenuItem = Styled.div`
+  color:white;
+  margin-left: 1rem;
+  a{
+    color: white;
+    font-weight: bold;
+  }
 `;
 
 export default function MenuDesktop() {
   return (
     <MenuWrapper>
-     
+      <Menu>
+        <Logo>Nano<strong>Metitiere</strong></Logo>
+        <Flex>
+        
+          <MenuItem><Link to="/">Home</Link></MenuItem>
+          <MenuItem><Link to="/Portfolio">Portfolio</Link></MenuItem>
+        </Flex>
+      </Menu>
     </MenuWrapper>
   );
 }

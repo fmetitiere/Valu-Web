@@ -12,11 +12,11 @@ const AvatarStyled = styled(Avatar)`
 
 function changeImageSize({desktop}){
   return(
-    desktop && `
+    desktop ? `
     width: 11rem !important;
     height: 11rem !important;
     `
-    ||
+    :
     `width: 10rem !important;
     height: 10rem !important;`
   )
