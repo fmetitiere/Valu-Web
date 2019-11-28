@@ -1,7 +1,4 @@
-import React, { useState } from 'react';
-import { H3, P, Button, Card } from '../Layout/';
-
-import classnames from 'classnames';
+import React from 'react';
 import styled from 'styled-components';
 
 const ExpWrapper = styled.div`
@@ -24,28 +21,18 @@ const Time = styled.div`
 	color: #68b7f0;
 `;
 
-
-
 const Skill = styled.div`font-weight: 400;`;
 
-export default function ExperienceText({ show = false }) {
-	const [ open, setOpen ] = useState(false);
-
-	const isOpen = open;
-	show = isOpen;
-
+export default function ExperienceText({ show }) {
 	return (
-		<Card>
-			<H3 noMarginTop left>
-				Experience
-			</H3>
+		<div>
 			<ExpWrapper>
 				<Company>
 					Technisys<Skill>Senior User Interface Developer</Skill>
 				</Company>
 				<Time>2018 - Today</Time>
 			</ExpWrapper>
-			{open && (
+			{show && (
 				<div>
 					<ExpWrapper>
 						<Company>
@@ -76,16 +63,6 @@ export default function ExperienceText({ show = false }) {
 					</ExpWrapper>
 				</div>
 			)}
-
-			{(open && (
-				<Button blue whiteFont className={classnames({ show })} onClick={() => setOpen(!isOpen)}>
-					Show -
-				</Button>
-			)) || (
-				<Button className={classnames({ show })} onClick={() => setOpen(!isOpen)}>
-					Show +
-				</Button>
-			)}
-		</Card>
+		</div>
 	);
 }

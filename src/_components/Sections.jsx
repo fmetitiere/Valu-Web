@@ -9,7 +9,7 @@ const Wrapper = styled.div`
   grid-template-areas: "left center right";
   width: 100%;
   grid-gap: 1rem;
-  margin-top: 1rem;
+  margin: 1rem 0;
 `;
 
 const Section = styled(Link)`

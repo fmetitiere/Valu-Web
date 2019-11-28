@@ -11,7 +11,9 @@ import ExperienceText from "../_components/ExperienceText";
 import BiogrphyText from "../_components/BiographyText";
 import Posts from "../_components/Posts";
 import NameSocial from "../_components/NameSocial";
-import Experience from "../_components/Experience";
+import Skills from "../_components/Skills";
+import Cards from "../_components/Cards";
+
 
 export default function HomeDesktop() {
   return (
@@ -20,14 +22,14 @@ export default function HomeDesktop() {
         <ProfileArea>
           <Banner desktop />
           <NameSocial desktop />
-          <Experience/>
+          <Skills/>
         </ProfileArea>
         <PostsArea>
           <Posts desktop />
         </PostsArea>
         <BioArea>
-            <BiogrphyText desktop/>
-            <ExperienceText desktop/>
+            <Cards title="Biography" component={BiogrphyText}/>
+            <Cards title="Experience" component={ExperienceText}/>
         </BioArea>
       </MainDesktop>
     </LayoutDesktop>

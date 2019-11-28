@@ -10,19 +10,30 @@ const AvatarStyled = styled(Avatar)`
     z-index:1;
 `;
 
+function changeImageSize({desktop}){
+  return(
+    desktop && `
+    width: 11rem !important;
+    height: 11rem !important;
+    `
+    ||
+    `width: 10rem !important;
+    height: 10rem !important;`
+  )
+}
+
 const AvatarWrapper = styled(Grid)`
 border-radius: .5rem;
 padding: .2rem;
   div {
-    width: 9rem !important;
-    height: 9rem !important;
+    ${changeImageSize}
     border-radius: 5rem !important;
   }
 `;
 
-export default function ImageAvatars() {
+export default function ImageAvatars({desktop}) {
   return (
-    <AvatarWrapper container justify="center" alignItems="center">
+    <AvatarWrapper desktop={desktop} container justify="center" alignItems="center">
       <AvatarStyled alt="Nano Metitiere" src={AvatarImage}  />
     </AvatarWrapper>
   );

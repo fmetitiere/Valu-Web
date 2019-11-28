@@ -17,7 +17,7 @@ const defaultOptions = {
 };
 
 function changePosition({ desktop }) {
-  return desktop ? "2rem" : "3.5rem";
+  return desktop ? "0rem" : "2rem";
 }
 
 const AvatarWrapper = Styled.div`
@@ -31,10 +31,16 @@ function changeBorderRadius({desktop}){
 	return desktop ? ".5rem" : ".5rem .5rem 0 0"
 }
 
+function addBackgroundTransparent({desktop, ...props}){
+  return (
+    desktop ? "transparent" : props.theme.PrimaryColor
+  )
+}
+
 const BackgroundWrapper = Styled.div`
 		z-index:0;
 		// background-image: url(${BackgroundImage});
-		background: ${props => props.theme.PrimaryColor};
+		background: ${addBackgroundTransparent};
 		background-position: center;
 		background-repeat: no-repeat;
 		background-size: cover;
@@ -71,12 +77,12 @@ class SocialAnimBackground extends React.Component {
   }
 }
 
-function Banner({ ...props }) {
+function Banner({ desktop, ...props }) {
   return (
-    <BackgroundWrapper {...props}>
+    <BackgroundWrapper desktop={desktop} {...props}>
       <SocialAnimBackground>
-        <AvatarWrapper {...props}>
-          <Avatar />
+        <AvatarWrapper desktop={desktop} {...props}>
+          <Avatar desktop={desktop} />
         </AvatarWrapper>
       </SocialAnimBackground>
     </BackgroundWrapper>

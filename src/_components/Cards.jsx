@@ -1,50 +1,22 @@
-import React from 'react';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardMedia from '@material-ui/core/CardMedia';
-import Button from '@material-ui/core/Button';
+import React, {useState} from 'react';
+import classnames from 'classnames';
 
+import { Card, Button, H3 } from '../Layout/';
 
-import Styled from 'styled-components';
+export default function Cards({ component, children, show, title }) {
+	const Component = component;
 
-import BackgroundImage from '../images/banner.jpg'
+	const [ open, setOpen ] = useState(false);
 
-const CardStyled = Styled(Card)`
-    width: 100%;
-    background: white;
-    
-    &.MuiPaper-rounded-3 {
-       
-    }
-    .MuiCard-root-1 {
-        width: 100% !important;
-    }
-    .MuiCardMedia-root-35 {
-        height: 10rem;
-    }
-`;
-
-export default function MediaCard() {
-
-
-  return (
-    <CardStyled >
-      <CardActionArea>
-        <CardMedia
-          image={BackgroundImage}
-          title="Contemplative Reptile"
-        />
-        
-      </CardActionArea>
-      <CardActions>
-        <Button size="small" color="primary">
-          Share
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
-        </Button>
-      </CardActions>
-    </CardStyled>
-  );
+	return (
+		<Card>
+      <H3 noMarginTop left>
+				{title}
+			</H3>
+			<Component show={open}>{children}</Component>
+			<Button className={classnames({ show })} onClick={() => setOpen(!open)}>
+				{open ? `Show -` :  `Show +`}
+			</Button>
+		</Card>
+	);
 }

@@ -153,6 +153,7 @@ function addGrid({grid}){
     display: grid;
     grid-template-columns: 2.5fr 5fr 3fr;
     grid-template-areas: "profile posts bio";
+    grid-gap: 1rem;
     `) || "";
 }
 
@@ -162,20 +163,18 @@ export const MainDesktop = Styled.div`
     width: 1170px;
     margin: 0 auto;
     background: white;
+    padding-top: 1rem;
 `;
 
 export const ProfileArea = Styled.div`
     grid-area: profile;
     position: relative;
-    padding: 1rem 0 0 1rem;
 `;
 export const PostsArea = Styled.div`
     grid-area: posts;
-    padding: 0 1rem;
 `;
 export const BioArea = Styled.div`
     grid-area: bio;
-    padding: 1rem 1rem 0 0;
 `;
 
 function BackgroundColor({ blue, ...props }) {

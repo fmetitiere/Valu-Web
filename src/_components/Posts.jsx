@@ -16,7 +16,6 @@ function changeBackPosition({ right, left }) {
 
 const Wrapper = styled.div`
   width: 100%;
-  margin-top: 1rem;
 `;
 
 function changeSectionSize({ desktop }) {
@@ -34,6 +33,7 @@ const Section = styled.div`
   flex-direction: column;
   overflow: hidden;
   box-shadow: ${props => props.theme.Shadows};
+  margin-bottom: 1rem;  
 `;
 
 const Image = styled.div`

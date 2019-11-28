@@ -1,26 +1,18 @@
-import React, { useState } from 'react';
-import { H3, P, Button, Card } from '../Layout/';
+import React from 'react';
 
-import classnames from 'classnames';
-import styled from 'styled-components';
+import { P } from '../Layout/';
 
-export default function BiographyText({show=false}) {
-	const [ open, setOpen ] = useState(false);
-
-  const isOpen = open;
-  show = isOpen;
-
+export default function BiographyText({ show }) {
 	return (
-		<Card>
-			<H3 noMarginTop left>Biography</H3>
+		<div>
 			<P>
 				Born in Buenos Aires (Argentina), Nano began his studies in 2012 at the "First Da Vinci Multimedia
 				School" in <strong>"Multimedia Design"</strong>. After two years of studies, he travels to Ecuador to
 				specialize in <strong>"Web Development"</strong> where he acquired advanced knowledge in HTML 5 and CSS
 				3. <br />
 			</P>
-			{open && (
-				<P className={classnames({show})}>
+			{show && (
+				<P>
 					He worked as a Web Multimedia Designer in Latinmanagers Ecuador and was the editor of the RACEI
 					(Argentine Network of International Studies Centers) and TIP (Research in Paradiplomacy) magazine of
 					Argentina. Then in 2016 he started as a <strong>Frontend Developer</strong> in Lop Multimedia
@@ -31,10 +23,6 @@ export default function BiographyText({show=false}) {
 					<strong>UI Develop in React JS</strong> for Digital banking product.
 				</P>
 			)}
-
-			{(open && <Button blue whiteFont className={classnames({show})} onClick={() => setOpen(!isOpen)}>Show -</Button>) || (
-				<Button className={classnames({show})} onClick={() => setOpen(!isOpen)}>Show +</Button>
-			)}
-		</Card>
+		</div>
 	);
 }
