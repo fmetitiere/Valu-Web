@@ -168,7 +168,6 @@ export const MainDesktop = Styled.div`
 
 export const ProfileArea = Styled.div`
     grid-area: profile;
-    position: fixed;
 `;
 export const PostsArea = Styled.div`
     grid-area: posts;
