@@ -23,20 +23,18 @@ import {
 } from "../_components/Backgrounds";
 import {
   Layout,
-  LayoutDesktop,
   Header,
   Main,
-  MainDesktop,
   Left,
   Center
 } from "../Layout";
 
-function changeGrid({ threeCol }) {
+function changeGrid({ fourthCol }) {
   return (
-    (threeCol &&
+    (fourthCol &&
       `
-      grid-template-columns: 1fr 1fr 1fr;
-      grid-template-areas: "1 2 3";
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-areas: "1 2 3 4";
       `) ||
     `
       grid-template-columns: 1fr 1fr;
@@ -48,7 +46,7 @@ function changeGrid({ threeCol }) {
 const PortContainer = styled.div`
   display: grid;
   ${changeGrid}
-  height: 15rem;
+  height: 11rem;
   width: 100%;
   grid-gap: 1rem;
 `;
@@ -131,29 +129,22 @@ export default function Portfolio({ desktop }, ...props) {
   return (
     <div>
       {(desktop && (
-        <LayoutDesktop>
-          <MainDesktop noPadding>
-            <PortContainer threeCol>
+       <>
+            <PortContainer fourthCol>
               <PortElement imgPath={Dinn} title="Dinn"></PortElement>
               <PortElement imgPath={Gire} title="Rapipago"></PortElement>
               <PortElement
                 imgPath={PathfindersBack}
                 title="Pathfinders"
               ></PortElement>
-            </PortContainer>
-            <PortContainer threeCol>
-              <PortElement
-                right
-                imgPath={ManuBack}
-                title="Manuel DiCiervo"
-              ></PortElement>
               <PortElement
                 imgPath={Proyecto2000}
                 title="Proyecto 2000"
               ></PortElement>
-              <PortElement left imgPath={Benfica} title="Benfica"></PortElement>
             </PortContainer>
-            <PortContainer threeCol>
+            <PortContainer fourthCol>
+              
+              <PortElement left imgPath={Benfica} title="Benfica"></PortElement>
               <PortElement right imgPath={Piccot} title="Piccot"></PortElement>
               <PortElement left imgPath={IdWeb} title="ID"></PortElement>
               <PortElement
@@ -162,17 +153,18 @@ export default function Portfolio({ desktop }, ...props) {
                 title="Tecnovibe"
               ></PortElement>
             </PortContainer>
-            <PortContainer threeCol>
+         
+            <PortContainer fourthCol>
               <PortElement imgPath={Xolos} title="Xolos"></PortElement>
               <PortElement imgPath={Airwheel} title="Airwheel"></PortElement>
               <PortElement left imgPath={NorAuto} title="NorAuto"></PortElement>
-            </PortContainer>
-            <PortContainer threeCol>
               <PortElement
                 left
                 imgPath={Criterium}
                 title="Criterium"
               ></PortElement>
+            </PortContainer>
+            <PortContainer fourthCol>
               <PortElement imgPath={Danzar} title="Danzar"></PortElement>
 
               <PortElement
@@ -180,16 +172,14 @@ export default function Portfolio({ desktop }, ...props) {
                 imgPath={SinLimite}
                 title="Sin Limite"
               ></PortElement>
-            </PortContainer>
-            <PortContainer threeCol>
               <PortElement
                 left
                 imgPath={KLD}
                 title="KLD Argentina"
               ></PortElement>
             </PortContainer>
-          </MainDesktop>
-        </LayoutDesktop>
+          
+         </>
       )) || (
         <Layout noPadding>
           <Header>

@@ -1,11 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import Styled from "styled-components";
+import React from 'react';
+import { Link } from 'react-router-dom';
+import Styled from 'styled-components';
+import { MDBIcon } from 'mdbreact';
 
 const MenuWrapper = Styled.div`
     grid-area: header; 
-		background: ${props => props.theme.PrimaryColor};
-    box-shadow: ${props => props.theme.Shadows};
+		background: ${(props) => props.theme.PrimaryColor};
+    box-shadow: ${(props) => props.theme.Shadows};
     backgriund-size: cover;
     position: fixed;
     height:3.5rem;
@@ -13,45 +14,48 @@ const MenuWrapper = Styled.div`
     top:0;
     width:100%;
     z-index:199;
+
 `;
 const Menu = Styled.div`
-  width: 1170px;
-  display: flex;
+  width: 5%;
+
     align-items: center;
     justify-content: space-between;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "home portfolio";
+    > div{
+      align-self:center;
+      justify-self: center;
+    }
 `;
 
-const Flex = Styled.div`
-  display: flex;
-`;
-
-const Logo = Styled.div`
-  color: white;
-  font-weight: normal;
-  font-size: 1.2rem;
-`;
-
-const MenuItem = Styled.div`
-  color:white;
-  margin-left: 1rem;
+const MenuItem = Styled.div`  
   a{
     color: white;
     font-weight: bold;
+    .fa, .fas {
+      font-size: 1.5rem;
+    }
   }
 `;
 
 export default function MenuDesktop() {
-  return (
-    <MenuWrapper>
-      <Menu>
-        <Logo>Nano<strong>Metitiere</strong></Logo>
-        <Flex>
-        
-          <MenuItem><Link to="/">Home</Link></MenuItem>
-          <MenuItem><Link to="/Portfolio">Portfolio</Link></MenuItem>
-        </Flex>
-      </Menu>
-    </MenuWrapper>
-  );
+	return (
+		<MenuWrapper>
+			<Menu>
+				<MenuItem>
+					<Link to="/">
+						<MDBIcon icon="home" />
+					</Link>
+				</MenuItem>
+				<MenuItem>
+					<Link to="/portfolio">
+						<MDBIcon icon="images" />
+					</Link>
+				</MenuItem>
+			</Menu>
+		</MenuWrapper>
+	);
 }

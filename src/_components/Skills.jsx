@@ -4,9 +4,11 @@ import styled from 'styled-components';
 
 const Wrapper = styled.div`
 	margin: 1rem 0;
+	.skillbar{
+		max-width:85%;
+	}
 	.skillbar-bar {
 		left: 8.5rem;
-		max-width: 7rem;
 		background: linear-gradient(to right, rgba(96, 124, 234, 1) 0%, rgba(105, 186, 241, 1) 100%);
 	}
 	.skillbar-title {

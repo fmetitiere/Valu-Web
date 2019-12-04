@@ -7,12 +7,12 @@ export default function BiographyText({ show }) {
 		<div>
 			<P>
 				Born in Buenos Aires (Argentina), Nano began his studies in 2012 at the "First Da Vinci Multimedia
-				School" in <strong>"Multimedia Design"</strong>. After two years of studies, he travels to Ecuador to
-				specialize in <strong>"Web Development"</strong> where he acquired advanced knowledge in HTML 5 and CSS
-				3. <br />
+				School" in <strong>"Multimedia Design"</strong>. After two years of studies, he travels to Ecuador to specialize in 
 			</P>
 			{show && (
 				<P>
+					
+				<strong>"Web Development"</strong> where he acquired advanced knowledge in HTML and CSS. <br />
 					He worked as a Web Multimedia Designer in Latinmanagers Ecuador and was the editor of the RACEI
 					(Argentine Network of International Studies Centers) and TIP (Research in Paradiplomacy) magazine of
 					Argentina. Then in 2016 he started as a <strong>Frontend Developer</strong> in Lop Multimedia

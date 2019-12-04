@@ -14,8 +14,8 @@ const AvatarWrapper = styled(Grid)`
 border-radius: .5rem;
 padding: .2rem;
   div {
-    width: 11rem !important;
-    height: 11rem !important;
+    width: 10rem !important;
+    height: 10rem !important;
     border-radius: 5rem !important;
   }
 `;

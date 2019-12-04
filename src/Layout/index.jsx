@@ -168,6 +168,7 @@ export const MainDesktop = Styled.div`
 
 export const ProfileArea = Styled.div`
     grid-area: profile;
+    position: relative;
 `;
 export const PostsArea = Styled.div`
     grid-area: posts;

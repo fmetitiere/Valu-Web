@@ -22,7 +22,7 @@ function changeSectionSize({ desktop }) {
   return desktop ? "auto" : "auto";
 }
 function changeImageSize({ desktop }) {
-  return desktop ? "20rem" : "12rem";
+  return desktop ? "15rem" : "12rem";
 }
 
 const Section = styled.div`
@@ -143,13 +143,7 @@ export default function Posts({ desktop }) {
         country="Argentina"
         desktop={desktop}
       />
-      <PostElement
-        imgPath={ManuBack}
-        title="Manuel DiCiervo"
-        page="Web Design and Develop"
-        country="Argentina"
-        desktop={desktop}
-      />
+     
     </>
   );
 }
