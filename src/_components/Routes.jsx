@@ -2,12 +2,12 @@ import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import { BrowserView, MobileView } from 'react-device-detect';
 
-import { Menu, MenuDesktop } from '../Layout';
 import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
+import SkillsPage from './SkillsPage';
 
-import { LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
+import { Menu, MenuDesktop, LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
 import ExperienceText from '../_components/ExperienceText';
 import BiogrphyText from '../_components/BiographyText';
 import NameSocial from '../_components/NameSocial';
@@ -25,6 +25,7 @@ function Routes() {
 						<Route exact path="/" component={Home} />
 						<Route exact path="/about" component={About} />
 						<Route exact path="/portfolio" component={Portfolio} />
+						<Route exact path="/skills" component={SkillsPage} />
 					</Switch>
 					<Menu />
 				</BrowserRouter>

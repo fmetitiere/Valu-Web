@@ -2,8 +2,14 @@ import React from 'react';
 import SkillBar from 'react-skillbars';
 import styled from 'styled-components';
 
+function addMargin({addBottomMargin}){
+	return(
+		addBottomMargin && "1rem 0 5rem;" || "1rem 0"
+	)
+}
+
 const Wrapper = styled.div`
-	margin: 1rem 0;
+	margin: ${addMargin};
 	.skillbar{
 		max-width:85%;
 	}
@@ -44,9 +50,10 @@ const skills = [
     { type: 'Adobe After Effects', level: 70 },
 ];
 
-export default function Skills() {
+
+export default function Skills({...props}) {
 	return (
-		<Wrapper>
+		<Wrapper {...props}>
 			<SkillBar skills={skills} height={28} />
 		</Wrapper>
 	);

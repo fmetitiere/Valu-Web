@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { H5, SMALL } from "../Layout/";
 import { Dinn, ManuBack, Gire } from "../_components/Backgrounds";
 
+import {Data} from '../_components/PortfolioData';
 import { MDBIcon } from "mdbreact";
 import Modal from "react-responsive-modal";
 
@@ -125,23 +126,24 @@ export default function Posts({ desktop }) {
   return (
     <>
       <PostElement
-        imgPath={Dinn}
-        title="Dinn"
-        desc="Technisys"
-        page="UI Develop"
-        company="Actinver"
-        country="México"
+        imgPath={Data[0].name}
+        title={Data[0].text}
+        desc={Data[0].desc}
+        page={Data[0].skill}
+        company={Data[0].company}
+        country={Data[0].country}
         desktop={desktop}
         center
       />
-      <PostElement
-        imgPath={Gire}
-        title="Rapipago"
-        desc="Technisys"
-        page="UX UI Develop"
-        company="GIRE"
-        country="Argentina"
+       <PostElement
+        imgPath={Data[1].name}
+        title={Data[1].text}
+        desc={Data[1].desc}
+        page={Data[1].skill}
+        company={Data[1].company}
+        country={Data[1].country}
         desktop={desktop}
+        center
       />
      
     </>

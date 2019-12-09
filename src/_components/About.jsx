@@ -5,6 +5,8 @@ import { Layout, Header, Main, Left, Center, MainContainer } from '../Layout';
 import backgroundImage from '../images/backgroundLoading.jpg';
 import BiographyText from '../_components/BiographyText';
 import { MDBIcon } from 'mdbreact';
+import Skills from "../_components/Skills";
+
 
 const Banner = styled.div`
 	width: 100%;
@@ -26,6 +28,7 @@ export default function About({ ...props }) {
 					<Banner />
 					<MainContainer>
 						<BiographyText show={true} />
+               			<Skills addBottomMargin/>
 					</MainContainer>
 				</Main>
 			</Layout>

@@ -3,24 +3,8 @@ import styled from "styled-components";
 import Modal from "react-responsive-modal";
 import { MDBIcon } from "mdbreact";
 
-import {
-  PathfindersBack,
-  ManuBack,
-  Proyecto2000,
-  Benfica,
-  Piccot,
-  IdWeb,
-  Xolos,
-  Airwheel,
-  SinLimite,
-  NorAuto,
-  Criterium,
-  Danzar,
-  KLD,
-  Gire,
-  Tecnovibe,
-  Dinn
-} from "../_components/Backgrounds";
+import {Data} from '../_components/PortfolioData';
+
 import {
   Layout,
   Header,
@@ -43,10 +27,16 @@ function changeGrid({ fourthCol }) {
   );
 }
 
+function changePortfolioHeight({mobile}){
+  return(
+    mobile && "height:70rem; margin-bottom:4rem;" || "height:40rem;"
+  )
+}
+
 const PortContainer = styled.div`
   display: grid;
   ${changeGrid}
-  height: 11rem;
+  ${changePortfolioHeight};
   width: 100%;
   grid-gap: 1rem;
 `;
@@ -61,7 +51,7 @@ function changeBackPosition({ right, left }) {
 
 const BackgroundSmall = styled.div`
   width: 100%;
-  height: 92%;
+  height: 100%;
   align-self: center;
   justify-self: center;
   ${changeBackground}
@@ -93,6 +83,17 @@ const PortfolioTitle = styled.div`
   }
 `;
 
+
+const BackgroundLarge = styled.div`
+  width: 16rem;
+  height: 60vh;
+  ${changeBackground}
+  background-position: center top;
+  background-size: cover;
+  background-repeat: no-repeat;
+`;
+
+
 function PortElement({ title, imgPath, modal = true, ...props }) {
   const [showModal, setShowModal] = useState(false);
 
@@ -117,142 +118,35 @@ function PortElement({ title, imgPath, modal = true, ...props }) {
   );
 }
 
-const BackgroundLarge = styled.div`
-  width: 18rem;
-  height: 60vh;
-  ${changeBackground}
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
-`;
+function DataComponent(){
+  return(
+    Data.map(element => <PortElement imgPath={element.name} title={element.text}></PortElement>)
+  )
+}
+
+function DataArray({fourthCol, mobile}){
+  return(
+    <PortContainer mobile={mobile} fourthCol={fourthCol}><DataComponent/></PortContainer>
+  )
+}
+
 export default function Portfolio({ desktop }, ...props) {
   return (
     <div>
       {(desktop && (
-       <>
-            <PortContainer fourthCol>
-              <PortElement imgPath={Dinn} title="Dinn"></PortElement>
-              <PortElement imgPath={Gire} title="Rapipago"></PortElement>
-              <PortElement
-                imgPath={PathfindersBack}
-                title="Pathfinders"
-              ></PortElement>
-              <PortElement
-                imgPath={Proyecto2000}
-                title="Proyecto 2000"
-              ></PortElement>
-            </PortContainer>
-            <PortContainer fourthCol>
-              
-              <PortElement left imgPath={Benfica} title="Benfica"></PortElement>
-              <PortElement right imgPath={Piccot} title="Piccot"></PortElement>
-              <PortElement left imgPath={IdWeb} title="ID"></PortElement>
-              <PortElement
-                left
-                imgPath={Tecnovibe}
-                title="Tecnovibe"
-              ></PortElement>
-            </PortContainer>
-         
-            <PortContainer fourthCol>
-              <PortElement imgPath={Xolos} title="Xolos"></PortElement>
-              <PortElement imgPath={Airwheel} title="Airwheel"></PortElement>
-              <PortElement left imgPath={NorAuto} title="NorAuto"></PortElement>
-              <PortElement
-                left
-                imgPath={Criterium}
-                title="Criterium"
-              ></PortElement>
-            </PortContainer>
-            <PortContainer fourthCol>
-              <PortElement imgPath={Danzar} title="Danzar"></PortElement>
-
-              <PortElement
-                left
-                imgPath={SinLimite}
-                title="Sin Limite"
-              ></PortElement>
-              <PortElement
-                left
-                imgPath={KLD}
-                title="KLD Argentina"
-              ></PortElement>
-            </PortContainer>
-          
+         <>
+         <DataArray fourthCol/> 
          </>
       )) || (
         <Layout noPadding>
           <Header>
             <Left>
-              <MDBIcon
-                onClick={() => props.history.goBack()}
-                icon="arrow-left"
-              />
+            <MDBIcon onClick={() => props.history.goBack()} icon="arrow-left" />
             </Left>
             <Center>Portfolio</Center>
           </Header>
           <Main>
-            <PortContainer>
-              <PortElement imgPath={Dinn} title="Dinn"></PortElement>
-              <PortElement imgPath={Gire} title="Rapipago"></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                imgPath={PathfindersBack}
-                title="Pathfinders"
-              ></PortElement>
-              <PortElement
-                right
-                imgPath={ManuBack}
-                title="Manuel DiCiervo"
-              ></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                imgPath={Proyecto2000}
-                title="Proyecto 2000"
-              ></PortElement>
-              <PortElement left imgPath={Benfica} title="Benfica"></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement right imgPath={Piccot} title="Piccot"></PortElement>
-              <PortElement left imgPath={IdWeb} title="ID"></PortElement>
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                left
-                imgPath={Tecnovibe}
-                title="Tecnovibe"
-              ></PortElement>
-              <PortElement imgPath={Xolos} title="Xolos"></PortElement>
-
-            </PortContainer>
-            <PortContainer>
-              <PortElement imgPath={Airwheel} title="Airwheel"></PortElement>
-              <PortElement left imgPath={NorAuto} title="NorAuto"></PortElement>
-
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                left
-                imgPath={Criterium}
-                title="Criterium"
-              ></PortElement>
-              <PortElement imgPath={Danzar} title="Danzar"></PortElement>
-
-            </PortContainer>
-            <PortContainer>
-              <PortElement
-                left
-                imgPath={SinLimite}
-                title="Sin Limite"
-              ></PortElement>
-              <PortElement
-                left
-                imgPath={KLD}
-                title="KLD Argentina"
-              ></PortElement>
-            </PortContainer>
+            <DataArray mobile/> 
           </Main>
         </Layout>
       )}

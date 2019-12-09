@@ -32,10 +32,10 @@ const DefaultLayout = Styled.div`
     padding: ${changePadding};
     margin: 0;
     display: grid;
-    grid-template-rows: 4rem auto 4rem;
-    grid-template-areas: "header" "content" "footer";
+    grid-template-rows: 4rem auto;
+    grid-template-areas: "header" "content";
     width: 100%;
-    height: 100%;
+    height: 100vh;
 `;
 
 const NoHeaderLayout = Styled.div`

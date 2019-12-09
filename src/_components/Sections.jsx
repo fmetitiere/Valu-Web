@@ -33,7 +33,7 @@ export default function Sections() {
       <Section to="/portfolio">
         <p>Portfolio</p>
       </Section>
-      <Section>
+      <Section to="/skills">
         <p>Skills</p>
       </Section>
       <Section to="/about">
