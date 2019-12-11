@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 import { H5, SMALL } from "../Layout/";
-import { Dinn, ManuBack, Gire } from "../_components/Backgrounds";
 
 import {Data} from '../_components/PortfolioData';
 import { MDBIcon } from "mdbreact";

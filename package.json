@@ -10,6 +10,7 @@
     "react": "^16.9.0",
     "react-device-detect": "^1.7.5",
     "react-dom": "^16.9.0",
+    "react-email-share-link": "^1.0.3",
     "react-fade-in": "^0.1.6",
     "react-loading": "^2.0.3",
     "react-lottie": "^1.2.3",

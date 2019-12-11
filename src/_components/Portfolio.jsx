@@ -29,7 +29,7 @@ function changeGrid({ fourthCol }) {
 
 function changePortfolioHeight({mobile}){
   return(
-    mobile && "height:70rem; margin-bottom:4rem;" || "height:40rem;"
+    mobile ? "height:70rem; margin-bottom:4rem;" : "height:40rem;"
   )
 }
 

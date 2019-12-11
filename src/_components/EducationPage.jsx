@@ -1,20 +1,20 @@
 import React from 'react';
 
-import { Layout, Header, Left, Center, Main } from '../Layout/';
+import { Layout, Header, Left, Center, Main } from '../Layout';
 import { MDBIcon } from 'mdbreact';
-import Skills from "../_components/Skills";
+import EducationText from '../_components/EducationText';
 
-export default function SkillsPage(props) {
+export default function EducationsPage(props) {
 	return (
 		<Layout noPadding>
 			<Header>
 				<Left>
 					<MDBIcon onClick={() => props.history.goBack()} icon="arrow-left" />
 				</Left>
-				<Center>Skills</Center>
+				<Center>Education</Center>
 			</Header>
 			<Main>
-                <Skills/>
+                <EducationText show={true}/>
             </Main>
 		</Layout>
 	);

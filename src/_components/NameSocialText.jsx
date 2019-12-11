@@ -2,6 +2,7 @@ import React from 'react';
 import Styled from 'styled-components';
 import { MDBIcon } from 'mdbreact';
 
+
 const Social = Styled.div`
 	align-self: center;
 	justify-self: center;

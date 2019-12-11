@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 function addMargin({addBottomMargin}){
 	return(
-		addBottomMargin && "1rem 0 5rem;" || "1rem 0"
+		addBottomMargin ? "1rem 0 5rem;" : "1rem 0"
 	)
 }
 

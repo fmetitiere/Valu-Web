@@ -8373,6 +8373,13 @@ react-easy-swipe@^0.0.16:
   dependencies:
     prop-types "^15.5.8"
 
+react-email-share-link@^1.0.3:
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/react-email-share-link/-/react-email-share-link-1.0.3.tgz#745d09fa9bca8a1c3820f7a8bc43237bb4e5c05e"
+  integrity sha512-MNWNN4OHbrE3ia3l3a5EHds4dXbu9o7j1F4P+UkQ4y15AdkU/laMDD2EXE3onVRePtk2Et3TUHKyEleocUfN2g==
+  dependencies:
+    prop-types "^15.7.2"
+
 react-error-overlay@^6.0.0:
   version "6.0.0"
   resolved "https://registry.yarnpkg.com/react-error-overlay/-/react-error-overlay-6.0.0.tgz#485beca3db57e8ec2d934d4ee598754467229499"
