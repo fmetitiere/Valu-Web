@@ -30,7 +30,7 @@ export default function NameSocialText() {
 					<MDBIcon fab icon="facebook-square" />
 				</Social1>
 			</a>
-			<a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/nano.digitalartist/">
+			<a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/nano.uideveloper/">
 				<Social2>
 					<MDBIcon fab icon="instagram" />
 				</Social2>

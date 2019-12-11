@@ -5,8 +5,8 @@ import { Link } from "react-router-dom";
 
 const Wrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "left center right";
+  grid-template-columns: 1fr 1fr;
+  grid-template-areas: "left center";
   width: 100%;
   grid-gap: 1rem;
   margin: 1rem 0;
@@ -33,9 +33,7 @@ export default function Sections() {
       <Section to="/portfolio">
         <p>Portfolio</p>
       </Section>
-      <Section to="/skills">
-        <p>Skills</p>
-      </Section>
+      
       <Section to="/about">
         <p>Bio</p>
       </Section>

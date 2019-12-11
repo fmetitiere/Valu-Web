@@ -25,7 +25,7 @@ export default function About({ ...props }) {
 					<Center>Biography</Center>
 				</Header>
 				<Main noPadding>
-					<Banner />
+					
 					<MainContainer>
 						<BiographyText show={true} />
                			<Skills addBottomMargin/>

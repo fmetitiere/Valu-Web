@@ -132,7 +132,7 @@ function DataArray({fourthCol, mobile}){
 
 export default function Portfolio({ desktop }, ...props) {
   return (
-    <div>
+    <>
       {(desktop && (
          <>
          <DataArray fourthCol/> 
@@ -150,6 +150,6 @@ export default function Portfolio({ desktop }, ...props) {
           </Main>
         </Layout>
       )}
-    </div>
+    </>
   );
 }

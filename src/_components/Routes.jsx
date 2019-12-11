@@ -5,7 +5,6 @@ import { BrowserView, MobileView } from 'react-device-detect';
 import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
-import SkillsPage from './SkillsPage';
 
 import { Menu, MenuDesktop, LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
 import ExperienceText from '../_components/ExperienceText';
@@ -25,7 +24,6 @@ function Routes() {
 						<Route exact path="/" component={Home} />
 						<Route exact path="/about" component={About} />
 						<Route exact path="/portfolio" component={Portfolio} />
-						<Route exact path="/skills" component={SkillsPage} />
 					</Switch>
 					<Menu />
 				</BrowserRouter>
