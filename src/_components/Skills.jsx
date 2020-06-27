@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 	}
 	.skillbar-bar {
 		left: 8.5rem;
-		background: linear-gradient(to right, rgba(96, 124, 234, 1) 0%, rgba(105, 186, 241, 1) 100%);
+		background: ${props => props.theme.PrimaryColor};
 	}
 	.skillbar-title {
 		span {
