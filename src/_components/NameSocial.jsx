@@ -87,7 +87,7 @@ export default function NameSocial({ desktop }) {
       {desktop ? (
         <>
           <H3>
-            <b>Nano Metitiere</b>
+            <b>Valu Tenaglia</b>
           </H3>
           <Profession>UX UI Developer</Profession>
           <Contact>
