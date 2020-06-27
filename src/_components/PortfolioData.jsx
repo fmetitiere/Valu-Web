@@ -25,6 +25,13 @@ export const Data = [{
     "skill": "UI Develop",
     "company": "Actinver",
     "country": "México"
+},{
+    "name": Dinn,
+    "text": "Dinn",
+    "desc": "Technisys",
+    "skill": "UI Develop",
+    "company": "Actinver",
+    "country": "México"
 },
 {
     "name": Gire,

@@ -36,6 +36,7 @@ const DefaultLayout = Styled.div`
     grid-template-areas: "header" "content";
     width: 100%;
     height: 100vh;
+    background:#efefef;
 `;
 
 const NoHeaderLayout = Styled.div`
@@ -162,7 +163,6 @@ export const MainDesktop = Styled.div`
     ${addGrid};
     width: 1170px;
     margin: 0 auto;
-    background: white;
     padding-top: 1rem;
 `;
 
@@ -177,14 +177,14 @@ export const BioArea = Styled.div`
     grid-area: bio;
 `;
 
-function SecondaryButton({ secondary, ...props }) {
+function SecondaryButton({ secondary, theme }) {
 	return (
         secondary ? `
-        background: ${props.theme.PrimaryColor};
+        background: ${theme.PrimaryColor};
         color: white;
         ` : `
         background: white;
-        color: #68b7f0;
+        color: ${theme.PrimaryColor};
         `
     )
 }
@@ -194,7 +194,7 @@ export const Button = Styled.button`
     border: 0;
     width: 100%;
     margin: .5rem 0;
-    border: .1rem solid #68b7f0;
+    border: .1rem solid ${props => props.theme.PrimaryColor};
     padding: .3rem;
     font-weight: bold;
     border-radius: .5rem;
