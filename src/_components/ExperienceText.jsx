@@ -28,39 +28,45 @@ export default function ExperienceText({ show }) {
 		<div>
 			<ExpWrapper>
 				<Company>
-					Technisys<Skill>Senior User Interface Developer</Skill>
+					BDTCJ<Skill>Columnista</Skill>
 				</Company>
-				<Time>2018 - Today</Time>
+				<Time>Actualmente</Time>
 			</ExpWrapper>
 			{show && (
 				<div>
 					<ExpWrapper>
 						<Company>
-							Association of Electronic Sports And Video Games of Argentina<Skill>Freelance Multimedia Designer</Skill>
+							Portal de empleos<Skill>Redactora de artículos</Skill>
 						</Company>
-						<Time>2018</Time>
+						<Time>Actualmente</Time>
 					</ExpWrapper>
 					<ExpWrapper>
 						<Company>
-							LOP Multimedia (Argentina)
-							<Skill>Junior Frontend Developer</Skill>
+							Comunidad de Programadores
+							<Skill>Copywriter / UX Writer</Skill>
 						</Company>
-						<Time>2016 - 2018</Time>
+						<Time>Actualmente</Time>
 					</ExpWrapper>
 					<ExpWrapper>
 						<Company>
-							Latinmanagers (Ecuador)
-							<Skill>Web Multimedia Designer</Skill>
+							Instituto Modelo Proyecto 2000
+							<Skill>Contenidista / Community MAnager</Skill>
 						</Company>
-						<Time>2014 - 2016</Time>
+						<Time>2018 - Actualmente</Time>
 					</ExpWrapper>
 					<ExpWrapper>
 						<Company>
-							PARADIPLOMACIA.ORG
-							<Skill>Freelance Graphic Designer</Skill>
+							Danzar Por La Paz
+							<Skill>Diseño de Artes Digitales</Skill>
 						</Company>
-						<Time>2014 - 2016</Time>
+						<Time>2014 - 2019</Time>
 					</ExpWrapper>
+					<ExpWrapper>
+				<Company>
+					Bhodi Meditación<Skill>Asistente de Social Media</Skill>
+				</Company>
+				<Time>2018</Time>
+			</ExpWrapper>
 				</div>
 			)}
 		</div>

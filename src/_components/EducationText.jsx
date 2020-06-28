@@ -30,25 +30,46 @@ export default function EducationText({ show }) {
     <div>
       <ExpWrapper>
         <Company>
-          Platzi<Skill>Javascript Fundamentals</Skill>
+          Universidad Siglo 21<Skill>Técnica Univ. en Marketing y Publicidad Digital</Skill>
         </Company>
-        <Time>2019</Time>
+        <Time>2020</Time>
       </ExpWrapper>
       {show && (
         <div>
           <ExpWrapper>
             <Company>
-              National Technological University of Buenos Aires
-              <Skill>Video Game Developer</Skill>
+              Crehana
+              <Skill>UxWriting Ux Editing</Skill>
+            </Company>
+            <Time>2020</Time>
+          </ExpWrapper>
+          <ExpWrapper>
+            <Company>
+            Udemy
+              <Skill>SEO y Posicionamiento en Google</Skill>
+            </Company>
+            <Time>2020</Time>
+          </ExpWrapper>
+          <ExpWrapper>
+        <Company>
+          Platzi<Skill>Curso Profesional de Google Ads</Skill>
+        </Company>
+        <Time>2019</Time>
+      </ExpWrapper>
+    
+          <ExpWrapper>
+            <Company>
+              Centro de e-Learning UTN FRBA
+              <Skill>Experto Universitario en E-Commerce y Marketing Digital</Skill>
             </Company>
             <Time>2018</Time>
           </ExpWrapper>
           <ExpWrapper>
             <Company>
-              Postgraduate Studies Center Euroinnova
-              <Skill>Web Developer</Skill>
+            Centro de eLearning UTN FRBA
+              <Skill>Mediciòn y evaluaciòn. KPI y Web Analytics</Skill>
             </Company>
-            <Time>2016</Time>
+            <Time>2018</Time>
           </ExpWrapper>
         </div>
       )}
