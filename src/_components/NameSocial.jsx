@@ -89,16 +89,16 @@ export default function NameSocial({ desktop }) {
           <H3>
             <b>Valu Tenaglia</b>
           </H3>
-          <Profession>Copywriter/Ux Writer</Profession>
+          <Profession>Copywriter / Ux Writer</Profession>
           <Contact>
             <EmailShare
-              email="fmetitiere@gmail.com"
+              email="valutenaglia@gmail.com"
               subject="Mail from App"
               body="Your message, http://nanometitiere.com"
             >
               {link => (
                 <a href={link} data-rel="external">
-                  fmetitiere@gmail.com
+                  valutenaglia@gmail.com
                 </a>
               )}
             </EmailShare>
@@ -110,23 +110,23 @@ export default function NameSocial({ desktop }) {
       ) : (
         <>
           <H3Styled>
-            <b>Nano Metitiere</b>
+            <b>Valu Tenaglia</b>
           </H3Styled>
 		  <Contact>
             <EmailShare
-              email="fmetitiere@gmail.com"
+              email="valutenaglia@gmail.com"
               subject="Mail from App"
               body="Your message, http://nanometitiere.com"
             >
               {link => (
                 <a href={link} data-rel="external">
-                  fmetitiere@gmail.com
+                  valutenaglia@gmail.com
                 </a>
               )}
             </EmailShare>
           </Contact>
           <InfoSocial>
-            <Profession>UX UI Developer</Profession>
+            <Profession>Copywriter/ Ux Writer</Profession>
             <NameSocialText />
           </InfoSocial>
         </>

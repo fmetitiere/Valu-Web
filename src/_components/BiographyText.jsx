@@ -12,15 +12,16 @@ export default function BiographyText({ show }) {
 			{show && (
 				<P>
 					
-				<strong>"Web Development"</strong> where he acquired advanced knowledge in HTML and CSS. <br />
-					He worked as a Web Multimedia Designer in Latinmanagers Ecuador and was the editor of the RACEI
-					(Argentine Network of International Studies Centers) and TIP (Research in Paradiplomacy) magazine of
-					Argentina. Then in 2016 he started as a <strong>Frontend Developer</strong> in Lop Multimedia
-					Argentina where he perfected in E-Commerce Web Sites working with recognized Brands. <br />
-					He also worked as a <strong>Freelance Multimedia Designer</strong> at DEVA (ASSOCIATION OF
-					ELECTRONIC SPORTS AND VIDEO GAMES OF ARGENTINA). He currently works in Technisys as a{' '}
-					<strong>Senior User Interface Developer</strong> where he specilazed in{' '}
-					<strong>UI Develop in React JS</strong> for Digital banking product.
+				<strong>"Soy Copywriter y UX Writer "</strong> Me dedido a aplicar el poder de las palabras en diferentes 
+				objetivos y circunstancias. <br /> Estudié la carrera de Técnica Universitaria en
+				 <strong>Marketing y Publicidad Digital </strong>en la Universidad Siglo 21. 
+				 Comencé en 2017 realizando proyectos de lanzamiento de un sitio web, creación de contenidos, 
+				 diseño de post para redes sociales y consultorías para emprendedores en Instagram. 
+				 Trabajé en organizaciones a beneficio de Unicef y como voluntaria en proyectos de ayuda a la comunidad 
+				 creando el copywriting de herramientas digitales que permiten enviar donaciones durante la pandemia.
+				 Actualmente continùo capacitándome para estar al tanto de las ultimas actualizaciones y tendencias en mi carrera.
+{' '}
+					
 				</P>
 			)}
 		</div>
