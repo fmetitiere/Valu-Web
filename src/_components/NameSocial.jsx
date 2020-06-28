@@ -7,7 +7,7 @@ import { H3 } from "../Layout/";
 
 const Wrapper = Styled.div`
     width:100%;
-    margin-top: 4rem;
+    margin-top: 1rem;
     border-bottom: 1px solid #ddd;
 `;
 

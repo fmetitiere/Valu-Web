@@ -6,6 +6,9 @@ import * as animationData from "../Animations/BackgroundAnimDesktop.json";
 import BackgroundImage from "../images/banner.jpg";
 import Avatar from "../_components/Avatar";
 
+import { isMobile } from 'react-device-detect';
+
+
 const defaultOptions = {
   loop: true,
   autoplay: true,
@@ -24,7 +27,7 @@ const AvatarWrapper = Styled.div`
 	position: absolute;
 	left:0;
 	right:0;
-	top: ${changePosition};
+	top: 0;
 `;
 
 function changeBorderRadius({desktop}){
@@ -45,7 +48,7 @@ const BackgroundWrapper = Styled.div`
 		background-repeat: no-repeat;
 		background-size: cover;
 		width: 100%;
-		height:7.5rem;
+		height:auto;
 		border-radius: ${changeBorderRadius};
 		`;
 
@@ -66,9 +69,9 @@ class SocialAnimBackground extends React.Component {
       <>
         <Lottie
           isClickToPauseDisabled={true}
-          speed={0.4}
+          speed={0.8}
           options={defaultOptions}
-          height={210}
+          height={isMobile && `16rem` || `12rem`}
           width={"100%"}
         />
         {this.props.children}
@@ -79,13 +82,11 @@ class SocialAnimBackground extends React.Component {
 
 function Banner({ desktop, ...props }) {
   return (
-    <BackgroundWrapper desktop={desktop} {...props}>
       <SocialAnimBackground>
         <AvatarWrapper desktop={desktop} {...props}>
           <Avatar desktop={desktop} />
         </AvatarWrapper>
       </SocialAnimBackground>
-    </BackgroundWrapper>
   );
 }
 

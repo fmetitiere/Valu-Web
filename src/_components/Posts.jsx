@@ -144,6 +144,16 @@ export default function Posts({ desktop }) {
         desktop={desktop}
         center
       />
+      <PostElement
+        imgPath={Data[2].name}
+        title={Data[2].text}
+        desc={Data[2].desc}
+        page={Data[2].skill}
+        company={Data[2].company}
+        country={Data[2].country}
+        desktop={desktop}
+        center
+      />
      
     </>
   );
