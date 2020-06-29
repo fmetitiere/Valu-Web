@@ -1,7 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Styled from 'styled-components';
-import { MDBIcon } from 'mdbreact';
 import { P } from "../Layout/";
 
 
