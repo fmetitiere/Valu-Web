@@ -88,9 +88,7 @@ export default function NameSocial({ desktop }) {
     <Wrapper>
       {desktop ? (
         <>
-          <H3>
-            <b>Valu Tenaglia</b>
-          </H3>
+          
           <Profession>Copywriter / Ux Writer</Profession>
           <Contact>
             <EmailShare
