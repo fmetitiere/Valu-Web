@@ -1,6 +1,7 @@
 import React from "react";
 import Styled from "styled-components";
 import EmailShare from "react-email-share-link";
+import { isMobile } from 'react-device-detect';
 
 import NameSocialText from "../_components/NameSocialText";
 import { H3 } from "../Layout/";
@@ -61,7 +62,8 @@ const Profession = Styled.div`
 	font-weight: bold;
 	color: white;
 	border-radius: .3rem;
-	padding: .2rem .3rem;
+  padding: .2rem .3rem;
+  font-size: ${isMobile ? `0.875rem;` : `1rem;`}
 `;
 
 const Contact = Styled.div`
@@ -126,7 +128,7 @@ export default function NameSocial({ desktop }) {
             </EmailShare>
           </Contact>
           <InfoSocial>
-            <Profession>Copywriter/ Ux Writer</Profession>
+            <Profession>Copywriter / Ux Writer</Profession>
             <NameSocialText />
           </InfoSocial>
         </>
