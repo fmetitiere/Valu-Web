@@ -40,7 +40,7 @@ const Wrapper = styled.div`
 
 const skills = [
 	{ type: 'Paquete Office', level: 100 },
-	{ type: 'Redaccón SEO', level: 80 },
+	{ type: 'Redacción SEO', level: 80 },
 	{ type: 'Google Analytics', level: 70 },
     { type: 'Google Ads', level: 70 },
     { type: 'Figma', level: 70 },

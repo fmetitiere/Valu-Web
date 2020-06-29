@@ -1,89 +1,49 @@
 import {
-    PathfindersBack,
-    ManuBack,
+    BDTCJ,
     Proyecto2000,
-    Benfica,
-    Piccot,
-    IdWeb,
-    Xolos,
-    Airwheel,
-    SinLimite,
-    NorAuto,
-    Criterium,
-    Danzar,
-    KLD,
-    Gire,
-    Tecnovibe,
-    Dinn
+    ComunidadDeProgramadores,
+    DanzarPorLaPaz,
+    BodhiMeditación,
+
   } from "../_components/Backgrounds";
 
   
 export const Data = [{
-    "name": Dinn,
-    "text": "Dinn",
-    "desc": "Technisys",
-    "skill": "UI Develop",
-    "company": "Actinver",
-    "country": "México"
-},
-{
-    "name": Gire,
-    "text": "Rapipago",
-    "desc": "Technisys",
-    "skill": "UX UI Develop",
-    "company": "GIRE",
+    "name": BDTCJ,
+    "text": "BDTCJ",
+    "desc": "Blog de Empleos",
+    "skill": "Columnista",
+    "company": "",
     "country": "Argentina"
 },
 {
-    "name": ManuBack,
-    "text": "Manu DiCiervo"
-},
-{
-    "name": PathfindersBack,
-    "text": "Pathfinders"
-},
-{
-    "name": Benfica,
-    "text": "Benfica Store"
-},
-{
     "name": Proyecto2000,
-    "text": "Proyecto 2000"
-},
-{
-    "name": Piccot,
-    "text": "Piccot"
-},
-{
-    "name": IdWeb,
-    "text": "ID"
-},
-{
-    "name": Tecnovibe,
-    "text": "Tecnovibe",
-},
-{
-    "name": Xolos,
-    "text": "Xolos"
+    "text": "Instituto Modelo Proyecto 2000",
+    "desc": "Escuela de Enseñanza ESpecial",
+    "skill": "Contenidista / Community Manager",
+    "company": "",
+    "country": "Argentina"
 },{
-    "name": Airwheel,
-    "text": "Airwheel"
+    "name": ComunidadDeProgramadores,
+    "text": "Comunidad De Programadores",
+    "desc": "Herramientas Digitales de Ayuda contra el Covid-19",
+    "skill": "Copywriter / UX Writer",
+    "company": "",
+    "country": "Argentina"
 },{
-    "name": NorAuto,
-    "text": "NorAuto"
+    "name": DanzarPorLaPaz,
+    "text": "Danzar Por La Paz",
+    "desc": "Gala de Ballet a beneficio de Unicef",
+    "skill": "Diseño de Artes Digitales",
+    "company": "",
+    "country": "Argentina"
 },{
-    "name": Danzar,
-    "text": "Danzar"
-},
-{
-    "name": SinLimite,
-    "text": "SinLimite"
-},{
-    "name": Criterium,
-    "text": "Criterium"
-},{
-    "name": KLD,
-    "text": "KLD Argentina"
+    "name": BodhiMeditación,
+    "text": "Bodhi Meditación",
+    "desc": "Centro de Meditación",
+    "skill": "Asistente de Social Media",
+    "company": "",
+    "country": "Ecuador"
 },]
 
 
