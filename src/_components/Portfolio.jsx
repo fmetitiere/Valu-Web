@@ -17,8 +17,8 @@ function changeGrid({ fourthCol }) {
   return (
     (fourthCol &&
       `
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      grid-template-areas: "1 2 3 4";
+      grid-template-columns: 1fr 1fr;
+      grid-template-areas: "1 2";
       `) ||
     `
       grid-template-columns: 1fr 1fr;

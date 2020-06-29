@@ -26,17 +26,17 @@ const Social3 = Styled(Social)`
 export default function NameSocialText() {
 	return (
 		<>
-			<a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/nano.metitiere">
+			<a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/valutenaglia/?modal=admin_todo_tour">
 				<Social1>
 					<MDBIcon fab icon="facebook-square" />
 				</Social1>
 			</a>
-			<a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/nano.uideveloper/">
+			<a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/valutenaglia/">
 				<Social2>
 					<MDBIcon fab icon="instagram" />
 				</Social2>
 			</a>
-			<a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/fernando-metitiere/">
+			<a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/valu-tenaglia/">
 				<Social3>
 					<MDBIcon fab icon="linkedin" />
 				</Social3>
