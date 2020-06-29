@@ -16,8 +16,8 @@ const AvatarWrapper = styled(Grid)`
 border-radius: .5rem;
 padding: .2rem;
   div {
-    width: ${isMobile && `15rem !important;` || `10rem !important;`} 
-    height: ${isMobile && `15rem !important;` || `10rem !important;`}
+    width: ${isMobile ? `15rem !important;` : `10rem !important;`} 
+    height: ${isMobile ? `15rem !important;` : `10rem !important;`}
     border-radius: 100rem !important;
   }
 `;
