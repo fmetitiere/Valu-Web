@@ -18,7 +18,7 @@ const Time = styled.div`
   grid-area: right;
   text-align: right;
   font-size: 0.8rem;
-  color: #68b7f0;
+  color: ${props => props.theme.PrimaryColor};
 `;
 
 const Skill = styled.div`

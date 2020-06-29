@@ -72,11 +72,7 @@ const PortfolioTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(
-    to right,
-    rgba(96, 124, 234, 0.9) 0%,
-    rgba(105, 186, 241, 0.9) 100%
-  );
+  background: ${props => props.theme.PrimaryColor};
   p {
     margin: 0;
     font-weight: bold;

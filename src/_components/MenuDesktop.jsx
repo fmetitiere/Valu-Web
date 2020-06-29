@@ -2,6 +2,8 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Styled from 'styled-components';
 import { MDBIcon } from 'mdbreact';
+import { P } from "../Layout/";
+
 
 const MenuWrapper = Styled.div`
     grid-area: header; 
@@ -12,31 +14,33 @@ const MenuWrapper = Styled.div`
     height:3.5rem;
     padding: 1rem;
     top:0;
-    width:100%;
+    width: 100%;
     z-index:199;
+    display:flex;
+    justify-content:center;
 
 `;
 const Menu = Styled.div`
-  width: 5%;
-
     align-items: center;
     justify-content: space-between;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "home portfolio";
-    > div{
-      align-self:center;
-      justify-self: center;
-    }
+    display: flex;
+
 `;
+const Container = Styled.div`
+width: 1170px;
+display:flex;
+    justify-content:space-between;
+`;
+
+
 
 const MenuItem = Styled.div`  
   a{
     color: white;
-    font-weight: bold;
+    margin-right:1rem;
+    font-weight: 400;
     .fa, .fas {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
   }
 `;
@@ -44,18 +48,23 @@ const MenuItem = Styled.div`
 export default function MenuDesktop() {
 	return (
 		<MenuWrapper>
+      <Container>
+      <P bold contrast>
+        Valu  Tenaglia
+      </P>
 			<Menu>
 				<MenuItem>
 					<Link to="/">
-						<MDBIcon icon="home" />
+						Home
 					</Link>
 				</MenuItem>
 				<MenuItem>
 					<Link to="/portfolio">
-						<MDBIcon icon="images" />
+						Portfolio
 					</Link>
 				</MenuItem>
 			</Menu>
+      </Container>
 		</MenuWrapper>
 	);
 }

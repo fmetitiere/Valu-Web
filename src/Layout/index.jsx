@@ -37,6 +37,9 @@ const DefaultLayout = Styled.div`
     width: 100%;
     height: 100vh;
     background:#efefef;
+    a:hover {
+        color: #fff;
+    }
 `;
 
 const NoHeaderLayout = Styled.div`
@@ -129,11 +132,24 @@ export const H5 = Styled.h5`
     margin:0;
 `;
 
+function changePColor({contrast}){
+    return(
+        contrast ? `white` : `#333`
+    )
+}
+function changePWeight({bold}){
+    return(
+        bold ? `700` : `400`
+    )
+}
+
 export const P = Styled.p`
     font-size: 1rem;
     padding:0;
     margin:0;
     text-align: justify;
+    color: ${changePColor};
+    font-weight: ${changePWeight};
 `;
 
 export const SMALL = Styled.small`
@@ -147,6 +163,9 @@ export const LayoutDesktop = Styled.div`
     grid-template-areas: "header" "content";
     width: 100%;
     height: 100%;
+    a:hover {
+        color: #fff;
+    }
 `;
 
 function addGrid({grid}){

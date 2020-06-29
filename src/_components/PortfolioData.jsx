@@ -19,7 +19,7 @@ export const Data = [{
 {
     "name": Proyecto2000,
     "text": "Instituto Modelo Proyecto 2000",
-    "desc": "Escuela de Enseñanza ESpecial",
+    "desc": "Escuela de Enseñanza Especial",
     "skill": "Contenidista / Community Manager",
     "company": "",
     "country": "Argentina"

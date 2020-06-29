@@ -44,7 +44,7 @@ class SocialAnimBackground extends React.Component {
       <>
         <Lottie
           isClickToPauseDisabled={true}
-          speed={0.8}
+          speed={0.7}
           options={defaultOptions}
           height={isMobile ? `16rem` : `12rem`}
           width={"100%"}
