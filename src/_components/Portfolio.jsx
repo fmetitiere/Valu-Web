@@ -51,6 +51,7 @@ function changeBackPosition({ right, left }) {
 
 const BackgroundSmall = styled.div`
   width: 100%;
+  cursor:pointer;
   height: 100%;
   align-self: center;
   justify-self: center;
@@ -77,6 +78,10 @@ const PortfolioTitle = styled.div`
     margin: 0;
     font-weight: bold;
   }
+  a{
+    color:#fff;
+    border-bottom:1px solid white;
+  }
 `;
 
 
@@ -90,7 +95,7 @@ const BackgroundLarge = styled.div`
 `;
 
 
-function PortElement({ title, imgPath, modal = true, ...props }) {
+function PortElement({ title,link, imgPath, modal = true, ...props }) {
   const [showModal, setShowModal] = useState(false);
 
   return (
@@ -101,7 +106,7 @@ function PortElement({ title, imgPath, modal = true, ...props }) {
         imgPath={imgPath}
       >
         <PortfolioTitle>
-          <p>{title}</p>
+          <a target="_blank" href={link}><p>{title}</p></a>
         </PortfolioTitle>
       </BackgroundSmall>
       {modal && (
@@ -116,7 +121,7 @@ function PortElement({ title, imgPath, modal = true, ...props }) {
 
 function DataComponent(){
   return(
-    Data.map(element => <PortElement imgPath={element.name} title={element.text}></PortElement>)
+    Data.map(element => <PortElement imgPath={element.name} title={element.text} link={element.link}></PortElement>)
   )
 }
 

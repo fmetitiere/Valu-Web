@@ -39,7 +39,8 @@ export default function EducationText({ show }) {
           <ExpWrapper>
             <Company>
               Crehana
-              <Skill>UxWriting Ux Editing</Skill>
+              <Skill>-UxWriting Ux Editing</Skill>
+              <Skill> -Design Research: conociendo al usuario y su entorno</Skill>
             </Company>
             <Time>2020</Time>
           </ExpWrapper>

@@ -43,7 +43,7 @@ const skills = [
 	{ type: 'Redacción SEO', level: 80 },
 	{ type: 'Google Analytics', level: 70 },
     { type: 'Google Ads', level: 70 },
-    { type: 'Figma', level: 70 },
+    { type: 'Figma', level: 50 },
     { type: 'Adobe XD', level: 50 },
     { type: 'Adobe Illustrator', level: 60 },
     { type: 'Adobe Photoshop', level: 50 },
