@@ -106,7 +106,7 @@ function PortElement({ title,link, imgPath, modal = true, ...props }) {
         imgPath={imgPath}
       >
         <PortfolioTitle>
-          <a target="_blank" href={link}><p>{title}</p></a>
+          <a rel="noopener noreferrer" target="_blank" href={link}><p>{title}</p></a>
         </PortfolioTitle>
       </BackgroundSmall>
       {modal && (
