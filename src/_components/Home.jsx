@@ -2,7 +2,7 @@ import React from "react";
 
 import NameSocial from "../_components/NameSocial";
 import Sections from "../_components/Sections";
-import Posts from "../_components/Posts";
+import Portfolio from "../_components/Portfolio";
 import { Layout, Main, Banner } from "../Layout/";
 
 export default function Home() {
@@ -12,7 +12,7 @@ export default function Home() {
         <Banner />
         <NameSocial />
         <Sections />
-        <Posts />
+        <Portfolio/>
       </Main>
     </Layout>
   );

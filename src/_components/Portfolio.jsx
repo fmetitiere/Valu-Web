@@ -1,17 +1,12 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
-import Modal from "react-responsive-modal";
+import { Link } from "react-router-dom";
+
 import { MDBIcon } from "mdbreact";
 
-import {Data} from '../_components/PortfolioData';
+import Data from "../_components/PortfolioData";
 
-import {
-  Layout,
-  Header,
-  Main,
-  Left,
-  Center
-} from "../Layout";
+import { Layout, Header, Main, Left, H3, Center } from "../Layout";
 
 function changeGrid({ fourthCol }) {
   return (
@@ -27,10 +22,8 @@ function changeGrid({ fourthCol }) {
   );
 }
 
-function changePortfolioHeight({mobile}){
-  return(
-    mobile ? "height:70rem; margin-bottom:4rem;" : "height:40rem;"
-  )
+function changePortfolioHeight({ mobile }) {
+  return mobile ? "height:70rem; margin-bottom:4rem;" : "height:45rem;";
 }
 
 const PortContainer = styled.div`
@@ -38,7 +31,7 @@ const PortContainer = styled.div`
   ${changeGrid}
   ${changePortfolioHeight};
   width: 100%;
-  grid-gap: 1rem;
+  grid-gap: 2rem;
 `;
 
 function changeBackground({ imgPath }) {
@@ -51,7 +44,6 @@ function changeBackPosition({ right, left }) {
 
 const BackgroundSmall = styled.div`
   width: 100%;
-  cursor:pointer;
   height: 100%;
   align-self: center;
   justify-self: center;
@@ -59,11 +51,12 @@ const BackgroundSmall = styled.div`
   background-position: ${changeBackPosition} top;
   border-radius: 0.5rem;
   overflow: hidden;
-  box-shadow: ${props => props.theme.Shadows};
+  box-shadow: ${(props) => props.theme.Shadows};
   display: flex;
   align-items: flex-end;
   background-size: cover;
   background-repeat: no-repeat;
+  position:relative;
 `;
 
 const PortfolioTitle = styled.div`
@@ -73,83 +66,84 @@ const PortfolioTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  background: ${props => props.theme.PrimaryColor};
+  background: ${(props) => props.theme.PrimaryColor};
   p {
     margin: 0;
     font-weight: bold;
   }
-  a{
-    color:#fff;
-    border-bottom:1px solid white;
+`;
+
+const PortfolioLimit = styled.div`
+  height: 50rem;
+  overflow-y: auto;
+  padding: 0 1rem;
+  ::-webkit-scrollbar {
+    background: transparent;
+    width: 12px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ccc;
+    border-radius: 5rem;
   }
 `;
 
-
-const BackgroundLarge = styled.div`
-  width: 16rem;
-  height: 60vh;
-  ${changeBackground}
-  background-position: center top;
-  background-size: cover;
-  background-repeat: no-repeat;
+const Label = styled.div`
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: blue;
+  font-size:0.75rem;
+  color:white;
+  padding: 0.5rem;
+  background-color: ${(props) => props.theme.PrimaryColor};
+  border-radius: 0 0 0 0.5rem;
 `;
 
-
-function PortElement({ title,link, imgPath, modal = true, ...props }) {
-  const [showModal, setShowModal] = useState(false);
-
+function PortElement({ title, skills, type, imgPath, link, ...props }) {
   return (
-    <>
-      <BackgroundSmall
-        {...props}
-        onClick={() => setShowModal(true)}
-        imgPath={imgPath}
-      >
+    <Link to={link}>
+      <BackgroundSmall {...props} imgPath={imgPath}>
+        <Label>{skills}</Label>
         <PortfolioTitle>
-          <a rel="noopener noreferrer" target="_blank" href={link}><p>{title}</p></a>
+          <p>{title} - {type}</p>
         </PortfolioTitle>
       </BackgroundSmall>
-      {modal && (
-        <Modal open={showModal} onClose={() => setShowModal(false)} center>
-          <h3>{title}</h3>
-          <BackgroundLarge imgPath={imgPath} />
-        </Modal>
-      )}
-    </>
+    </Link>
   );
 }
 
-function DataComponent(){
-  return(
-    Data.map(element => <PortElement imgPath={element.name} title={element.text} link={element.link}></PortElement>)
-  )
+function DataComponent() {
+  return Data.map((element) => (
+    <PortElement
+      link={`/article/${element.name}`}
+      imgPath={element.img}
+      title={element.name}
+      skills={element.skills}
+      type={element.type}
+    ></PortElement>
+  ));
 }
 
-function DataArray({fourthCol, mobile}){
-  return(
-    <PortContainer mobile={mobile} fourthCol={fourthCol}><DataComponent/></PortContainer>
-  )
+function DataArray({ fourthCol, mobile }) {
+  return (
+    <PortContainer mobile={mobile} fourthCol={fourthCol}>
+      <DataComponent />
+    </PortContainer>
+  );
 }
 
 export default function Portfolio({ desktop }, ...props) {
   return (
     <>
       {(desktop && (
-         <>
-         <DataArray fourthCol/> 
-         </>
+        <PortfolioLimit>
+          <H3 left>Portfolio</H3>
+          <DataArray fourthCol />
+        </PortfolioLimit>
       )) || (
-        <Layout noPadding>
-          <Header>
-            <Left>
-            <MDBIcon onClick={() => props.history.goBack()} icon="arrow-left" />
-            </Left>
-            <Center>Portfolio</Center>
-          </Header>
-          <Main>
-            <DataArray mobile/> 
-          </Main>
-        </Layout>
+         
+            <DataArray mobile />
       )}
     </>
   );

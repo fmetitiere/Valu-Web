@@ -6,8 +6,9 @@ import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
 
-import { Menu, MenuDesktop, LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
+import { Menu, LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
 import ExperienceText from '../_components/ExperienceText';
+import ArticlePage from '../_components/ArticlePage';
 import BiogrphyText from '../_components/BiographyText';
 import EducationText from '../_components/EducationText';
 import EducationPage from '../_components/EducationPage';
@@ -15,7 +16,8 @@ import NameSocial from '../_components/NameSocial';
 import Skills from '../_components/Skills';
 import Cards from '../_components/Cards';
 
-import HomeDesktop from './HomeDesktop';
+
+
 
 function Routes() {
 	return (
@@ -27,6 +29,7 @@ function Routes() {
 						<Route exact path="/about" component={About} />
 						<Route exact path="/portfolio" component={Portfolio} />
 						<Route exact path="/education" component={EducationPage} />
+						<Route path="/article/:name" component={ArticlePage} />
 					</Switch>
 					<Menu />
 				</BrowserRouter>
@@ -43,10 +46,10 @@ function Routes() {
 							</ProfileArea>
 							<PostsArea>
 								<Switch>
-									<Route exact path="/" component={HomeDesktop} />
-									<Route exact path="/portfolio">
+									<Route exact path="/">
 										<Portfolio desktop />
 									</Route>
+									<Route path="/article/:name" component={ArticlePage} />
 								</Switch>
 							</PostsArea>
 							<BioArea>
@@ -55,7 +58,6 @@ function Routes() {
 								<Cards title="Education" component={EducationText} />
 							</BioArea>
 						</MainDesktop>
-						<MenuDesktop />
 					</LayoutDesktop>
 				</BrowserRouter>
 			</BrowserView>
