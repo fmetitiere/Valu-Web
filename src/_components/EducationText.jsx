@@ -36,6 +36,20 @@ export default function EducationText({ show }) {
       </ExpWrapper>
       {show && (
         <div>
+           <ExpWrapper>
+            <Company>
+              Google Activate
+              <Skill> HTML y CSS.Introducción al Desarrollo Web</Skill>
+            </Company>
+            <Time>2021</Time>
+          </ExpWrapper>
+          <ExpWrapper>
+            <Company>
+              Domestika
+              <Skill> Introducción al UX Writing-Mario Ferrer</Skill>
+            </Company>
+            <Time>2020</Time>
+          </ExpWrapper>
           <ExpWrapper>
             <Company>
               Crehana

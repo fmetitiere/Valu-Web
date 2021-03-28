@@ -1,12 +1,11 @@
-import React from 'react';
-import Styled from 'styled-components';
-import { MDBIcon } from 'mdbreact';
+import React from "react";
+import Styled from "styled-components";
 
+import Icon from "../_components/Icon";
 
 const Social = Styled.div`
 	align-self: center;
 	justify-self: center;
-	background: rgba(128, 128, 128, 0.1);
 	width: 100%;
 	text-align: center;
 	padding: .2rem .3rem;
@@ -24,23 +23,45 @@ const Social3 = Styled(Social)`
 `;
 
 export default function NameSocialText() {
-	return (
-		<>
-			<a rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/valutenaglia/?modal=admin_todo_tour">
-				<Social1>
-					<MDBIcon fab icon="facebook-square" />
-				</Social1>
-			</a>
-			<a rel="noopener noreferrer" target="_blank" href="https://www.instagram.com/valutenaglia/">
-				<Social2>
-					<MDBIcon fab icon="instagram" />
-				</Social2>
-			</a>
-			<a rel="noopener noreferrer" target="_blank" href="https://www.linkedin.com/in/valu-tenaglia/">
-				<Social3>
-					<MDBIcon fab icon="linkedin" />
-				</Social3>
-			</a>
-		</>
-	);
+  return (
+    <>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.facebook.com/valutenaglia"
+      >
+        <Social1>
+          <Icon name="facebook" />
+        </Social1>
+      </a>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.instagram.com/valutenaglia/"
+      >
+        <Social2>
+          <Icon name="insta" />
+        </Social2>
+      </a>
+      <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="https://www.linkedin.com/in/valu-tenaglia-uxwriter/"
+      >
+        <Social3>
+          <Icon name="linkedin" />
+        </Social3>
+      </a>
+
+	  <a
+        rel="noopener noreferrer"
+        target="_blank"
+        href="/CV-FernandoMetitiere.pdf"
+      >
+        <Social3>
+          <Icon name="pdf" />
+        </Social3>
+      </a>
+    </>
+  );
 }

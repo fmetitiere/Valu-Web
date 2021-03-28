@@ -28,7 +28,7 @@ export default function ExperienceText({ show }) {
 		<div>
 			<ExpWrapper>
 				<Company>
-					BDTCJ<Skill>Columnista</Skill>
+					1MIB<Skill>UX Writer /Content Creator</Skill>
 				</Company>
 				<Time>Actualmente</Time>
 			</ExpWrapper>
@@ -36,30 +36,36 @@ export default function ExperienceText({ show }) {
 				<div>
 					<ExpWrapper>
 						<Company>
-							Portal de empleos<Skill>Redactora de artículos</Skill>
-						</Company>
-						<Time>Actualmente</Time>
-					</ExpWrapper>
-					<ExpWrapper>
-						<Company>
-							Comunidad de Programadores
-							<Skill>Copywriter / UX Writer</Skill>
+							BTCJ<Skill>Redactora de artículos</Skill>
 						</Company>
 						<Time>Actualmente</Time>
 					</ExpWrapper>
 					<ExpWrapper>
 						<Company>
 							Instituto Modelo Proyecto 2000
-							<Skill>Contenidista / Community MAnager</Skill>
+							<Skill>Content Creator</Skill>
 						</Company>
 						<Time>2018 - Actualmente</Time>
 					</ExpWrapper>
 					<ExpWrapper>
 						<Company>
+							Genwords<Skill>Content Marketing</Skill>
+						</Company>
+						<Time>2021</Time>
+					</ExpWrapper>
+					<ExpWrapper>
+						<Company>
+							Comunidad de Programadores
+							<Skill>Copywriter / UX Writer</Skill>
+						</Company>
+						<Time>2020</Time>
+					</ExpWrapper>				
+					<ExpWrapper>
+						<Company>
 							Danzar Por La Paz
 							<Skill>Diseño de Artes Digitales</Skill>
 						</Company>
-						<Time>2014 - 2019</Time>
+						<Time>2017 - 2019</Time>
 					</ExpWrapper>
 					<ExpWrapper>
 				<Company>

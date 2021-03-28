@@ -15,7 +15,7 @@ const Wrapper = styled.div`
 	}
 	.skillbar-bar {
 		left: 8.5rem;
-		background: ${props => props.theme.PrimaryColor};
+		background: ${(props) => props.theme.PrimaryColor};
 	}
 	.skillbar-title {
 		span {
@@ -39,16 +39,15 @@ const Wrapper = styled.div`
 `;
 
 const skills = [
-	{ type: 'Paquete Office', level: 100 },
-	{ type: 'Redacción SEO', level: 80 },
-	{ type: 'Google Analytics', level: 70 },
-    { type: 'Google Ads', level: 70 },
-    { type: 'Figma', level: 50 },
-    { type: 'Adobe XD', level: 50 },
-    { type: 'Adobe Illustrator', level: 60 },
-    { type: 'Adobe Photoshop', level: 50 },
-    { type: 'Adobe After Effects', level: 50 },
-];
+	{ type: 'Adobe Suit', level: 70 },
+    { type: 'Adobe XD', level: 60 },
+    { type: 'Figma', level: 60 },
+    { type: 'Redacción SEO', level: 80 },
+    { type: 'Wordpress', level: 50 },
+	{ type: 'HTML', level: 50 },
+    { type: 'Google Analytics', level: 60 },
+    { type: 'Google Ads', level: 50 },
+	];
 
 
 export default function Skills({...props}) {

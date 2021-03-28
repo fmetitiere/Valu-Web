@@ -1,21 +1,20 @@
 import React from "react";
 import Styled from "styled-components";
 import EmailShare from "react-email-share-link";
-import { isMobile } from 'react-device-detect';
 
 import NameSocialText from "../_components/NameSocialText";
 import { H3 } from "../Layout/";
 
 const Wrapper = Styled.div`
     width:100%;
-    margin-top: 1rem;
     border-bottom: 1px solid #ddd;
 `;
 
 const InfoSocial = Styled.div`
 	display: grid;
-	grid-template-columns: 4fr 1fr 1fr 1fr;
-    grid-template-areas: "profession social1 social2 social3";
+  margin: 1rem 0;
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas: "profession social1 social2 social3 ";
     grid-gap: 1rem;
   height:3rem;
   a{
@@ -31,8 +30,8 @@ const InfoSocial = Styled.div`
 `;
 const InfoSocialDesktop = Styled.div`
 	display: grid;
-	grid-template-columns: 1fr 1fr 1fr;
-  grid-template-areas: "social1 social2 social3";
+	grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-areas: "social1 social2 social3 social4";
   grid-gap: 1rem;
   height:3rem;
   margin-bottom: .5rem;
@@ -62,8 +61,7 @@ const Profession = Styled.div`
 	font-weight: bold;
 	color: white;
 	border-radius: .3rem;
-  padding: .2rem .3rem;
-  font-size: ${isMobile ? `0.875rem;` : `1rem;`}
+	padding: .2rem .3rem;
 `;
 
 const Contact = Styled.div`
@@ -74,6 +72,7 @@ const Contact = Styled.div`
 	font-weight: bold;
 	border-radius: .3rem;
 	padding: .2rem .3rem;
+  margin: 0.5rem 0;
 	a{
 		color: black !important;
 	}
@@ -88,8 +87,10 @@ export default function NameSocial({ desktop }) {
     <Wrapper>
       {desktop ? (
         <>
-          
-          <Profession>Copywriter / Ux Writer</Profession>
+          <H3 center>
+            <b>Valu Tenaglia</b>
+          </H3>
+          <Profession>UX Writer / Content Creator</Profession>
           <Contact>
             <EmailShare
               email="valutenaglia@gmail.com"
@@ -125,8 +126,9 @@ export default function NameSocial({ desktop }) {
               )}
             </EmailShare>
           </Contact>
+          <Profession>Sr UX UI Developer</Profession>
           <InfoSocial>
-            <Profession>Copywriter / Ux Writer</Profession>
+            
             <NameSocialText />
           </InfoSocial>
         </>

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import styled from "styled-components";
 import { H5, SMALL } from "../Layout/";
+import { Link } from "react-router-dom";
 
-import {Data} from '../_components/PortfolioData';
+import Data from "../_components/PortfolioData";
 import { MDBIcon } from "mdbreact";
-import Modal from "react-responsive-modal";
 
 function changeBackground({ imgPath }) {
   return imgPath ? imgPath : "";
@@ -32,7 +32,7 @@ const Section = styled.div`
   color: unset;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: ${props => props.theme.Shadows};
+  box-shadow: ${(props) => props.theme.Shadows};
   margin-bottom: 1rem;
   padding-bottom: 1rem;
 `;
@@ -52,51 +52,32 @@ const ProyectName = styled.div`
   justify-content: space-between;
   span,
   i {
-    color: ${props => props.theme.NavBarMenuColor};
+    color: ${(props) => props.theme.NavBarMenuColor};
   }
 `;
 const ProyectDesc = styled.div`
   padding: .5rem 0 0 1rem;
   span{
     text-transform: uppercase
-    color: ${props => props.theme.NavBarMenuColor}; 
+    color: ${(props) => props.theme.NavBarMenuColor}; 
   }
-`;
-
-function changeModalSize({ desktop }) {
-  return (
-    (desktop &&`
-    width: 30rem;
-    height: 75vh;
-    `) ||`
-    width: 18rem;
-    height: 60vh;
-    `
-  );
-}
-
-const ImageModal = styled.div`
-  ${changeModalSize}
-  background: url(${changeBackground});
-  background-position: center top;
-  background-size: cover;
 `;
 
 function PostElement({
   title,
   desc,
-  page,
+  skill,
   company,
   country,
   imgPath,
   desktop,
-  center
+  link,
+  center,
 }) {
-  const [showModal, setShowModal] = useState(false);
-
+  
   return (
-    <>
-      <Wrapper onClick={() => setShowModal(true)}>
+    <Link to={link}>
+      <Wrapper>
         <Section desktop={desktop} href="/about">
           <ProyectName>
             <H5>{title}</H5>
@@ -108,53 +89,34 @@ function PostElement({
           </ProyectName>
           <Image center={center} desktop={desktop} imgPath={imgPath} />
           <ProyectDesc>
-            <SMALL>{page}</SMALL>
+            <SMALL>{skill}</SMALL>
             {desc && <H5>{desc}</H5>}
           </ProyectDesc>
         </Section>
       </Wrapper>
-      <Modal open={showModal} onClose={() => setShowModal(false)} center>
-        <h4>{title}</h4>
-        <ImageModal desktop={desktop} imgPath={imgPath} />
-      </Modal>
-    </>
+    </Link>
   );
 }
 
-export default function Posts({ desktop }) {
-  return (
-    <>
-      <PostElement
-        imgPath={Data[0].name}
-        title={Data[0].text}
-        desc={Data[0].desc}
-        page={Data[0].skill}
-        company={Data[0].company}
-        country={Data[0].country}
-        desktop={desktop}
-        center
-      />
-       <PostElement
-        imgPath={Data[1].name}
-        title={Data[1].text}
-        desc={Data[1].desc}
-        page={Data[1].skill}
-        company={Data[1].company}
-        country={Data[1].country}
-        desktop={desktop}
-        center
-      />
-      <PostElement
-        imgPath={Data[2].name}
-        title={Data[2].text}
-        desc={Data[2].desc}
-        page={Data[2].skill}
-        company={Data[2].company}
-        country={Data[2].country}
-        desktop={desktop}
-        center
-      />
-     
-    </>
-  );
+
+function CountPosts({desktop}){
+  return(
+    Data.slice(0, 3).map(element => <PostElement
+      imgPath={element.img}
+      title={element.name}
+      desc={element.author}
+      skill={element.skills}
+      company={element.company}
+      country={element.country}
+      link={`/article/${element.name}`}
+      desktop={desktop}
+      center
+    />)
+  )
+}
+
+
+
+export default function Posts() {
+  return <CountPosts/>;
 }
