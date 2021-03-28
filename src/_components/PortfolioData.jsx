@@ -4,7 +4,6 @@ import {
   Domestika2,
   ComunidadDeProgramadores,
   ComunidadDeProgramadores2,
-  DanzarPorLaPaz,
   Proyecto2000,
   Proyecto20002,
   OneMib,

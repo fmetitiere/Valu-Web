@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 
 import { isMobile } from 'react-device-detect';
 
-
 import Data from "../_components/PortfolioData";
 
 import {  H3 } from "../Layout";

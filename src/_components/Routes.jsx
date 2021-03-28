@@ -6,7 +6,7 @@ import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
 
-import { Menu, LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
+import { LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
 import ExperienceText from '../_components/ExperienceText';
 import ArticlePage from '../_components/ArticlePage';
 import BiogrphyText from '../_components/BiographyText';
