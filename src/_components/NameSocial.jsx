@@ -126,7 +126,7 @@ export default function NameSocial({ desktop }) {
               )}
             </EmailShare>
           </Contact>
-          <Profession>Sr UX UI Developer</Profession>
+          <Profession>UX Writer / Content Creator</Profession>
           <InfoSocial>
             
             <NameSocialText />
