@@ -56,7 +56,7 @@ export default function NameSocialText() {
 	  <a
         rel="noopener noreferrer"
         target="_blank"
-        href="/CV-FernandoMetitiere.pdf"
+        href="/CV-ValuTenaglia-UXWriter.pdf"
       >
         <Social3>
           <Icon name="pdf" />
