@@ -7,12 +7,12 @@ import { H3 } from "../Layout/";
 
 const Wrapper = Styled.div`
     width:100%;
-    margin-top: 4rem;
     border-bottom: 1px solid #ddd;
 `;
 
 const InfoSocial = Styled.div`
 	display: grid;
+  margin: 1rem 0;
 	grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-areas: "profession social1 social2 social3 ";
     grid-gap: 1rem;
@@ -72,6 +72,7 @@ const Contact = Styled.div`
 	font-weight: bold;
 	border-radius: .3rem;
 	padding: .2rem .3rem;
+  margin: 0.5rem 0;
 	a{
 		color: black !important;
 	}
@@ -114,13 +115,13 @@ export default function NameSocial({ desktop }) {
           </H3Styled>
 		  <Contact>
             <EmailShare
-              email="fmetitiere@gmail.com"
+              email="valutenaglia@gmail.com"
               subject="Mail from App"
               body="Your message, http://nanometitiere.com"
             >
               {link => (
                 <a href={link} data-rel="external">
-                  fmetitiere@gmail.com
+                  valutenaglia@gmail.com
                 </a>
               )}
             </EmailShare>

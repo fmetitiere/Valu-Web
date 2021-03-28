@@ -52,28 +52,28 @@ const ArticlePage = ({ match, ...props }) => {
       </Title>
       <Carrousel bannerData={article.carrosel} />
       <Info>
-        <P>Autor</P>
+        <P bold>Autor</P>
         <P right>{article.author}</P>
       </Info>
       <Info>
-        <P>Cliente</P>
+        <P bold>Cliente</P>
         <P right>{article.company}</P>
       </Info>
       <Info>
-        <P>País</P>
+        <P bold>País</P>
         <P right>{article.country}</P>
       </Info>
       <Info>
-        <P>Habilidades</P>
+        <P bold>Habilidades</P>
         <P right>{article.skills}</P>
       </Info>
       
       <Info>
-        <P>Descripción</P>
+        <P bold>Descripción</P>
         <P right>{article.tech}</P>
       </Info>
       <Info>
-        <P>Herramientas</P>
+        <P bold>Herramientas</P>
         <P right>{article.soft}</P>
       </Info>
       {article.link && (

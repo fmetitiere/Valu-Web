@@ -36,7 +36,6 @@ const DefaultLayout = Styled.div`
     grid-template-areas: "header" "content";
     width: 100%;
     height: 100vh;
-    background:#efefef;
     a:hover {
         color: #fff;
     }
@@ -47,9 +46,7 @@ const NoHeaderLayout = Styled.div`
     height: 100%;
     padding: ${changePadding};
     margin: 0;
-    display: grid;
-    grid-template-rows: auto 4rem;
-    grid-template-areas: "content" "footer";
+
     width: 100%;
 `;
 

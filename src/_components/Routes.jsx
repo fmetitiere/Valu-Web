@@ -31,7 +31,6 @@ function Routes() {
 						<Route exact path="/education" component={EducationPage} />
 						<Route path="/article/:name" component={ArticlePage} />
 					</Switch>
-					<Menu />
 				</BrowserRouter>
 			</MobileView>
 
@@ -53,9 +52,9 @@ function Routes() {
 								</Switch>
 							</PostsArea>
 							<BioArea>
-								<Cards title="Biography" component={BiogrphyText} />
-								<Cards title="Experience" component={ExperienceText} />
-								<Cards title="Education" component={EducationText} />
+								<Cards title="Biografía" component={BiogrphyText} />
+								<Cards title="Experiencia" component={ExperienceText} />
+								<Cards title="Educación" component={EducationText} />
 							</BioArea>
 						</MainDesktop>
 					</LayoutDesktop>
