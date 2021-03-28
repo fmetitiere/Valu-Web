@@ -28,7 +28,7 @@ export default function NameSocialText() {
       <a
         rel="noopener noreferrer"
         target="_blank"
-        href="https://www.facebook.com/nano.metitiere"
+        href="https://www.facebook.com/valutenaglia"
       >
         <Social1>
           <Icon name="facebook" />

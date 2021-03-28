@@ -2,33 +2,19 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
-import { MDBIcon } from "mdbreact";
+import { isMobile } from 'react-device-detect';
 
 import Data from "../_components/PortfolioData";
 
-import { Layout, Header, Main, Left, H3, Center } from "../Layout";
-
-function changeGrid({ fourthCol }) {
-  return (
-    (fourthCol &&
-      `
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "1 2";
-      `) ||
-    `
-      grid-template-columns: 1fr 1fr;
-      grid-template-areas: "1 2";
-      `
-  );
-}
+import {  H3 } from "../Layout";
 
 function changePortfolioHeight({ mobile }) {
-  return mobile ? "height:70rem; margin-bottom:4rem;" : "height:45rem;";
+  return mobile ? "height:70rem; margin-bottom:0;" : "height:45rem;";
 }
 
 const PortContainer = styled.div`
   display: grid;
-  ${changeGrid}
+  grid-template-columns: ${isMobile ? "1fr" : "1fr 1fr"};
   ${changePortfolioHeight};
   width: 100%;
   grid-gap: 2rem;
@@ -56,7 +42,7 @@ const BackgroundSmall = styled.div`
   align-items: flex-end;
   background-size: cover;
   background-repeat: no-repeat;
-  position:relative;
+  position: relative;
 `;
 
 const PortfolioTitle = styled.div`
@@ -93,8 +79,8 @@ const Label = styled.div`
   top: 0;
   right: 0;
   background: blue;
-  font-size:0.75rem;
-  color:white;
+  font-size: 0.75rem;
+  color: white;
   padding: 0.5rem;
   background-color: ${(props) => props.theme.PrimaryColor};
   border-radius: 0 0 0 0.5rem;
@@ -141,10 +127,7 @@ export default function Portfolio({ desktop }, ...props) {
           <H3 left>Portfolio</H3>
           <DataArray fourthCol />
         </PortfolioLimit>
-      )) || (
-         
-            <DataArray mobile />
-      )}
+      )) || <DataArray mobile />}
     </>
   );
 }

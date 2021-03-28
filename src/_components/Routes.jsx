@@ -6,7 +6,7 @@ import Home from './Home';
 import About from './About';
 import Portfolio from './Portfolio';
 
-import { Menu, LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
+import { LayoutDesktop, MainDesktop, ProfileArea, PostsArea, BioArea, Banner } from '../Layout/';
 import ExperienceText from '../_components/ExperienceText';
 import ArticlePage from '../_components/ArticlePage';
 import BiogrphyText from '../_components/BiographyText';
@@ -31,7 +31,6 @@ function Routes() {
 						<Route exact path="/education" component={EducationPage} />
 						<Route path="/article/:name" component={ArticlePage} />
 					</Switch>
-					<Menu />
 				</BrowserRouter>
 			</MobileView>
 
@@ -53,9 +52,9 @@ function Routes() {
 								</Switch>
 							</PostsArea>
 							<BioArea>
-								<Cards title="Biography" component={BiogrphyText} />
-								<Cards title="Experience" component={ExperienceText} />
-								<Cards title="Education" component={EducationText} />
+								<Cards title="Biografía" component={BiogrphyText} />
+								<Cards title="Experiencia" component={ExperienceText} />
+								<Cards title="Educación" component={EducationText} />
 							</BioArea>
 						</MainDesktop>
 					</LayoutDesktop>

@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="48" height="18" viewBox="0 0 48 18">
+  <g id="Grupo_11851" data-name="Grupo 11851" transform="translate(-1051.897 -407.269)">
+    <g id="Grupo_11852" data-name="Grupo 11852" transform="translate(1051.897 407.269)">
+      <text id="PDF" transform="translate(19 14)" font-size="14" font-family="Cocogoose-Light, Cocogoose" font-weight="300"><tspan x="0" y="0">PDF</tspan></text>
+      <path id="download" d="M13.5,16H2.5A2.5,2.5,0,0,1,0,13.5a.625.625,0,0,1,1.25,0A1.251,1.251,0,0,0,2.5,14.75h11a1.251,1.251,0,0,0,1.25-1.25.625.625,0,1,1,1.25,0A2.5,2.5,0,0,1,13.5,16ZM9.294,11.483l3.46-3.446a.625.625,0,0,0-.882-.886L8.411,10.6a.625.625,0,0,1-.883,0l-3.4-3.444a.625.625,0,0,0-.89.878l3.4,3.446,0,0a1.877,1.877,0,0,0,2.651,0Zm-.669-3.2V.625a.625.625,0,1,0-1.25,0V8.281a.625.625,0,1,0,1.25,0Z"/>
+    </g>
+  </g>
+</svg>
