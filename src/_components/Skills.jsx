@@ -39,16 +39,15 @@ const Wrapper = styled.div`
 `;
 
 const skills = [
-	{ type: 'React JS', level: 50 },
-	{ type: 'UI Components', level: 80 },
-	{ type: 'Styled Components', level: 100 },
-    { type: 'Javascript', level: 50 },
-    { type: 'HTML', level: 100 },
-    { type: 'CSS / SASS', level: 100 },
-    { type: 'Adobe Illustrator', level: 100 },
-    { type: 'Adobe Photoshop', level: 100 },
-    { type: 'Adobe After Effects', level: 70 },
-];
+	{ type: 'Adobe Suit', level: 70 },
+    { type: 'Adobe XD', level: 60 },
+    { type: 'Figma', level: 60 },
+    { type: 'Redacción SEO', level: 80 },
+    { type: 'Wordpress', level: 50 },
+	{ type: 'HTML', level: 50 },
+    { type: 'Google Analytics', level: 60 },
+    { type: 'Google Ads', level: 50 },
+	];
 
 
 export default function Skills({...props}) {

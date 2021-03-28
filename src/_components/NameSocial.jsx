@@ -87,18 +87,18 @@ export default function NameSocial({ desktop }) {
       {desktop ? (
         <>
           <H3 center>
-            <b>Nano Metitiere</b>
+            <b>Valu Tenaglia</b>
           </H3>
-          <Profession>Sr UX UI Developer</Profession>
+          <Profession>UX Writer / Content Creator</Profession>
           <Contact>
             <EmailShare
-              email="fmetitiere@gmail.com"
+              email="valutenaglia@gmail.com"
               subject="Mail from App"
               body="Your message, http://nanometitiere.com"
             >
               {link => (
                 <a href={link} data-rel="external">
-                  fmetitiere@gmail.com
+                  valutenaglia@gmail.com
                 </a>
               )}
             </EmailShare>
@@ -110,7 +110,7 @@ export default function NameSocial({ desktop }) {
       ) : (
         <>
           <H3Styled>
-            <b>Nano Metitiere</b>
+            <b>Valu Tenaglia</b>
           </H3Styled>
 		  <Contact>
             <EmailShare

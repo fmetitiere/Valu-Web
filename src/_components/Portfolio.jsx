@@ -106,7 +106,7 @@ function PortElement({ title, skills, type, imgPath, link, ...props }) {
       <BackgroundSmall {...props} imgPath={imgPath}>
         <Label>{skills}</Label>
         <PortfolioTitle>
-          <p>{title} - {type}</p>
+          <p>{title}</p>
         </PortfolioTitle>
       </BackgroundSmall>
     </Link>

@@ -37,7 +37,7 @@ export default function NameSocialText() {
       <a
         rel="noopener noreferrer"
         target="_blank"
-        href="https://www.instagram.com/nano.uideveloper/"
+        href="https://www.instagram.com/valutenaglia/"
       >
         <Social2>
           <Icon name="insta" />
@@ -46,7 +46,7 @@ export default function NameSocialText() {
       <a
         rel="noopener noreferrer"
         target="_blank"
-        href="https://www.linkedin.com/in/fernando-metitiere/"
+        href="https://www.linkedin.com/in/valu-tenaglia-uxwriter/"
       >
         <Social3>
           <Icon name="linkedin" />

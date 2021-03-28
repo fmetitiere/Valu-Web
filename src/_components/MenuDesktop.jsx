@@ -49,7 +49,7 @@ export default function MenuDesktop() {
   return (
     <MenuWrapper>
       <Menu>
-        <H3 center>Nano Metitiere</H3>
+        <H3 center>Valu Tenaglia</H3>
         <LinksWrapper>
           <MenuItem>
             <Link to="/">

@@ -27,9 +27,8 @@ const Container = styled.div`
 `;
 
 const Info = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 3fr;
   margin: 0.5rem 0;
   border-bottom: 1px solid #ddd;
   padding-bottom: 0.5rem;
@@ -53,31 +52,28 @@ const ArticlePage = ({ match, ...props }) => {
       </Title>
       <Carrousel bannerData={article.carrosel} />
       <Info>
-        <P>Author</P>
+        <P>Autor</P>
         <P right>{article.author}</P>
       </Info>
       <Info>
-        <P>Client</P>
+        <P>Cliente</P>
         <P right>{article.company}</P>
       </Info>
       <Info>
-        <P>Country</P>
+        <P>País</P>
         <P right>{article.country}</P>
       </Info>
       <Info>
-        <P>Skills</P>
+        <P>Habilidades</P>
         <P right>{article.skills}</P>
       </Info>
+      
       <Info>
-        <P>Type</P>
-        <P right>{article.type}</P>
-      </Info>
-      <Info>
-        <P>Technologies Used</P>
+        <P>Descripción</P>
         <P right>{article.tech}</P>
       </Info>
       <Info>
-        <P>Software Used</P>
+        <P>Herramientas</P>
         <P right>{article.soft}</P>
       </Info>
       {article.link && (

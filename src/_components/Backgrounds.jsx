@@ -1,16 +1,25 @@
 import BDTCJ from "../images/BlogBDTCJ.jpg";
-import Proyecto2000 from "../images/proyecto2000.jpg";
+import Domestika from "../images/Domestika.jpg";
+import Domestika2 from "../images/Domestika2.jpg";
 import ComunidadDeProgramadores from "../images/ComunidadDeProgramadores.jpg";
+import ComunidadDeProgramadores2 from "../images/ComunidaddeP2.jpg";
 import DanzarPorLaPaz from "../images/DanzarPorLaPaz.jpg";
-import BodhiMeditación from "../images/BodhiMeditación.jpg";
-
-
+import OneMib from "../images/1MIB.jpg";
+import OneMib2 from "../images/1MIB-2.jpg";
+import Proyecto2000 from "../images/proyecto2000.jpg";
+import Proyecto20002 from "../images/proyecto2.jpg";
 
 
 export {
     BDTCJ,
-    Proyecto2000,
+    Domestika,
+    Domestika2,
     ComunidadDeProgramadores,
+    ComunidadDeProgramadores2,
     DanzarPorLaPaz,
-    BodhiMeditación
+    OneMib,
+    OneMib2,
+    Proyecto2000,
+    Proyecto20002
+    
 }
