@@ -95,7 +95,7 @@ export default function NameSocial({ desktop }) {
             <EmailShare
               email="valutenaglia@gmail.com"
               subject="Mail from App"
-              body="Your message, http://nanometitiere.com"
+              body="Your message, http://valutenaglia.com"
             >
               {link => (
                 <a href={link} data-rel="external">
@@ -117,7 +117,7 @@ export default function NameSocial({ desktop }) {
             <EmailShare
               email="valutenaglia@gmail.com"
               subject="Mail from App"
-              body="Your message, http://nanometitiere.com"
+              body="Your message, http://valutenaglia.com"
             >
               {link => (
                 <a href={link} data-rel="external">
